@@ -111,6 +111,14 @@ program.command('doctor')
     }
   });
 
+program.command('setup')
+  .description('Interactive setup: configure Playwright MCP token across all detected tools')
+  .option('--token <token>', 'Provide token directly instead of auto-detecting')
+  .action(async (opts) => {
+    const { runSetup } = await import('./setup.js');
+    await runSetup({ cliVersion: PKG_VERSION, token: opts.token });
+  });
+
 // ── Dynamic site commands ──────────────────────────────────────────────────
 
 const registry = getRegistry();
