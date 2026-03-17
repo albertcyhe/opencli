@@ -144,7 +144,7 @@ export async function runSetup(opts: { cliVersion?: string; token?: string } = {
     if (sel.startsWith('shell:')) {
       const p = sel.slice('shell:'.length);
       const before = fileExists(p) ? fs.readFileSync(p, 'utf-8') : '';
-      writeFileWithMkdir(p, upsertShellToken(before, token));
+      writeFileWithMkdir(p, upsertShellToken(before, token, p));
       written.push(p);
       wroteShell = true;
     } else if (sel.startsWith('config:')) {
@@ -153,7 +153,7 @@ export async function runSetup(opts: { cliVersion?: string; token?: string } = {
       if (config && config.parseError) continue;
       const before = fileExists(p) ? fs.readFileSync(p, 'utf-8') : '';
       const format = config?.format ?? (p.endsWith('.toml') ? 'toml' : 'json');
-      const next = format === 'toml' ? upsertTomlConfigToken(before, token) : upsertJsonConfigToken(before, token);
+      const next = format === 'toml' ? upsertTomlConfigToken(before, token) : upsertJsonConfigToken(before, token, p);
       writeFileWithMkdir(p, next);
       written.push(p);
     }
@@ -180,7 +180,7 @@ export async function runSetup(opts: { cliVersion?: string; token?: string } = {
   // Step 7: Auto-verify browser connectivity
   console.log(chalk.dim('  Verifying browser connectivity...'));
   try {
-    const result = await checkTokenConnectivity();
+    const result = await checkTokenConnectivity({ timeout: 5 });
     if (result.ok) {
       console.log(`  ${chalk.green('✓')} Browser connected in ${(result.durationMs / 1000).toFixed(1)}s`);
     } else {

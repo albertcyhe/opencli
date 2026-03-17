@@ -83,6 +83,54 @@ describe('json token helpers', () => {
     const parsed = JSON.parse(next);
     expect(parsed.mcp.playwright.environment.PLAYWRIGHT_MCP_EXTENSION_TOKEN).toBe('abc123');
   });
+
+  it('creates standard mcpServers format for empty file (not OpenCode)', () => {
+    const next = upsertJsonConfigToken('', 'abc123');
+    const parsed = JSON.parse(next);
+    expect(parsed.mcpServers.playwright.env.PLAYWRIGHT_MCP_EXTENSION_TOKEN).toBe('abc123');
+    expect(parsed.mcp).toBeUndefined();
+  });
+
+  it('creates OpenCode format when filePath contains opencode', () => {
+    const next = upsertJsonConfigToken('', 'abc123', '/home/user/.config/opencode/opencode.json');
+    const parsed = JSON.parse(next);
+    expect(parsed.mcp.playwright.environment.PLAYWRIGHT_MCP_EXTENSION_TOKEN).toBe('abc123');
+    expect(parsed.mcpServers).toBeUndefined();
+  });
+
+  it('creates standard format when filePath is claude.json', () => {
+    const next = upsertJsonConfigToken('', 'abc123', '/home/user/.claude.json');
+    const parsed = JSON.parse(next);
+    expect(parsed.mcpServers.playwright.env.PLAYWRIGHT_MCP_EXTENSION_TOKEN).toBe('abc123');
+  });
+});
+
+describe('fish shell support', () => {
+  it('generates fish set -gx syntax for fish config path', () => {
+    const next = upsertShellToken('', 'abc123', '/home/user/.config/fish/config.fish');
+    expect(next).toContain('set -gx PLAYWRIGHT_MCP_EXTENSION_TOKEN "abc123"');
+    expect(next).not.toContain('export');
+  });
+
+  it('replaces existing fish set line', () => {
+    const content = 'set -gx PLAYWRIGHT_MCP_EXTENSION_TOKEN "old"\n';
+    const next = upsertShellToken(content, 'new', '/home/user/.config/fish/config.fish');
+    expect(next).toContain('set -gx PLAYWRIGHT_MCP_EXTENSION_TOKEN "new"');
+    expect(next).not.toContain('"old"');
+  });
+
+  it('appends fish syntax to existing fish config', () => {
+    const content = 'set -gx PATH /usr/bin\n';
+    const next = upsertShellToken(content, 'abc123', '/home/user/.config/fish/config.fish');
+    expect(next).toContain('set -gx PLAYWRIGHT_MCP_EXTENSION_TOKEN "abc123"');
+    expect(next).toContain('set -gx PATH /usr/bin');
+  });
+
+  it('uses export syntax for zshrc even with filePath', () => {
+    const next = upsertShellToken('', 'abc123', '/home/user/.zshrc');
+    expect(next).toContain('export PLAYWRIGHT_MCP_EXTENSION_TOKEN="abc123"');
+    expect(next).not.toContain('set -gx');
+  });
 });
 
 describe('doctor report rendering', () => {

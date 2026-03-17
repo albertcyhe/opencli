@@ -111,6 +111,15 @@ export function getDefaultShellRcPath(): string {
   return path.join(os.homedir(), '.zshrc');
 }
 
+function isFishConfig(filePath: string): boolean {
+  return filePath.endsWith('config.fish') || filePath.includes('/fish/');
+}
+
+/** Detect if a JSON config file uses OpenCode's `mcp` format vs standard `mcpServers` */
+function isOpenCodeConfig(filePath: string): boolean {
+  return filePath.includes('opencode');
+}
+
 export function getDefaultMcpConfigPaths(cwd: string = process.cwd()): string[] {
   const home = os.homedir();
   const candidates = [
@@ -136,7 +145,15 @@ export function readTokenFromShellContent(content: string): string | null {
   return m?.[3] ?? null;
 }
 
-export function upsertShellToken(content: string, token: string): string {
+export function upsertShellToken(content: string, token: string, filePath?: string): string {
+  if (filePath && isFishConfig(filePath)) {
+    // Fish shell uses `set -gx` instead of `export`
+    const fishLine = `set -gx ${PLAYWRIGHT_TOKEN_ENV} "${token}"`;
+    const fishRe = /^\s*set\s+(-gx\s+)?PLAYWRIGHT_MCP_EXTENSION_TOKEN\s+.*/m;
+    if (!content.trim()) return `${fishLine}\n`;
+    if (fishRe.test(content)) return content.replace(fishRe, fishLine);
+    return `${content.replace(/\s*$/, '')}\n${fishLine}\n`;
+  }
   const nextLine = `export ${PLAYWRIGHT_TOKEN_ENV}="${token}"`;
   if (!content.trim()) return `${nextLine}\n`;
   if (TOKEN_LINE_RE.test(content)) return content.replace(TOKEN_LINE_RE, `$1"${
@@ -162,16 +179,16 @@ function readTokenFromJsonObject(parsed: any): string | null {
   return null;
 }
 
-export function upsertJsonConfigToken(content: string, token: string): string {
+export function upsertJsonConfigToken(content: string, token: string, filePath?: string): string {
   const parsed = content.trim() ? JSON.parse(content) : {};
-  if (parsed?.mcpServers) {
-    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME] = parsed.mcpServers[PLAYWRIGHT_SERVER_NAME] ?? {
-      command: 'npx',
-      args: ['-y', '@playwright/mcp@latest', '--extension'],
-    };
-    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env = parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env ?? {};
-    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env[PLAYWRIGHT_TOKEN_ENV] = token;
-  } else {
+
+  // Determine format: use OpenCode format only if explicitly an opencode config,
+  // or if the existing content already uses `mcp` key (not `mcpServers`)
+  const useOpenCodeFormat = filePath
+    ? isOpenCodeConfig(filePath)
+    : (!parsed.mcpServers && parsed.mcp);
+
+  if (useOpenCodeFormat) {
     parsed.mcp = parsed.mcp ?? {};
     parsed.mcp[PLAYWRIGHT_SERVER_NAME] = parsed.mcp[PLAYWRIGHT_SERVER_NAME] ?? {
       command: ['npx', '-y', '@playwright/mcp@latest', '--extension'],
@@ -180,6 +197,14 @@ export function upsertJsonConfigToken(content: string, token: string): string {
     };
     parsed.mcp[PLAYWRIGHT_SERVER_NAME].environment = parsed.mcp[PLAYWRIGHT_SERVER_NAME].environment ?? {};
     parsed.mcp[PLAYWRIGHT_SERVER_NAME].environment[PLAYWRIGHT_TOKEN_ENV] = token;
+  } else {
+    parsed.mcpServers = parsed.mcpServers ?? {};
+    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME] = parsed.mcpServers[PLAYWRIGHT_SERVER_NAME] ?? {
+      command: 'npx',
+      args: ['-y', '@playwright/mcp@latest', '--extension'],
+    };
+    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env = parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env ?? {};
+    parsed.mcpServers[PLAYWRIGHT_SERVER_NAME].env[PLAYWRIGHT_TOKEN_ENV] = token;
   }
   return `${JSON.stringify(parsed, null, 2)}\n`;
 }
@@ -263,6 +288,26 @@ function readConfigStatus(filePath: string): McpConfigStatus {
 }
 
 /**
+ * Dynamically enumerate Chrome profiles by scanning for 'Default' and 'Profile *'
+ * directories across all browser base paths. Falls back to ['Default'] if none found.
+ */
+function enumerateProfiles(baseDirs: string[]): string[] {
+  const profiles = new Set<string>();
+  for (const base of baseDirs) {
+    if (!fileExists(base)) continue;
+    try {
+      for (const entry of fs.readdirSync(base, { withFileTypes: true })) {
+        if (!entry.isDirectory()) continue;
+        if (entry.name === 'Default' || /^Profile \d+$/.test(entry.name)) {
+          profiles.add(entry.name);
+        }
+      }
+    } catch { /* permission denied, etc. */ }
+  }
+  return profiles.size > 0 ? [...profiles].sort() : ['Default'];
+}
+
+/**
  * Discover the auth token stored by the Playwright MCP Bridge extension
  * by scanning Chrome's LevelDB localStorage files directly.
  *
@@ -298,7 +343,7 @@ export function discoverExtensionToken(): string | null {
     );
   }
 
-  const profiles = ['Default', 'Profile 1', 'Profile 2', 'Profile 3'];
+  const profiles = enumerateProfiles(bases);
   const tokenRe = /([A-Za-z0-9_-]{40,50})/;
 
   for (const base of bases) {
@@ -424,7 +469,7 @@ export function checkExtensionInstalled(): { installed: boolean; browsers: strin
     );
   }
 
-  const profiles = ['Default', 'Profile 1', 'Profile 2', 'Profile 3'];
+  const profiles = enumerateProfiles(browserDirs.map(d => d.base));
   const foundBrowsers: string[] = [];
 
   for (const { name, base } of browserDirs) {
@@ -643,7 +688,7 @@ export async function applyBrowserDoctorFix(report: DoctorReport, opts: DoctorOp
   const written: string[] = [];
   if (plannedWrites.includes(shellPath)) {
     const shellBefore = fileExists(shellPath) ? fs.readFileSync(shellPath, 'utf-8') : '';
-    writeFileWithMkdir(shellPath, upsertShellToken(shellBefore, token));
+    writeFileWithMkdir(shellPath, upsertShellToken(shellBefore, token, shellPath));
     written.push(shellPath);
   }
 
@@ -651,7 +696,9 @@ export async function applyBrowserDoctorFix(report: DoctorReport, opts: DoctorOp
     if (!plannedWrites.includes(config.path)) continue;
     if (config.parseError) continue;
     const before = fileExists(config.path) ? fs.readFileSync(config.path, 'utf-8') : '';
-    const next = config.format === 'toml' ? upsertTomlConfigToken(before, token) : upsertJsonConfigToken(before, token);
+    const next = config.format === 'toml'
+      ? upsertTomlConfigToken(before, token)
+      : upsertJsonConfigToken(before, token, config.path);
     writeFileWithMkdir(config.path, next);
     written.push(config.path);
   }
