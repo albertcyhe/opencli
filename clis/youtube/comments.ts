@@ -15,7 +15,7 @@ cli({
     { name: 'url', required: true, positional: true, help: 'YouTube video URL or video ID' },
     { name: 'limit', type: 'int', default: 20, help: 'Max comments (max 100)' },
   ],
-  columns: ['rank', 'author', 'text', 'likes', 'replies', 'time'],
+  columns: ['rank', 'comment_id', 'author', 'text', 'likes', 'replies', 'time'],
   func: async (page, kwargs) => {
     const videoId = parseVideoId(kwargs.url);
     const limit = Math.min(kwargs.limit || 20, 100);
@@ -77,6 +77,7 @@ cli({
           const toolbar = p.toolbar || {};
           return {
             rank: i + 1,
+            comment_id: m.key || props.commentId || '',
             author: author.displayName || '',
             text: (props.content?.content || '').substring(0, 300),
             likes: toolbar.likeCountNotliked || '0',

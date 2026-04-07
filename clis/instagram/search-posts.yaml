@@ -1,0 +1,54 @@
+site: instagram
+name: search-posts
+description: Search Instagram posts by hashtag
+domain: www.instagram.com
+
+args:
+  query:
+    type: str
+    required: true
+    positional: true
+    description: Hashtag or keyword to search (without #)
+  limit:
+    type: int
+    default: 10
+    description: Number of posts to return
+
+pipeline:
+  - navigate: https://www.instagram.com
+
+  - evaluate: |
+      (async () => {
+        const query = ${{ args.query | json }}.replace(/^#/, '');
+        const limit = ${{ args.limit }};
+        const headers = { 'X-IG-App-ID': '936619743392459' };
+        const opts = { credentials: 'include', headers };
+
+        const resp = await fetch('https://www.instagram.com/api/v1/tags/web_info/?tag_name=' + encodeURIComponent(query), opts);
+        if (!resp.ok) throw new Error('Failed to search: HTTP ' + resp.status);
+        const data = await resp.json();
+
+        const sections = data.data?.recent?.sections || data.data?.top?.sections || [];
+        const posts = [];
+        for (const section of sections) {
+          const medias = section.layout_content?.medias || [];
+          for (const m of medias) {
+            const node = m.media;
+            if (!node) continue;
+            posts.push({
+              rank: posts.length + 1,
+              author: node.user?.username || '',
+              caption: (node.caption?.text || '').replace(/\n/g, ' ').substring(0, 150),
+              likes: node.like_count || 0,
+              comments: node.comment_count || 0,
+              url: 'https://www.instagram.com/p/' + (node.code || node.shortcode || '') + '/',
+            });
+            if (posts.length >= limit) break;
+          }
+          if (posts.length >= limit) break;
+        }
+
+        return posts;
+      })()
+
+columns: [rank, author, caption, likes, comments, url]

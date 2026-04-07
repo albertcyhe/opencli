@@ -23,7 +23,7 @@ cli({
     { name: 'replies', type: 'int', default: 5, help: 'Max replies shown per comment at each level (sorted by score)' },
     { name: 'max-length', type: 'int', default: 2000, help: 'Max characters per comment body (min 100)' },
   ],
-  columns: ['type', 'author', 'score', 'text'],
+  columns: ['rank', 'comment_id', 'type', 'author', 'score', 'text'],
   func: async (page, kwargs) => {
     const sort = kwargs.sort ?? 'best';
     const limit = Math.max(1, kwargs.limit ?? 25);
@@ -59,6 +59,7 @@ cli({
         if (!Array.isArray(data) || data.length < 2) return { error: 'Unexpected response format' };
 
         var results = [];
+        var rankCounter = 0;
 
         // Post
         var post = data[0] && data[0].data && data[0].data.children && data[0].data.children[0] && data[0].data.children[0].data;
@@ -66,6 +67,8 @@ cli({
           var body = post.selftext || '';
           if (body.length > maxLength) body = body.slice(0, maxLength) + '\\n... [truncated]';
           results.push({
+            rank: '',
+            comment_id: post.name || '',
             type: 'POST',
             author: post.author || '[deleted]',
             score: post.score || 0,
@@ -90,7 +93,10 @@ cli({
             ? body
             : body.split('\\n').map(function(line) { return prefix + line; }).join('\\n');
 
+          rankCounter++;
           results.push({
+            rank: rankCounter,
+            comment_id: d.name || '',
             type: depth === 0 ? 'L0' : 'L' + depth,
             author: d.author || '[deleted]',
             score: d.score || 0,
@@ -118,6 +124,8 @@ cli({
               var cutoffIndent = '';
               for (var j = 0; j <= depth; j++) cutoffIndent += '  ';
               results.push({
+                rank: '',
+                comment_id: '',
                 type: 'L' + (depth + 1),
                 author: '',
                 score: '',
@@ -140,6 +148,8 @@ cli({
             var moreIndent = '';
             for (var j = 0; j <= depth; j++) moreIndent += '  ';
             results.push({
+              rank: '',
+              comment_id: '',
               type: 'L' + (depth + 1),
               author: '',
               score: '',
@@ -166,6 +176,8 @@ cli({
         var hiddenTopLevel = Math.max(0, t1TopLevel.length - limit) + moreTopLevel;
         if (hiddenTopLevel > 0) {
           results.push({
+            rank: '',
+            comment_id: '',
             type: '',
             author: '',
             score: '',

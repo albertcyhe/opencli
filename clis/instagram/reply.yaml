@@ -1,0 +1,64 @@
+site: instagram
+name: reply
+description: Reply to a specific Instagram comment
+domain: www.instagram.com
+
+args:
+  post-url:
+    type: str
+    required: true
+    positional: true
+    description: Post URL (e.g. https://www.instagram.com/p/XXXXX/)
+  comment-id:
+    type: str
+    required: true
+    positional: true
+    description: Comment ID (pk from get-comments output)
+  text:
+    type: str
+    required: true
+    positional: true
+    description: Reply text
+
+pipeline:
+  - navigate: https://www.instagram.com
+
+  - evaluate: |
+      (async () => {
+        const postUrl = ${{ args['post-url'] | json }};
+        const commentId = ${{ args['comment-id'] | json }};
+        const replyText = ${{ args.text | json }};
+        const headers = { 'X-IG-App-ID': '936619743392459' };
+
+        // Extract shortcode from URL
+        const shortcodeMatch = postUrl.match(/\/(p|reel|tv)\/([A-Za-z0-9_-]+)/);
+        if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);
+        const shortcode = shortcodeMatch[2];
+
+        // Get media ID from shortcode
+        const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', { credentials: 'include', headers });
+        if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);
+        const infoData = await infoResp.json();
+        const mediaPk = infoData.items?.[0]?.pk;
+        if (!mediaPk) throw new Error('Could not find media ID');
+
+        // Get CSRF token
+        const csrf = document.cookie.match(/csrftoken=([^;]+)/)?.[1] || '';
+
+        // Post reply with replied_to_comment_id
+        const resp = await fetch('https://www.instagram.com/api/v1/web/comments/' + mediaPk + '/add/', {
+          method: 'POST',
+          credentials: 'include',
+          headers: {
+            ...headers,
+            'X-CSRFToken': csrf,
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: 'comment_text=' + encodeURIComponent(replyText) + '&replied_to_comment_id=' + encodeURIComponent(commentId),
+        });
+
+        if (!resp.ok) throw new Error('Failed to reply: HTTP ' + resp.status);
+        return [{ status: 'success', message: 'Reply posted', comment_id: commentId, text: replyText }];
+      })()
+
+columns: [status, message, comment_id, text]

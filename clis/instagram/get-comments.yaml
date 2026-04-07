@@ -1,0 +1,58 @@
+site: instagram
+name: get-comments
+description: Get comments on an Instagram post with reply-able IDs
+domain: www.instagram.com
+
+args:
+  url:
+    type: str
+    required: true
+    positional: true
+    description: Post URL (e.g. https://www.instagram.com/p/XXXXX/)
+  limit:
+    type: int
+    default: 20
+    description: Number of comments to return
+
+pipeline:
+  - navigate: https://www.instagram.com
+
+  - evaluate: |
+      (async () => {
+        const postUrl = ${{ args.url | json }};
+        const limit = ${{ args.limit }};
+        const headers = { 'X-IG-App-ID': '936619743392459' };
+        const opts = { credentials: 'include', headers };
+
+        // Extract shortcode from URL
+        const shortcodeMatch = postUrl.match(/\/(p|reel|tv)\/([A-Za-z0-9_-]+)/);
+        if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);
+        const shortcode = shortcodeMatch[2];
+
+        // Get media ID from shortcode
+        const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', opts);
+        if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);
+        const infoData = await infoResp.json();
+        const mediaPk = infoData.items?.[0]?.pk;
+        if (!mediaPk) throw new Error('Could not find media ID for shortcode ' + shortcode);
+
+        // Fetch comments
+        const commentsResp = await fetch('https://www.instagram.com/api/v1/media/' + mediaPk + '/comments/?can_support_threading=true&count=' + Math.min(limit, 50), opts);
+        if (!commentsResp.ok) throw new Error('Failed to get comments: HTTP ' + commentsResp.status);
+        const commentsData = await commentsResp.json();
+        const comments = commentsData.comments || [];
+
+        return comments.slice(0, limit).map(function(c, i) {
+          return {
+            rank: i + 1,
+            comment_id: String(c.pk),
+            author: c.user?.username || '',
+            text: (c.text || '').substring(0, 300),
+            likes: c.comment_like_count || 0,
+            replies_count: c.child_comment_count || 0,
+            time: c.created_at ? new Date(c.created_at * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',
+          };
+        });
+      })()
+
+columns: [rank, comment_id, author, text, likes, replies_count, time]
