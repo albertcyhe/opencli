@@ -66,25 +66,51 @@ cli({
         if (!commentResp.ok) return {error: 'Failed to fetch comments: HTTP ' + commentResp.status};
         const commentData = await commentResp.json();
 
-        // Parse from frameworkUpdates (new ViewModel format)
-        const mutations = commentData.frameworkUpdates?.entityBatchUpdate?.mutations || [];
-        const commentEntities = mutations.filter(m => m.payload?.commentEntityPayload);
+        // Collect comment IDs from onResponseReceivedEndpoints
+        // New ViewModel format: commentThreadRenderer.commentViewModel.commentViewModel.commentId (Ugxxx format)
+        // Legacy format: commentThreadRenderer.comment.commentRenderer.commentId
+        var commentIds = [];
+        var endpoints = commentData.onResponseReceivedEndpoints || [];
+        for (var ei = 0; ei < endpoints.length; ei++) {
+          var ep = endpoints[ei];
+          var items = ep.reloadContinuationItemsCommand?.continuationItems
+            || ep.appendContinuationItemsAction?.continuationItems || [];
+          for (var ii = 0; ii < items.length; ii++) {
+            var thread = items[ii].commentThreadRenderer;
+            if (thread) {
+              // New ViewModel format (2025+)
+              var cId = thread.commentViewModel?.commentViewModel?.commentId
+                // Legacy format
+                || thread.comment?.commentRenderer?.commentId
+                || '';
+              if (cId) commentIds.push(cId);
+            }
+          }
+        }
 
-        return commentEntities.slice(0, limit).map((m, i) => {
-          const p = m.payload.commentEntityPayload;
-          const props = p.properties || {};
-          const author = p.author || {};
-          const toolbar = p.toolbar || {};
-          return {
-            rank: i + 1,
-            comment_id: m.key || props.commentId || '',
+        // Parse from frameworkUpdates (new ViewModel format)
+        var mutations = commentData.frameworkUpdates?.entityBatchUpdate?.mutations || [];
+        var commentEntities = mutations.filter(function(m) { return m.payload?.commentEntityPayload; });
+
+        var results = [];
+        for (var ci = 0; ci < Math.min(commentEntities.length, limit); ci++) {
+          var m = commentEntities[ci];
+          var p = m.payload.commentEntityPayload;
+          var props = p.properties || {};
+          var author = p.author || {};
+          var toolbar = p.toolbar || {};
+          var cid = commentIds[ci] || m.entityKey || m.key || props.commentId || ('yt-comment-' + (ci + 1));
+          results.push({
+            rank: ci + 1,
+            comment_id: '' + cid,
             author: author.displayName || '',
             text: (props.content?.content || '').substring(0, 300),
             likes: toolbar.likeCountNotliked || '0',
             replies: toolbar.replyCount || '0',
             time: props.publishedTime || '',
-          };
-        });
+          });
+        }
+        return results;
       })()
     `);
 

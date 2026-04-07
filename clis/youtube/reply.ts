@@ -1,10 +1,13 @@
 /**
  * YouTube reply — post a top-level comment on a video.
  *
- * Uses the InnerTube create_comment endpoint. Requires being logged into YouTube.
+ * Constructs createCommentParams via protobuf encoding from the video ID,
+ * then calls InnerTube create_comment endpoint.
+ *
+ * Requires the user to be logged into YouTube in the browser session.
  */
 import { cli, Strategy } from '@jackwener/opencli/registry';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
+import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { parseVideoId } from './utils.js';
 
 cli({
@@ -28,50 +31,86 @@ cli({
 
     const result = await page.evaluate(`(async () => {
       try {
-        const videoId = ${JSON.stringify(videoId)};
-        const commentText = ${JSON.stringify(text)};
-        const cfg = window.ytcfg?.data_ || {};
-        const apiKey = cfg.INNERTUBE_API_KEY;
-        const context = cfg.INNERTUBE_CONTEXT;
+        var videoId = ${JSON.stringify(videoId)};
+        var commentText = ${JSON.stringify(text)};
+        var cfg = window.ytcfg?.data_ || {};
+        var apiKey = cfg.INNERTUBE_API_KEY;
+        var context = cfg.INNERTUBE_CONTEXT;
         if (!apiKey || !context) return { ok: false, message: 'YouTube config not found — are you logged in?' };
 
-        // Extract createCommentParams from the page data
-        let createParams = null;
+        // Try to extract createCommentParams from page data first (legacy path)
+        var createParams = null;
+        var continuation = null;
 
-        // Try from ytInitialData
         if (window.ytInitialData) {
-          const results = window.ytInitialData.contents?.twoColumnWatchNextResults?.results?.results?.contents || [];
-          const commentSection = results.find(i => i.itemSectionRenderer?.targetId === 'comments-section');
-          const continuation = commentSection?.itemSectionRenderer?.contents?.[0]?.continuationItemRenderer?.continuationEndpoint?.continuationCommand?.token;
+          var results = window.ytInitialData.contents?.twoColumnWatchNextResults?.results?.results?.contents || [];
+          var commentSection = results.find(function(i) { return i.itemSectionRenderer?.targetId === 'comments-section'; });
+          continuation = commentSection?.itemSectionRenderer?.contents?.[0]?.continuationItemRenderer?.continuationEndpoint?.continuationCommand?.token;
+        }
 
-          if (continuation) {
-            // Fetch comments section to get createCommentParams
-            const contResp = await fetch('/youtubei/v1/next?key=' + apiKey + '&prettyPrint=false', {
-              method: 'POST', credentials: 'include',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ context, continuation })
-            });
-            if (contResp.ok) {
-              const contData = await contResp.json();
-              // Look for createRenderer in the response
-              const header = contData.onResponseReceivedEndpoints?.[0]?.reloadContinuationItemsCommand?.continuationItems
-                || contData.onResponseReceivedEndpoints?.[1]?.reloadContinuationItemsCommand?.continuationItems
-                || [];
-              for (const item of header) {
-                const renderer = item.commentsHeaderRenderer;
+        if (continuation) {
+          var contResp = await fetch('/youtubei/v1/next?key=' + apiKey + '&prettyPrint=false', {
+            method: 'POST', credentials: 'include',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ context, continuation })
+          });
+          if (contResp.ok) {
+            var contData = await contResp.json();
+            var eps = contData.onResponseReceivedEndpoints || [];
+            for (var ep of eps) {
+              var items = ep.reloadContinuationItemsCommand?.continuationItems || [];
+              for (var item of items) {
+                var renderer = item.commentsHeaderRenderer;
                 if (renderer?.createRenderer?.commentSimpleboxRenderer?.submitButton?.buttonRenderer?.serviceEndpoint?.createCommentEndpoint?.createCommentParams) {
                   createParams = renderer.createRenderer.commentSimpleboxRenderer.submitButton.buttonRenderer.serviceEndpoint.createCommentEndpoint.createCommentParams;
                   break;
                 }
               }
+              if (createParams) break;
             }
           }
         }
 
-        if (!createParams) return { ok: false, message: 'Could not find comment params — comments may be disabled or you are not logged in' };
+        // Fallback: construct createCommentParams via protobuf
+        if (!createParams) {
+          function encodeVarint(val) {
+            var bytes = [];
+            while (val > 0x7f) { bytes.push((val & 0x7f) | 0x80); val >>>= 7; }
+            bytes.push(val & 0x7f);
+            return bytes;
+          }
+          function encodeString(fieldNum, str) {
+            var tag = encodeVarint((fieldNum << 3) | 2);
+            var encoded = new TextEncoder().encode(str);
+            var len = encodeVarint(encoded.length);
+            var result = new Uint8Array(tag.length + len.length + encoded.length);
+            result.set(tag, 0);
+            result.set(len, tag.length);
+            result.set(encoded, tag.length + len.length);
+            return result;
+          }
+          function encodeVarintField(fieldNum, val) {
+            var tag = encodeVarint((fieldNum << 3) | 0);
+            var v = encodeVarint(val);
+            var result = new Uint8Array(tag.length + v.length);
+            result.set(tag, 0);
+            result.set(v, tag.length);
+            return result;
+          }
+          var parts = [
+            encodeString(2, videoId),
+            encodeVarintField(5, 0),
+            encodeVarintField(6, 1),
+          ];
+          var totalLen = parts.reduce(function(s, p) { return s + p.length; }, 0);
+          var buf = new Uint8Array(totalLen);
+          var offset = 0;
+          for (var p of parts) { buf.set(p, offset); offset += p.length; }
+          createParams = btoa(String.fromCharCode.apply(null, buf));
+        }
 
         // Post the comment
-        const resp = await fetch('/youtubei/v1/comment/create_comment?key=' + apiKey + '&prettyPrint=false', {
+        var resp = await fetch('/youtubei/v1/comment/create_comment?key=' + apiKey + '&prettyPrint=false', {
           method: 'POST', credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -81,12 +120,18 @@ cli({
           })
         });
 
+        if (resp.status === 403) {
+          return { ok: false, message: 'No permission to comment — make sure you are logged into YouTube and can comment on this video' };
+        }
         if (!resp.ok) return { ok: false, message: 'Failed to post comment: HTTP ' + resp.status };
-        const data = await resp.json();
 
-        // Check for success indicators
+        var data = await resp.json();
+        if (data.error) {
+          return { ok: false, message: data.error.message || 'YouTube API error' };
+        }
+
         if (data.actionResult?.status === 'STATUS_SUCCEEDED'
-          || data.actions?.some(a => a.createCommentAction)) {
+          || data.actions?.length > 0) {
           return { ok: true, message: 'Comment posted successfully' };
         }
 

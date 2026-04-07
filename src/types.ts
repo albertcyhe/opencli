@@ -66,6 +66,7 @@ export interface IPage {
   installInterceptor(pattern: string): Promise<void>;
   getInterceptedRequests(): Promise<any[]>;
   waitForCapture(timeout?: number): Promise<void>;
+  waitForContent?(opts?: { minBodyLength?: number; timeout?: number }): Promise<boolean>;
   screenshot(options?: ScreenshotOptions): Promise<string>;
   startNetworkCapture?(pattern?: string): Promise<void>;
   readNetworkCapture?(): Promise<unknown[]>;

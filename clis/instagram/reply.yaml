@@ -4,11 +4,11 @@ description: Reply to a specific Instagram comment
 domain: www.instagram.com
 
 args:
-  post-url:
+  username:
     type: str
     required: true
     positional: true
-    description: Post URL (e.g. https://www.instagram.com/p/XXXXX/)
+    description: Username of the post author
   comment-id:
     type: str
     required: true
@@ -19,28 +19,33 @@ args:
     required: true
     positional: true
     description: Reply text
+  index:
+    type: int
+    default: 1
+    description: Post index (1 = most recent)
 
 pipeline:
   - navigate: https://www.instagram.com
 
   - evaluate: |
       (async () => {
-        const postUrl = ${{ args['post-url'] | json }};
+        const username = ${{ args.username | json }};
         const commentId = ${{ args['comment-id'] | json }};
         const replyText = ${{ args.text | json }};
+        const idx = ${{ args.index }} - 1;
         const headers = { 'X-IG-App-ID': '936619743392459' };
+        const opts = { credentials: 'include', headers };
 
-        // Extract shortcode from URL
-        const shortcodeMatch = postUrl.match(/\/(p|reel|tv)\/([A-Za-z0-9_-]+)/);
-        if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);
-        const shortcode = shortcodeMatch[2];
+        // Get user ID
+        const r1 = await fetch('https://www.instagram.com/api/v1/users/web_profile_info/?username=' + encodeURIComponent(username), opts);
+        if (!r1.ok) throw new Error('User not found: ' + username);
+        const userId = (await r1.json())?.data?.user?.id;
 
-        // Get media ID from shortcode
-        const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', { credentials: 'include', headers });
-        if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);
-        const infoData = await infoResp.json();
-        const mediaPk = infoData.items?.[0]?.pk;
-        if (!mediaPk) throw new Error('Could not find media ID');
+        // Get user's posts
+        const r2 = await fetch('https://www.instagram.com/api/v1/feed/user/' + userId + '/?count=' + (idx + 1), opts);
+        const posts = (await r2.json())?.items || [];
+        if (idx >= posts.length) throw new Error('Post index ' + (idx + 1) + ' not found');
+        const mediaPk = posts[idx].pk;
 
         // Get CSRF token
         const csrf = document.cookie.match(/csrftoken=([^;]+)/)?.[1] || '';

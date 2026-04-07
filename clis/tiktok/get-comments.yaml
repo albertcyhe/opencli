@@ -16,35 +16,80 @@ args:
 
 pipeline:
   - navigate:
-      url: https://www.tiktok.com/explore
-      settleMs: 5000
+      url: ${{ args.url }}
+      settleMs: 6000
 
   - evaluate: |
       (async () => {
         const videoUrl = ${{ args.url | json }};
         const limit = ${{ args.limit }};
+        const wait = (ms) => new Promise(r => setTimeout(r, ms));
 
         // Extract video ID from URL
         const idMatch = videoUrl.match(/\/video\/(\d+)/);
         if (!idMatch) throw new Error('Invalid TikTok video URL — expected /video/<id>');
         const videoId = idMatch[1];
 
-        const res = await fetch('/api/comment/list/?aweme_id=' + videoId + '&cursor=0&count=' + Math.min(limit, 50) + '&aid=1988', { credentials: 'include' });
-        if (!res.ok) throw new Error('Comment API failed: HTTP ' + res.status);
-        const data = await res.json();
-        const comments = data.comments || [];
+        // Try API first
+        try {
+          const res = await fetch('/api/comment/list/?aweme_id=' + videoId + '&cursor=0&count=' + Math.min(limit, 50) + '&aid=1988', { credentials: 'include' });
+          if (res.ok) {
+            const data = await res.json();
+            const comments = data.comments || [];
+            if (comments.length > 0) {
+              return comments.slice(0, limit).map(function(c, i) {
+                return {
+                  rank: i + 1,
+                  comment_id: c.cid || '',
+                  author: c.user?.unique_id || c.user?.nickname || '',
+                  text: (c.text || '').substring(0, 300),
+                  likes: c.digg_count || 0,
+                  replies_count: c.reply_comment_total || 0,
+                  time: c.create_time ? new Date(c.create_time * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',
+                };
+              });
+            }
+          }
+        } catch (e) {
+          // API failed, fall back to DOM scraping
+        }
 
-        return comments.slice(0, limit).map(function(c, i) {
-          return {
+        // Fallback: DOM scraping
+        // Click comment icon to expand
+        const commentIcon = document.querySelector('[data-e2e="comment-icon"]');
+        if (commentIcon) {
+          const cBtn = commentIcon.closest('button') || commentIcon.closest('[role="button"]') || commentIcon;
+          cBtn.click();
+          await wait(3000);
+        }
+
+        const commentEls = document.querySelectorAll('[data-e2e="comment-level-1"]');
+        const results = [];
+        for (let i = 0; i < Math.min(commentEls.length, limit); i++) {
+          const el = commentEls[i];
+          // Try to extract comment ID from data attributes
+          let cid = '';
+          for (const attr of el.attributes) {
+            const m = String(attr.value).match(/^\d{10,}$/);
+            if (m) { cid = m[0]; break; }
+          }
+          if (!cid) cid = 'tiktok-comment-' + (i + 1);
+
+          const userEl = el.querySelector('[data-e2e="comment-username-1"]') || el.querySelector('a[href*="/@"]');
+          const textEl = el.querySelector('[data-e2e="comment-level-1"] p') || el.querySelector('p');
+          const likeEl = el.querySelector('[data-e2e="comment-like-count"]');
+
+          results.push({
             rank: i + 1,
-            comment_id: c.cid || '',
-            author: c.user?.unique_id || c.user?.nickname || '',
-            text: (c.text || '').substring(0, 300),
-            likes: c.digg_count || 0,
-            replies_count: c.reply_comment_total || 0,
-            time: c.create_time ? new Date(c.create_time * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',
-          };
-        });
+            comment_id: cid,
+            author: userEl ? userEl.textContent.trim() : '',
+            text: textEl ? textEl.textContent.trim().substring(0, 300) : '',
+            likes: likeEl ? parseInt(likeEl.textContent.replace(/[^0-9]/g, '') || '0', 10) : 0,
+            replies_count: 0,
+            time: '',
+          });
+        }
+        return results;
       })()
 
 columns: [rank, comment_id, author, text, likes, replies_count, time]

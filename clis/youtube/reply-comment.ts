@@ -1,8 +1,10 @@
 /**
  * YouTube reply-comment — reply to a specific comment on a video.
  *
- * Uses InnerTube create_comment_reply endpoint. The comment-id comes
- * from the `youtube comments` command output.
+ * Constructs createReplyParams via protobuf encoding from the comment ID
+ * and video ID, then calls InnerTube create_comment_reply endpoint.
+ *
+ * Requires the user to be logged into YouTube in the browser session.
  */
 import { cli, Strategy } from '@jackwener/opencli/registry';
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
@@ -16,7 +18,7 @@ cli({
   strategy: Strategy.COOKIE,
   browser: true,
   args: [
-    { name: 'comment-id', required: true, positional: true, help: 'Comment ID from youtube comments output' },
+    { name: 'comment-id', required: true, positional: true, help: 'Comment ID (Ugxxx format from youtube comments output)' },
     { name: 'text', required: true, positional: true, help: 'Reply text' },
     { name: 'url', required: true, help: 'Video URL (needed for context)' },
   ],
@@ -31,91 +33,81 @@ cli({
 
     const result = await page.evaluate(`(async () => {
       try {
-        const videoId = ${JSON.stringify(videoId)};
-        const commentId = ${JSON.stringify(commentId)};
-        const replyText = ${JSON.stringify(text)};
-        const cfg = window.ytcfg?.data_ || {};
-        const apiKey = cfg.INNERTUBE_API_KEY;
-        const context = cfg.INNERTUBE_CONTEXT;
+        var videoId = ${JSON.stringify(videoId)};
+        var commentId = ${JSON.stringify(commentId)};
+        var replyText = ${JSON.stringify(text)};
+        var cfg = window.ytcfg?.data_ || {};
+        var apiKey = cfg.INNERTUBE_API_KEY;
+        var context = cfg.INNERTUBE_CONTEXT;
         if (!apiKey || !context) return { ok: false, message: 'YouTube config not found — are you logged in?' };
 
-        // Step 1: Get comment continuation token
-        let continuationToken = null;
-        if (window.ytInitialData) {
-          const results = window.ytInitialData.contents?.twoColumnWatchNextResults?.results?.results?.contents || [];
-          const commentSection = results.find(i => i.itemSectionRenderer?.targetId === 'comments-section');
-          continuationToken = commentSection?.itemSectionRenderer?.contents?.[0]?.continuationItemRenderer?.continuationEndpoint?.continuationCommand?.token;
-        }
-        if (!continuationToken) {
-          const nextResp = await fetch('/youtubei/v1/next?key=' + apiKey + '&prettyPrint=false', {
-            method: 'POST', credentials: 'include',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ context, videoId })
-          });
-          if (!nextResp.ok) return { ok: false, message: 'Failed to get video data: HTTP ' + nextResp.status };
-          const nextData = await nextResp.json();
-          const results = nextData.contents?.twoColumnWatchNextResults?.results?.results?.contents || [];
-          const commentSection = results.find(i => i.itemSectionRenderer?.targetId === 'comments-section');
-          continuationToken = commentSection?.itemSectionRenderer?.contents?.[0]?.continuationItemRenderer?.continuationEndpoint?.continuationCommand?.token;
-        }
-        if (!continuationToken) return { ok: false, message: 'No comment section found' };
-
-        // Step 2: Fetch comments to find the target comment's reply params
-        const contResp = await fetch('/youtubei/v1/next?key=' + apiKey + '&prettyPrint=false', {
-          method: 'POST', credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ context, continuation: continuationToken })
-        });
-        if (!contResp.ok) return { ok: false, message: 'Failed to fetch comments' };
-        const contData = await contResp.json();
-
-        // Search for createReplyParams in the comment thread renderers
-        let createReplyParams = null;
-        const endpoints = contData.onResponseReceivedEndpoints || [];
-        for (const ep of endpoints) {
-          const items = ep.reloadContinuationItemsCommand?.continuationItems
-            || ep.appendContinuationItemsAction?.continuationItems
-            || [];
-          for (const item of items) {
-            const thread = item.commentThreadRenderer;
-            if (!thread) continue;
-            // Check if this is the target comment by matching key/commentId
-            const viewModel = thread.commentViewModel?.commentViewModel;
-            const commentKey = thread.commentViewModel?.commentKey
-              || viewModel?.commentKey
-              || thread.comment?.commentRenderer?.commentId
-              || '';
-            // Try multiple ways to match the comment
-            if (commentKey === commentId || commentKey.includes(commentId)) {
-              const replyRenderer = thread.commentViewModel?.commentViewModel?.replyCommandParams
-                || thread.replies?.commentRepliesRenderer?.submitButton?.buttonRenderer?.serviceEndpoint?.createCommentReplyEndpoint?.createReplyParams;
-              if (replyRenderer) {
-                createReplyParams = replyRenderer;
-                break;
-              }
-            }
-          }
-          if (createReplyParams) break;
+        // Construct createReplyParams via protobuf encoding
+        // Schema: field 2 = videoId (string), field 4 = commentId (string), field 6 = 0 (varint), field 7 = 1 (varint)
+        function encodeVarint(val) {
+          var bytes = [];
+          while (val > 0x7f) { bytes.push((val & 0x7f) | 0x80); val >>>= 7; }
+          bytes.push(val & 0x7f);
+          return bytes;
         }
 
-        if (!createReplyParams) return { ok: false, message: 'Could not find reply params for comment ' + commentId + ' — try using a different comment_id format' };
+        function encodeString(fieldNum, str) {
+          var tag = encodeVarint((fieldNum << 3) | 2);
+          var encoded = new TextEncoder().encode(str);
+          var len = encodeVarint(encoded.length);
+          var result = new Uint8Array(tag.length + len.length + encoded.length);
+          result.set(tag, 0);
+          result.set(len, tag.length);
+          result.set(encoded, tag.length + len.length);
+          return result;
+        }
 
-        // Step 3: Post the reply
-        const resp = await fetch('/youtubei/v1/comment/create_comment_reply?key=' + apiKey + '&prettyPrint=false', {
+        function encodeVarintField(fieldNum, val) {
+          var tag = encodeVarint((fieldNum << 3) | 0);
+          var v = encodeVarint(val);
+          var result = new Uint8Array(tag.length + v.length);
+          result.set(tag, 0);
+          result.set(v, tag.length);
+          return result;
+        }
+
+        // field 2 = videoId, field 3 = parentCommentId, field 5 = 0, field 6 = 1
+        var parts = [
+          encodeString(2, videoId),
+          encodeString(3, commentId),
+          encodeVarintField(5, 0),
+          encodeVarintField(6, 1),
+        ];
+
+        var totalLen = parts.reduce(function(s, p) { return s + p.length; }, 0);
+        var buf = new Uint8Array(totalLen);
+        var offset = 0;
+        for (var p of parts) { buf.set(p, offset); offset += p.length; }
+        var createReplyParams = btoa(String.fromCharCode.apply(null, buf));
+
+        // Post the reply via create_comment endpoint (NOT create_comment_reply)
+        // YouTube accepts replies through create_comment when parentCommentId is in field 3
+        var resp = await fetch('/youtubei/v1/comment/create_comment?key=' + apiKey + '&prettyPrint=false', {
           method: 'POST', credentials: 'include',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             context,
             commentText: replyText,
-            createReplyParams,
+            createCommentParams: createReplyParams,
           })
         });
 
+        if (resp.status === 403) {
+          return { ok: false, message: 'No permission to reply — make sure you are logged into YouTube and can comment on this video' };
+        }
         if (!resp.ok) return { ok: false, message: 'Failed to post reply: HTTP ' + resp.status };
-        const data = await resp.json();
+
+        var data = await resp.json();
+        if (data.error) {
+          return { ok: false, message: data.error.message || 'YouTube API error' };
+        }
 
         if (data.actionResult?.status === 'STATUS_SUCCEEDED'
-          || data.actions?.some(a => a.createCommentReplyAction)) {
+          || data.actions?.length > 0) {
           return { ok: true, message: 'Reply posted successfully' };
         }
 

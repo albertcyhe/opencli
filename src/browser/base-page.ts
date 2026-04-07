@@ -22,6 +22,7 @@ import {
   autoScrollJs,
   networkRequestsJs,
   waitForDomStableJs,
+  waitForContentJs,
 } from './dom-helpers.js';
 import { formatSnapshot } from '../snapshotFormatter.js';
 
@@ -192,6 +193,13 @@ export abstract class BasePage implements IPage {
   async waitForCapture(timeout: number = 10): Promise<void> {
     const maxMs = timeout * 1000;
     await this.evaluate(waitForCaptureJs(maxMs));
+  }
+
+  async waitForContent(opts?: { minBodyLength?: number; timeout?: number }): Promise<boolean> {
+    const minLen = opts?.minBodyLength ?? 500;
+    const timeoutMs = (opts?.timeout ?? 15) * 1000;
+    const result = await this.evaluate(waitForContentJs(minLen, timeoutMs));
+    return result === true;
   }
 
   /** Fallback basic snapshot */

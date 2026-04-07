@@ -2332,38 +2332,6 @@
   },
   {
     "site": "facebook",
-    "name": "comment",
-    "description": "Post a comment on a Facebook post",
-    "domain": "www.facebook.com",
-    "strategy": "ui",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Facebook post URL"
-      },
-      {
-        "name": "text",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Comment text"
-      }
-    ],
-    "columns": [
-      "status",
-      "message",
-      "text"
-    ],
-    "type": "ts",
-    "modulePath": "facebook/comment.js",
-    "sourceFile": "facebook/comment.ts"
-  },
-  {
-    "site": "facebook",
     "name": "events",
     "description": "Browse Facebook event categories",
     "domain": "www.facebook.com",
@@ -2471,41 +2439,6 @@
     ],
     "type": "yaml",
     "sourceFile": "facebook/friends.yaml"
-  },
-  {
-    "site": "facebook",
-    "name": "get-comments",
-    "description": "Get comments on a Facebook post with reply-able IDs",
-    "domain": "www.facebook.com",
-    "strategy": "cookie",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "str",
-        "required": true,
-        "positional": true,
-        "help": "Facebook post URL"
-      },
-      {
-        "name": "limit",
-        "type": "int",
-        "default": 20,
-        "required": false,
-        "help": "Number of comments (max 50)"
-      }
-    ],
-    "columns": [
-      "rank",
-      "comment_id",
-      "author",
-      "text",
-      "likes",
-      "time"
-    ],
-    "type": "ts",
-    "modulePath": "facebook/get-comments.js",
-    "sourceFile": "facebook/get-comments.ts"
   },
   {
     "site": "facebook",
@@ -2687,46 +2620,6 @@
     ],
     "type": "yaml",
     "sourceFile": "facebook/profile.yaml"
-  },
-  {
-    "site": "facebook",
-    "name": "reply",
-    "description": "Reply to a specific Facebook comment",
-    "domain": "www.facebook.com",
-    "strategy": "ui",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Facebook post URL"
-      },
-      {
-        "name": "comment-id",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Comment ID from get-comments output"
-      },
-      {
-        "name": "text",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Reply text"
-      }
-    ],
-    "columns": [
-      "status",
-      "message",
-      "comment_id",
-      "text"
-    ],
-    "type": "ts",
-    "modulePath": "facebook/reply.js",
-    "sourceFile": "facebook/reply.ts"
   },
   {
     "site": "facebook",
@@ -3701,11 +3594,19 @@
     "browser": true,
     "args": [
       {
-        "name": "url",
+        "name": "username",
         "type": "str",
         "required": true,
         "positional": true,
-        "help": "Post URL (e.g. https://www.instagram.com/p/XXXXX/)"
+        "help": "Username of the post author"
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "default": 1,
+        "required": false,
+        "positional": false,
+        "help": "Post index (1 = most recent)"
       },
       {
         "name": "limit",
@@ -3730,7 +3631,7 @@
         "navigate": "https://www.instagram.com"
       },
       {
-        "evaluate": "(async () => {\n  const postUrl = ${{ args.url | json }};\n  const limit = ${{ args.limit }};\n  const headers = { 'X-IG-App-ID': '936619743392459' };\n  const opts = { credentials: 'include', headers };\n\n  // Extract shortcode from URL\n  const shortcodeMatch = postUrl.match(/\\/(p|reel|tv)\\/([A-Za-z0-9_-]+)/);\n  if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);\n  const shortcode = shortcodeMatch[2];\n\n  // Get media ID from shortcode\n  const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', opts);\n  if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);\n  const infoData = await infoResp.json();\n  const mediaPk = infoData.items?.[0]?.pk;\n  if (!mediaPk) throw new Error('Could not find media ID for shortcode ' + shortcode);\n\n  // Fetch comments\n  const commentsResp = await fetch('https://www.instagram.com/api/v1/media/' + mediaPk + '/comments/?can_support_threading=true&count=' + Math.min(limit, 50), opts);\n  if (!commentsResp.ok) throw new Error('Failed to get comments: HTTP ' + commentsResp.status);\n  const commentsData = await commentsResp.json();\n  const comments = commentsData.comments || [];\n\n  return comments.slice(0, limit).map(function(c, i) {\n    return {\n      rank: i + 1,\n      comment_id: String(c.pk),\n      author: c.user?.username || '',\n      text: (c.text || '').substring(0, 300),\n      likes: c.comment_like_count || 0,\n      replies_count: c.child_comment_count || 0,\n      time: c.created_at ? new Date(c.created_at * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',\n    };\n  });\n})()\n"
+        "evaluate": "(async () => {\n  const username = ${{ args.username | json }};\n  const idx = ${{ args.index }} - 1;\n  const limit = ${{ args.limit }};\n  const headers = { 'X-IG-App-ID': '936619743392459' };\n  const opts = { credentials: 'include', headers };\n\n  // Get user ID\n  const r1 = await fetch('https://www.instagram.com/api/v1/users/web_profile_info/?username=' + encodeURIComponent(username), opts);\n  if (!r1.ok) throw new Error('User not found: ' + username + ' (HTTP ' + r1.status + ')');\n  const userId = (await r1.json())?.data?.user?.id;\n  if (!userId) throw new Error('User ID not found for ' + username);\n\n  // Get user's posts to find the media pk\n  const r2 = await fetch('https://www.instagram.com/api/v1/feed/user/' + userId + '/?count=' + (idx + 1), opts);\n  if (!r2.ok) throw new Error('Failed to get user feed: HTTP ' + r2.status);\n  const posts = (await r2.json())?.items || [];\n  if (idx >= posts.length) throw new Error('Post index ' + (idx + 1) + ' not found (user has ' + posts.length + ' posts)');\n  const mediaPk = posts[idx].pk;\n\n  // Fetch comments\n  const r3 = await fetch('https://www.instagram.com/api/v1/media/' + mediaPk + '/comments/?can_support_threading=true&count=' + Math.min(limit, 50), opts);\n  if (!r3.ok) throw new Error('Failed to get comments: HTTP ' + r3.status);\n  const commentsData = await r3.json();\n  const comments = commentsData.comments || [];\n\n  return comments.slice(0, limit).map(function(c, i) {\n    return {\n      rank: i + 1,\n      comment_id: String(c.pk),\n      author: c.user?.username || '',\n      text: (c.text || '').substring(0, 300),\n      likes: c.comment_like_count || 0,\n      replies_count: c.child_comment_count || 0,\n      time: c.created_at ? new Date(c.created_at * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',\n    };\n  });\n})()\n"
       }
     ],
     "type": "yaml",
@@ -3847,11 +3748,11 @@
     "browser": true,
     "args": [
       {
-        "name": "post-url",
+        "name": "username",
         "type": "str",
         "required": true,
         "positional": true,
-        "help": "Post URL (e.g. https://www.instagram.com/p/XXXXX/)"
+        "help": "Username of the post author"
       },
       {
         "name": "comment-id",
@@ -3866,6 +3767,14 @@
         "required": true,
         "positional": true,
         "help": "Reply text"
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "default": 1,
+        "required": false,
+        "positional": false,
+        "help": "Post index (1 = most recent)"
       }
     ],
     "columns": [
@@ -3879,7 +3788,7 @@
         "navigate": "https://www.instagram.com"
       },
       {
-        "evaluate": "(async () => {\n  const postUrl = ${{ args['post-url'] | json }};\n  const commentId = ${{ args['comment-id'] | json }};\n  const replyText = ${{ args.text | json }};\n  const headers = { 'X-IG-App-ID': '936619743392459' };\n\n  // Extract shortcode from URL\n  const shortcodeMatch = postUrl.match(/\\/(p|reel|tv)\\/([A-Za-z0-9_-]+)/);\n  if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);\n  const shortcode = shortcodeMatch[2];\n\n  // Get media ID from shortcode\n  const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', { credentials: 'include', headers });\n  if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);\n  const infoData = await infoResp.json();\n  const mediaPk = infoData.items?.[0]?.pk;\n  if (!mediaPk) throw new Error('Could not find media ID');\n\n  // Get CSRF token\n  const csrf = document.cookie.match(/csrftoken=([^;]+)/)?.[1] || '';\n\n  // Post reply with replied_to_comment_id\n  const resp = await fetch('https://www.instagram.com/api/v1/web/comments/' + mediaPk + '/add/', {\n    method: 'POST',\n    credentials: 'include',\n    headers: {\n      ...headers,\n      'X-CSRFToken': csrf,\n      'Content-Type': 'application/x-www-form-urlencoded',\n    },\n    body: 'comment_text=' + encodeURIComponent(replyText) + '&replied_to_comment_id=' + encodeURIComponent(commentId),\n  });\n\n  if (!resp.ok) throw new Error('Failed to reply: HTTP ' + resp.status);\n  return [{ status: 'success', message: 'Reply posted', comment_id: commentId, text: replyText }];\n})()\n"
+        "evaluate": "(async () => {\n  const username = ${{ args.username | json }};\n  const commentId = ${{ args['comment-id'] | json }};\n  const replyText = ${{ args.text | json }};\n  const idx = ${{ args.index }} - 1;\n  const headers = { 'X-IG-App-ID': '936619743392459' };\n  const opts = { credentials: 'include', headers };\n\n  // Get user ID\n  const r1 = await fetch('https://www.instagram.com/api/v1/users/web_profile_info/?username=' + encodeURIComponent(username), opts);\n  if (!r1.ok) throw new Error('User not found: ' + username);\n  const userId = (await r1.json())?.data?.user?.id;\n\n  // Get user's posts\n  const r2 = await fetch('https://www.instagram.com/api/v1/feed/user/' + userId + '/?count=' + (idx + 1), opts);\n  const posts = (await r2.json())?.items || [];\n  if (idx >= posts.length) throw new Error('Post index ' + (idx + 1) + ' not found');\n  const mediaPk = posts[idx].pk;\n\n  // Get CSRF token\n  const csrf = document.cookie.match(/csrftoken=([^;]+)/)?.[1] || '';\n\n  // Post reply with replied_to_comment_id\n  const resp = await fetch('https://www.instagram.com/api/v1/web/comments/' + mediaPk + '/add/', {\n    method: 'POST',\n    credentials: 'include',\n    headers: {\n      ...headers,\n      'X-CSRFToken': csrf,\n      'Content-Type': 'application/x-www-form-urlencoded',\n    },\n    body: 'comment_text=' + encodeURIComponent(replyText) + '&replied_to_comment_id=' + encodeURIComponent(commentId),\n  });\n\n  if (!resp.ok) throw new Error('Failed to reply: HTTP ' + resp.status);\n  return [{ status: 'success', message: 'Reply posted', comment_id: commentId, text: replyText }];\n})()\n"
       }
     ],
     "type": "yaml",
@@ -4635,113 +4544,6 @@
   },
   {
     "site": "linkedin",
-    "name": "comment",
-    "description": "Post a comment on a LinkedIn post",
-    "domain": "www.linkedin.com",
-    "strategy": "ui",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "LinkedIn post URL"
-      },
-      {
-        "name": "text",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Comment text"
-      }
-    ],
-    "columns": [
-      "status",
-      "message",
-      "text"
-    ],
-    "type": "ts",
-    "modulePath": "linkedin/comment.js",
-    "sourceFile": "linkedin/comment.ts"
-  },
-  {
-    "site": "linkedin",
-    "name": "get-comments",
-    "description": "Get comments on a LinkedIn post with reply-able IDs",
-    "domain": "www.linkedin.com",
-    "strategy": "cookie",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "str",
-        "required": true,
-        "positional": true,
-        "help": "LinkedIn post URL (e.g. linkedin.com/feed/update/urn:li:activity:XXX/)"
-      },
-      {
-        "name": "limit",
-        "type": "int",
-        "default": 20,
-        "required": false,
-        "help": "Number of comments (max 50)"
-      }
-    ],
-    "columns": [
-      "rank",
-      "comment_id",
-      "author",
-      "text",
-      "likes",
-      "time"
-    ],
-    "type": "ts",
-    "modulePath": "linkedin/get-comments.js",
-    "sourceFile": "linkedin/get-comments.ts"
-  },
-  {
-    "site": "linkedin",
-    "name": "reply",
-    "description": "Reply to a specific LinkedIn comment",
-    "domain": "www.linkedin.com",
-    "strategy": "ui",
-    "browser": true,
-    "args": [
-      {
-        "name": "post-url",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "LinkedIn post URL"
-      },
-      {
-        "name": "comment-id",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Comment ID (URN from get-comments output)"
-      },
-      {
-        "name": "text",
-        "type": "string",
-        "required": true,
-        "positional": true,
-        "help": "Reply text"
-      }
-    ],
-    "columns": [
-      "status",
-      "message",
-      "comment_id",
-      "text"
-    ],
-    "type": "ts",
-    "modulePath": "linkedin/reply.js",
-    "sourceFile": "linkedin/reply.ts"
-  },
-  {
-    "site": "linkedin",
     "name": "search",
     "description": "Search LinkedIn jobs",
     "domain": "www.linkedin.com",
@@ -4825,41 +4627,6 @@
     "type": "ts",
     "modulePath": "linkedin/search.js",
     "sourceFile": "linkedin/search.ts"
-  },
-  {
-    "site": "linkedin",
-    "name": "search-posts",
-    "description": "Search LinkedIn posts",
-    "domain": "www.linkedin.com",
-    "strategy": "cookie",
-    "browser": true,
-    "args": [
-      {
-        "name": "query",
-        "type": "str",
-        "required": true,
-        "positional": true,
-        "help": "Search keyword"
-      },
-      {
-        "name": "limit",
-        "type": "int",
-        "default": 15,
-        "required": false,
-        "help": "Number of posts (max 50)"
-      }
-    ],
-    "columns": [
-      "rank",
-      "author",
-      "text",
-      "reactions",
-      "comments",
-      "url"
-    ],
-    "type": "ts",
-    "modulePath": "linkedin/search-posts.js",
-    "sourceFile": "linkedin/search-posts.ts"
   },
   {
     "site": "linkedin",
@@ -7324,12 +7091,12 @@
     "pipeline": [
       {
         "navigate": {
-          "url": "https://www.tiktok.com/explore",
-          "settleMs": 5000
+          "url": "${{ args.url }}",
+          "settleMs": 6000
         }
       },
       {
-        "evaluate": "(async () => {\n  const videoUrl = ${{ args.url | json }};\n  const limit = ${{ args.limit }};\n\n  // Extract video ID from URL\n  const idMatch = videoUrl.match(/\\/video\\/(\\d+)/);\n  if (!idMatch) throw new Error('Invalid TikTok video URL — expected /video/<id>');\n  const videoId = idMatch[1];\n\n  const res = await fetch('/api/comment/list/?aweme_id=' + videoId + '&cursor=0&count=' + Math.min(limit, 50) + '&aid=1988', { credentials: 'include' });\n  if (!res.ok) throw new Error('Comment API failed: HTTP ' + res.status);\n  const data = await res.json();\n  const comments = data.comments || [];\n\n  return comments.slice(0, limit).map(function(c, i) {\n    return {\n      rank: i + 1,\n      comment_id: c.cid || '',\n      author: c.user?.unique_id || c.user?.nickname || '',\n      text: (c.text || '').substring(0, 300),\n      likes: c.digg_count || 0,\n      replies_count: c.reply_comment_total || 0,\n      time: c.create_time ? new Date(c.create_time * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',\n    };\n  });\n})()\n"
+        "evaluate": "(async () => {\n  const videoUrl = ${{ args.url | json }};\n  const limit = ${{ args.limit }};\n  const wait = (ms) => new Promise(r => setTimeout(r, ms));\n\n  // Extract video ID from URL\n  const idMatch = videoUrl.match(/\\/video\\/(\\d+)/);\n  if (!idMatch) throw new Error('Invalid TikTok video URL — expected /video/<id>');\n  const videoId = idMatch[1];\n\n  // Try API first\n  try {\n    const res = await fetch('/api/comment/list/?aweme_id=' + videoId + '&cursor=0&count=' + Math.min(limit, 50) + '&aid=1988', { credentials: 'include' });\n    if (res.ok) {\n      const data = await res.json();\n      const comments = data.comments || [];\n      if (comments.length > 0) {\n        return comments.slice(0, limit).map(function(c, i) {\n          return {\n            rank: i + 1,\n            comment_id: c.cid || '',\n            author: c.user?.unique_id || c.user?.nickname || '',\n            text: (c.text || '').substring(0, 300),\n            likes: c.digg_count || 0,\n            replies_count: c.reply_comment_total || 0,\n            time: c.create_time ? new Date(c.create_time * 1000).toISOString().replace('T', ' ').substring(0, 19) : '',\n          };\n        });\n      }\n    }\n  } catch (e) {\n    // API failed, fall back to DOM scraping\n  }\n\n  // Fallback: DOM scraping\n  // Click comment icon to expand\n  const commentIcon = document.querySelector('[data-e2e=\"comment-icon\"]');\n  if (commentIcon) {\n    const cBtn = commentIcon.closest('button') || commentIcon.closest('[role=\"button\"]') || commentIcon;\n    cBtn.click();\n    await wait(3000);\n  }\n\n  const commentEls = document.querySelectorAll('[data-e2e=\"comment-level-1\"]');\n  const results = [];\n  for (let i = 0; i < Math.min(commentEls.length, limit); i++) {\n    const el = commentEls[i];\n    // Try to extract comment ID from data attributes\n    let cid = '';\n    for (const attr of el.attributes) {\n      const m = String(attr.value).match(/^\\d{10,}$/);\n      if (m) { cid = m[0]; break; }\n    }\n    if (!cid) cid = 'tiktok-comment-' + (i + 1);\n\n    const userEl = el.querySelector('[data-e2e=\"comment-username-1\"]') || el.querySelector('a[href*=\"/@\"]');\n    const textEl = el.querySelector('[data-e2e=\"comment-level-1\"] p') || el.querySelector('p');\n    const likeEl = el.querySelector('[data-e2e=\"comment-like-count\"]');\n\n    results.push({\n      rank: i + 1,\n      comment_id: cid,\n      author: userEl ? userEl.textContent.trim() : '',\n      text: textEl ? textEl.textContent.trim().substring(0, 300) : '',\n      likes: likeEl ? parseInt(likeEl.textContent.replace(/[^0-9]/g, '') || '0', 10) : 0,\n      replies_count: 0,\n      time: '',\n    });\n  }\n  return results;\n})()\n"
       }
     ],
     "type": "yaml",
@@ -7525,6 +7292,18 @@
         "required": true,
         "positional": true,
         "help": "Reply text"
+      },
+      {
+        "name": "comment-text",
+        "type": "string",
+        "required": false,
+        "help": "Comment text for fuzzy matching if ID fails"
+      },
+      {
+        "name": "comment-author",
+        "type": "string",
+        "required": false,
+        "help": "Comment author for fuzzy matching if ID fails"
       }
     ],
     "columns": [

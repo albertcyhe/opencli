@@ -4,11 +4,15 @@ description: Get comments on an Instagram post with reply-able IDs
 domain: www.instagram.com
 
 args:
-  url:
+  username:
     type: str
     required: true
     positional: true
-    description: Post URL (e.g. https://www.instagram.com/p/XXXXX/)
+    description: Username of the post author
+  index:
+    type: int
+    default: 1
+    description: Post index (1 = most recent)
   limit:
     type: int
     default: 20
@@ -19,27 +23,29 @@ pipeline:
 
   - evaluate: |
       (async () => {
-        const postUrl = ${{ args.url | json }};
+        const username = ${{ args.username | json }};
+        const idx = ${{ args.index }} - 1;
         const limit = ${{ args.limit }};
         const headers = { 'X-IG-App-ID': '936619743392459' };
         const opts = { credentials: 'include', headers };
 
-        // Extract shortcode from URL
-        const shortcodeMatch = postUrl.match(/\/(p|reel|tv)\/([A-Za-z0-9_-]+)/);
-        if (!shortcodeMatch) throw new Error('Invalid Instagram post URL: ' + postUrl);
-        const shortcode = shortcodeMatch[2];
+        // Get user ID
+        const r1 = await fetch('https://www.instagram.com/api/v1/users/web_profile_info/?username=' + encodeURIComponent(username), opts);
+        if (!r1.ok) throw new Error('User not found: ' + username + ' (HTTP ' + r1.status + ')');
+        const userId = (await r1.json())?.data?.user?.id;
+        if (!userId) throw new Error('User ID not found for ' + username);
 
-        // Get media ID from shortcode
-        const infoResp = await fetch('https://www.instagram.com/api/v1/media/' + shortcode + '/info/', opts);
-        if (!infoResp.ok) throw new Error('Failed to get media info: HTTP ' + infoResp.status);
-        const infoData = await infoResp.json();
-        const mediaPk = infoData.items?.[0]?.pk;
-        if (!mediaPk) throw new Error('Could not find media ID for shortcode ' + shortcode);
+        // Get user's posts to find the media pk
+        const r2 = await fetch('https://www.instagram.com/api/v1/feed/user/' + userId + '/?count=' + (idx + 1), opts);
+        if (!r2.ok) throw new Error('Failed to get user feed: HTTP ' + r2.status);
+        const posts = (await r2.json())?.items || [];
+        if (idx >= posts.length) throw new Error('Post index ' + (idx + 1) + ' not found (user has ' + posts.length + ' posts)');
+        const mediaPk = posts[idx].pk;
 
         // Fetch comments
-        const commentsResp = await fetch('https://www.instagram.com/api/v1/media/' + mediaPk + '/comments/?can_support_threading=true&count=' + Math.min(limit, 50), opts);
-        if (!commentsResp.ok) throw new Error('Failed to get comments: HTTP ' + commentsResp.status);
-        const commentsData = await commentsResp.json();
+        const r3 = await fetch('https://www.instagram.com/api/v1/media/' + mediaPk + '/comments/?can_support_threading=true&count=' + Math.min(limit, 50), opts);
+        if (!r3.ok) throw new Error('Failed to get comments: HTTP ' + r3.status);
+        const commentsData = await r3.json();
         const comments = commentsData.comments || [];
 
         return comments.slice(0, limit).map(function(c, i) {

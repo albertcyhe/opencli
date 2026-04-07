@@ -236,3 +236,27 @@ export function waitForSelectorJs(selector: string, timeoutMs: number): string {
     })
   `;
 }
+
+/**
+ * Generate JS to wait until document.body.innerText reaches a minimum length.
+ * Uses MutationObserver + polling for reliable SPA content-ready detection.
+ * Resolves true when content is ready, false on timeout (does not reject).
+ */
+export function waitForContentJs(minBodyLength: number, timeoutMs: number): string {
+  return `
+    new Promise(resolve => {
+      const minLen = ${minBodyLength};
+      const deadline = Date.now() + ${timeoutMs};
+      const check = () => {
+        if ((document.body?.innerText || '').length >= minLen) return resolve(true);
+        if (Date.now() > deadline) return resolve(false);
+        setTimeout(check, 500);
+      };
+      if ((document.body?.innerText || '').length >= minLen) return resolve(true);
+      const obs = new MutationObserver(check);
+      obs.observe(document.body || document.documentElement, { childList: true, subtree: true });
+      check();
+      setTimeout(() => { obs.disconnect(); resolve(false); }, ${timeoutMs});
+    })
+  `;
+}
