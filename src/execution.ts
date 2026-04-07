@@ -23,6 +23,7 @@ import { checkDaemonStatus } from './browser/discover.js';
 import { log } from './logger.js';
 import { isElectronApp } from './electron-apps.js';
 import { probeCDP, resolveElectronEndpoint } from './launcher.js';
+import { resolveSessionId, validateSession } from './browserbase.js';
 
 const _loadedModules = new Set<string>();
 
@@ -159,9 +160,16 @@ export async function executeCommand(
     if (shouldUseBrowserSession(cmd)) {
       const electron = isElectronApp(cmd.site);
       let cdpEndpoint: string | undefined;
+      let useCDP = false;
 
-      if (electron) {
-        // Electron apps: respect manual endpoint override, then try auto-detect
+      // Priority 1: Browserbase session (--session or BROWSERBASE_SESSION_ID)
+      const sessionId = resolveSessionId(kwargs.session as string | undefined);
+      if (sessionId) {
+        const session = await validateSession(sessionId);
+        cdpEndpoint = session.connectUrl;
+        useCDP = true;
+      } else if (electron) {
+        // Priority 2: Electron apps — respect manual endpoint override, then auto-detect
         const manualEndpoint = process.env.OPENCLI_CDP_ENDPOINT;
         if (manualEndpoint) {
           const port = Number(new URL(manualEndpoint).port);
@@ -175,8 +183,13 @@ export async function executeCommand(
         } else {
           cdpEndpoint = await resolveElectronEndpoint(cmd.site);
         }
+      } else if (process.env.OPENCLI_CDP_ENDPOINT) {
+        // Priority 3: Manual CDP endpoint
+        cdpEndpoint = process.env.OPENCLI_CDP_ENDPOINT;
+        useCDP = true;
       } else {
-        // Browser Bridge: fail-fast when daemon is up but extension is missing.
+        // Priority 4: Browser Bridge (default)
+        // Fail-fast when daemon is up but extension is missing.
         // 300ms timeout avoids a full 2s wait on cold-start.
         const status = await checkDaemonStatus({ timeout: 300 });
         if (status.running && !status.extensionConnected) {
@@ -191,7 +204,7 @@ export async function executeCommand(
       }
 
       ensureRequiredEnv(cmd);
-      const BrowserFactory = getBrowserFactory(cmd.site);
+      const BrowserFactory = getBrowserFactory(cmd.site, { useCDP });
       result = await browserSession(BrowserFactory, async (page) => {
         const preNavUrl = resolvePreNav(cmd);
         if (preNavUrl) {

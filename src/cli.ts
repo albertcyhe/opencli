@@ -43,7 +43,8 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
     .name('opencli')
     .description('Make any website your CLI. Zero setup. AI-powered.')
     .version(PKG_VERSION)
-    .enablePositionalOptions();
+    .enablePositionalOptions()
+    .option('--session <id>', 'Browserbase session ID (or set BROWSERBASE_SESSION_ID env var)');
 
   // ── Built-in: list ────────────────────────────────────────────────────────
 

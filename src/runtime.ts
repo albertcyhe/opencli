@@ -4,10 +4,12 @@ import { TimeoutError } from './errors.js';
 import { isElectronApp } from './electron-apps.js';
 
 /**
- * Returns the appropriate browser factory based on site type.
- * Uses CDPBridge for registered Electron apps, otherwise BrowserBridge.
+ * Returns the appropriate browser factory based on site type and session config.
+ * Priority: Browserbase session → CDP endpoint → Electron app → BrowserBridge.
  */
-export function getBrowserFactory(site?: string): new () => IBrowserFactory {
+export function getBrowserFactory(site?: string, opts?: { useCDP?: boolean }): new () => IBrowserFactory {
+  if (opts?.useCDP) return CDPBridge;
+  if (process.env.OPENCLI_CDP_ENDPOINT) return CDPBridge;
   if (site && isElectronApp(site)) return CDPBridge;
   return BrowserBridge;
 }

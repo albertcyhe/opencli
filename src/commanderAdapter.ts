@@ -96,6 +96,13 @@ export function registerCommandToProgram(siteCmd: Command, cmd: CliCommand): voi
       }
       cmd.validateArgs?.(kwargs);
 
+      // Pass global --session option to kwargs for Browserbase support
+      // Walk up the command chain to find the root program's options
+      let root: Command | null = subCmd;
+      while (root?.parent) root = root.parent;
+      const globalOpts = root?.opts?.() ?? {};
+      if (globalOpts.session) kwargs.session = globalOpts.session;
+
       const verbose = optionsRecord.verbose === true;
       let format = typeof optionsRecord.format === 'string' ? optionsRecord.format : 'table';
       const formatExplicit = subCmd.getOptionValueSource('format') === 'cli';
