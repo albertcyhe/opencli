@@ -116,11 +116,17 @@ cli({
         document.execCommand('insertText', false, replyText);
         await wait(1000);
 
-        // Click post button
-        const btns = Array.from(document.querySelectorAll('[data-e2e="comment-post"], button'));
+        // Limit submit lookup to the active composer so we do not hit another visible Reply action.
+        const composerRoot = input.closest('[data-e2e="comment-input"]')
+          || input.parentElement
+          || document;
+        const btns = Array.from(composerRoot.querySelectorAll('[data-e2e="comment-post"], button'));
         const postBtn = btns.find(function(b) {
-          var t = b.textContent.trim();
-          return t === 'Post' || t === '发布' || t === '发送' || t === 'Reply';
+          var t = (b.textContent || '').trim();
+          return b.getAttribute('data-e2e') === 'comment-post'
+            || t === 'Post'
+            || t === '发布'
+            || t === '发送';
         });
 
         if (!postBtn) {

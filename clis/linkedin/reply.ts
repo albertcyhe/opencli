@@ -125,12 +125,16 @@ cli({
         document.execCommand('insertText', false, replyText);
         await wait(1000);
 
-        // Find and click submit
-        var submitBtns = Array.from(document.querySelectorAll('button'));
+        // Limit submit lookup to the active reply composer so we do not re-click another Reply action.
+        var composerRoot = input.closest('form')
+          || input.closest('.comments-comment-box--is-reply')
+          || input.closest('.comments-comment-box')
+          || input.parentElement;
+        var submitBtns = Array.from((composerRoot || document).querySelectorAll('button, [role="button"]'));
         var submitBtn = submitBtns.find(function(b) {
           var t = (b.textContent || '').trim().toLowerCase();
           var label = (b.getAttribute('aria-label') || '').toLowerCase();
-          return (t === 'post' || t === 'reply' || t === '发布' || label.includes('post reply'))
+          return (t === 'post' || t === 'reply' || t === '发布' || label.includes('post reply') || label.includes('reply'))
             && !b.disabled;
         });
 

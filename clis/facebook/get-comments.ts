@@ -59,8 +59,7 @@ cli({
 
       // Filter to only comment-level articles (those nested inside another article)
       var commentArticles = articles.filter(function(el) {
-        return el.closest('[role="article"]') !== el
-          && el.parentElement?.closest('[role="article"]') !== null;
+        return Boolean(el.parentElement && el.parentElement.closest('[role="article"]'));
       });
 
       // If no nested articles found, try different selector strategy

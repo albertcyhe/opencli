@@ -46,12 +46,16 @@ cli({
         document.execCommand('insertText', false, commentText);
         await wait(1000);
 
-        // Find and click the submit/post button
-        const btns = Array.from(document.querySelectorAll('button'));
+        // Limit submit lookup to the active composer so we do not re-click the action-bar comment button.
+        const composerRoot = input.closest('form')
+          || input.closest('.comments-comment-box__form')
+          || input.closest('.comments-comment-box')
+          || input.parentElement;
+        const btns = Array.from((composerRoot || document).querySelectorAll('button, [role="button"]'));
         const postBtn = btns.find(b => {
           const t = (b.textContent || '').trim().toLowerCase();
           const label = (b.getAttribute('aria-label') || '').toLowerCase();
-          return (t === 'post' || t === 'comment' || t === '发布' || label.includes('post comment'))
+          return (t === 'post' || t === 'comment' || t === '发布' || label.includes('post comment') || label.includes('comment'))
             && !b.disabled;
         });
 
