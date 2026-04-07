@@ -27,7 +27,7 @@ cli({
     { name: 'limit', type: 'int', default: 20, help: 'Number of top-level comments (max 50)' },
     { name: 'with-replies', type: 'boolean', default: false, help: 'Include nested replies (楼中楼)' },
   ],
-  columns: ['rank', 'author', 'text', 'likes', 'time', 'is_reply', 'reply_to'],
+  columns: ['rank', 'comment_id', 'author', 'text', 'likes', 'time', 'is_reply', 'reply_to'],
   func: async (page, kwargs) => {
     const limit = parseCommentLimit(kwargs.limit);
     const withReplies = Boolean(kwargs['with-replies']);
@@ -93,7 +93,22 @@ cli({
           const time = clean(item.querySelector('.date, .time'))
 
           if (!text) continue
-          results.push({ author, text, likes, time, is_reply: false, reply_to: '' })
+          // Extract comment ID from DOM attributes or data-* attributes
+          let commentId = ''
+          const allAttrs = Array.from(p.attributes || [])
+          for (const attr of allAttrs) {
+            const m = String(attr.value).match(/^[a-f0-9]{24}$/)
+            if (m) { commentId = m[0]; break }
+          }
+          if (!commentId && item) {
+            const itemAttrs = Array.from(item.attributes || [])
+            for (const attr of itemAttrs) {
+              const m = String(attr.value).match(/[a-f0-9]{24}/)
+              if (m) { commentId = m[0]; break }
+            }
+          }
+          if (!commentId) commentId = 'xhs-comment-' + (results.length + 1)
+          results.push({ comment_id: commentId, author, text, likes, time, is_reply: false, reply_to: '' })
 
           // Extract nested replies (楼中楼)
           if (withReplies) {
@@ -104,7 +119,14 @@ cli({
               const sLikes = parseLikes(sub.querySelector('.count'))
               const sTime = clean(sub.querySelector('.date, .time'))
               if (!sText) return
-              results.push({ author: sAuthor, text: sText, likes: sLikes, time: sTime, is_reply: true, reply_to: author })
+              let sCommentId = ''
+              const sAttrs = Array.from(sub.attributes || [])
+              for (const attr of sAttrs) {
+                const m = String(attr.value).match(/[a-f0-9]{24}/)
+                if (m) { sCommentId = m[0]; break }
+              }
+              if (!sCommentId) sCommentId = 'xhs-reply-' + (results.length + 1)
+              results.push({ comment_id: sCommentId, author: sAuthor, text: sText, likes: sLikes, time: sTime, is_reply: true, reply_to: author })
             })
           }
         }

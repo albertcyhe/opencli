@@ -126,12 +126,16 @@ git clone git@github.com:jackwener/opencli.git && cd opencli && npm install && n
 
 | Site | Commands |
 |------|----------|
-| **xiaohongshu** | `search` `note` `comments` `feed` `user` `download` `publish` `notifications` `creator-notes` `creator-notes-summary` `creator-note-detail` `creator-profile` `creator-stats` |
-| **bilibili** | `hot` `search` `history` `feed` `ranking` `download` `comments` `dynamic` `favorite` `following` `me` `subtitle` `user-videos` |
+| **xiaohongshu** | `search` `note` `comments` `reply` `feed` `user` `download` `publish` `notifications` `creator-notes` `creator-notes-summary` `creator-note-detail` `creator-profile` `creator-stats` |
+| **bilibili** | `hot` `search` `history` `feed` `ranking` `download` `comments` `reply` `dynamic` `favorite` `following` `me` `subtitle` `user-videos` |
+| **douyin** | `videos` `get-comments` `reply` `publish` `profile` `hashtag` `location` `stats` `drafts` `draft` `delete` `update` `activities` `collections` `user-videos` |
 | **tieba** | `hot` `posts` `search` `read` |
 | **hupu** | `hot` `search` `detail` `mentions` `reply` `like` `unlike` |
-| **twitter** | `trending` `search` `timeline` `bookmarks` `post` `download` `profile` `article` `like` `likes` `notifications` `reply` `reply-dm` `thread` `follow` `unfollow` `followers` `following` `block` `unblock` `bookmark` `unbookmark` `delete` `hide-reply` `accept` |
-| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `user` `user-posts` `user-comments` `upvote` `upvoted` `save` `saved` `comment` `subscribe` |
+| **twitter** | `trending` `search` `timeline` `bookmarks` `post` `download` `profile` `article` `like` `likes` `notifications` `reply` `reply-dm` `thread` `get-comments` `follow` `unfollow` `followers` `following` `block` `unblock` `bookmark` `unbookmark` `delete` `hide-reply` `accept` |
+| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `reply` `user` `user-posts` `user-comments` `upvote` `upvoted` `save` `saved` `comment` `subscribe` |
+| **youtube** | `search` `video` `channel` `comments` `reply` `reply-comment` `transcript` `transcript-group` |
+| **instagram** | `search` `search-posts` `profile` `get-comments` `reply` `comment` `like` `follow` `save` `unlike` `unfollow` `unsave` `download` `post` `story` `reel` `note` `explore` `saved` `followers` `following` `user` |
+| **tiktok** | `search` `get-comments` `reply` `comment` `like` `follow` `save` `unlike` `unfollow` `unsave` `profile` `user` `explore` `notifications` `followers` `following` `friends` `live` |
 | **amazon** | `bestsellers` `search` `product` `offer` `discussion` `movers-shakers` `new-releases` |
 | **1688** | `search` `item` `assets` `download` `store` |
 | **gemini** | `new` `ask` `image` `deep-research` `deep-research-result` |

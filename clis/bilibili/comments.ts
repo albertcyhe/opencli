@@ -16,7 +16,7 @@ cli({
     { name: 'bvid', required: true, positional: true, help: 'Video BV ID (e.g. BV1WtAGzYEBm)' },
     { name: 'limit', type: 'int', default: 20, help: 'Number of comments (max 50)' },
   ],
-  columns: ['rank', 'author', 'text', 'likes', 'replies', 'time'],
+  columns: ['rank', 'comment_id', 'author', 'text', 'likes', 'replies', 'time'],
   func: async (page, kwargs) => {
     const bvid = await resolveBvid(kwargs.bvid);
     const limit = Math.min(Number(kwargs.limit) || 20, 50);
@@ -34,6 +34,7 @@ cli({
     const replies: any[] = payload?.data?.replies ?? [];
     return replies.slice(0, limit).map((r: any, i: number) => ({
       rank: i + 1,
+      comment_id: String(r.rpid ?? ''),
       author: r.member?.uname ?? '',
       text: (r.content?.message ?? '').replace(/\n/g, ' ').trim(),
       likes: r.like ?? 0,

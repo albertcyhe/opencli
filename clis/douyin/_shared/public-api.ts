@@ -2,10 +2,14 @@ import type { IPage } from '@jackwener/opencli/types';
 import { browserFetch } from './browser-fetch.js';
 
 export interface DouyinComment {
+  cid?: string;
   text?: string;
   digg_count?: number;
+  reply_comment_total?: number;
+  create_time?: number;
   user?: {
     nickname?: string;
+    sec_uid?: string;
   };
 }
 
@@ -59,7 +63,7 @@ export async function fetchDouyinComments(
   page: IPage,
   awemeId: string,
   count: number,
-): Promise<Array<{ text: string; digg_count: number; nickname: string }>> {
+): Promise<Array<{ cid: string; text: string; digg_count: number; reply_comment_total: number; create_time: number; nickname: string }>> {
   const params = new URLSearchParams({
     aweme_id: awemeId,
     count: String(count),
@@ -77,8 +81,11 @@ export async function fetchDouyinComments(
   ) as DouyinCommentListResponse;
 
   return (data.comments || []).slice(0, count).map((comment) => ({
+    cid: comment.cid || '',
     text: comment.text || '',
     digg_count: comment.digg_count ?? 0,
+    reply_comment_total: comment.reply_comment_total ?? 0,
+    create_time: comment.create_time ?? 0,
     nickname: comment.user?.nickname || '',
   }));
 }

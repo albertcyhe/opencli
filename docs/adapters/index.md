@@ -6,16 +6,16 @@ Run `opencli list` for the live registry.
 
 | Site | Commands | Mode |
 |------|----------|------|
-| **[twitter](./browser/twitter)** | `trending` `bookmarks` `profile` `search` `timeline` `thread` `following` `followers` `notifications` `post` `reply` `delete` `like` `likes` `article` `follow` `unfollow` `bookmark` `unbookmark` `download` `accept` `reply-dm` `block` `unblock` `hide-reply` | 🔐 Browser |
-| **[reddit](./browser/reddit)** | `hot` `frontpage` `popular` `search` `subreddit` `read` `user` `user-posts` `user-comments` `upvote` `save` `comment` `subscribe` `saved` `upvoted` | 🔐 Browser |
+| **[twitter](./browser/twitter)** | `trending` `bookmarks` `profile` `search` `timeline` `thread` `get-comments` `following` `followers` `notifications` `post` `reply` `delete` `like` `likes` `article` `follow` `unfollow` `bookmark` `unbookmark` `download` `accept` `reply-dm` `block` `unblock` `hide-reply` | 🔐 Browser |
+| **[reddit](./browser/reddit)** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `reply` `user` `user-posts` `user-comments` `upvote` `save` `comment` `subscribe` `saved` `upvoted` | 🔐 Browser |
 | **[tieba](./browser/tieba)** | `hot` `posts` `search` `read` | 🔐 Browser |
 | **[hupu](./browser/hupu)** | `hot` `search` `detail` `mentions` `reply` `like` `unlike` | 🌐 / 🔐 |
-| **[bilibili](./browser/bilibili)** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `dynamic` `ranking` `following` `user-videos` `download` | 🔐 Browser |
+| **[bilibili](./browser/bilibili)** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `dynamic` `ranking` `following` `user-videos` `download` `comments` `reply` | 🔐 Browser |
 | **[zhihu](./browser/zhihu)** | `hot` `search` `question` `download` | 🔐 Browser |
-| **[xiaohongshu](./browser/xiaohongshu)** | `search` `notifications` `feed` `user` `note` `comments` `download` `publish` `creator-notes` `creator-note-detail` `creator-notes-summary` `creator-profile` `creator-stats` | 🔐 Browser |
+| **[xiaohongshu](./browser/xiaohongshu)** | `search` `notifications` `feed` `user` `note` `comments` `reply` `download` `publish` `creator-notes` `creator-note-detail` `creator-notes-summary` `creator-profile` `creator-stats` | 🔐 Browser |
 | **[xiaoe](./browser/xiaoe)** | `courses` `detail` `catalog` `play-url` `content` | 🔐 Browser |
 | **[xueqiu](./browser/xueqiu)** | `feed` `hot-stock` `hot` `search` `stock` `comments` `watchlist` `earnings-date` `fund-holdings` `fund-snapshot` | 🔐 Browser |
-| **[youtube](./browser/youtube)** | `search` `video` `transcript` | 🔐 Browser |
+| **[youtube](./browser/youtube)** | `search` `video` `comments` `reply` `reply-comment` `transcript` `transcript-group` `channel` | 🔐 Browser |
 | **[v2ex](./browser/v2ex)** | `hot` `latest` `topic` `node` `user` `member` `replies` `nodes` `daily` `me` `notifications` | 🌐 / 🔐 |
 | **[bloomberg](./browser/bloomberg)** | `main` `markets` `economics` `industries` `tech` `politics` `businessweek` `opinions` `feeds` `news` | 🌐 / 🔐 |
 | **[weibo](./browser/weibo)** | `hot` `search` `feed` `user` `me` `post` `comments` | 🔐 Browser |
@@ -39,12 +39,12 @@ Run `opencli list` for the live registry.
 | **[douban](./browser/douban)** | `search` `top250` `subject` `photos` `download` `marks` `reviews` `movie-hot` `book-hot` | 🔐 Browser |
 | **[facebook](./browser/facebook)** | `feed` `profile` `search` `friends` `groups` `events` `notifications` `memories` `add-friend` `join-group` | 🔐 Browser |
 | **[imdb](./browser/imdb)** | `search` `title` `top` `trending` `person` `reviews` | 🌐 / 🔐 |
-| **[instagram](./browser/instagram)** | `explore` `profile` `search` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `save` `unsave` `saved` | 🔐 Browser |
+| **[instagram](./browser/instagram)** | `explore` `profile` `search` `search-posts` `get-comments` `reply` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `save` `unsave` `saved` `download` `post` `story` `reel` `note` | 🔐 Browser |
 | **[medium](./browser/medium)** | `feed` `search` `user` | 🔐 Browser |
 | **[sinablog](./browser/sinablog)** | `hot` `search` `article` `user` | 🔐 Browser |
 | **[substack](./browser/substack)** | `feed` `search` `publication` | 🔐 Browser |
 | **[pixiv](./browser/pixiv)** | `ranking` `search` `user` `illusts` `detail` `download` | 🔐 Browser |
-| **[tiktok](./browser/tiktok)** | `explore` `search` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `save` `unsave` `live` `notifications` `friends` | 🔐 Browser |
+| **[tiktok](./browser/tiktok)** | `explore` `search` `get-comments` `reply` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `save` `unsave` `live` `notifications` `friends` `followers` | 🔐 Browser |
 | **[google](./browser/google)** | `news` `search` `suggest` `trends` | 🌐 / 🔐 |
 | **[jd](./browser/jd)** | `item` | 🔐 Browser |
 | **[amazon](./browser/amazon)** | `bestsellers` `search` `product` `offer` `discussion` `movers-shakers` `new-releases` | 🔐 Browser |
@@ -57,7 +57,7 @@ Run `opencli list` for the live registry.
 | **[band](./browser/band)** | `bands` `posts` `post` `mentions` | 🔐 Browser |
 | **[zsxq](./browser/zsxq)** | `groups` `dynamics` `topics` `topic` `search` | 🔐 Browser |
 | **[bluesky](./browser/bluesky)** | `search` `profile` `user` `feeds` `followers` `following` `thread` `trending` `starter-packs` | 🌐 Public |
-| **[douyin](./browser/douyin)** | `profile` `videos` `user-videos` `activities` `collections` `hashtag` `location` `stats` `publish` `draft` `drafts` `delete` `update` | 🔐 Browser |
+| **[douyin](./browser/douyin)** | `profile` `videos` `get-comments` `reply` `user-videos` `activities` `collections` `hashtag` `location` `stats` `publish` `draft` `drafts` `delete` `update` | 🔐 Browser |
 | **[xianyu](./browser/xianyu)** | `search` `item` `chat` | 🔐 Browser |
 
 ## Public API Adapters
