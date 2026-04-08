@@ -77,6 +77,24 @@ Point your AI agent (Claude Code, Cursor) to [`skills/opencli-operate/SKILL.md`]
 
 Available commands: `open`, `state`, `click`, `type`, `select`, `keys`, `wait`, `get`, `screenshot`, `scroll`, `back`, `eval`, `network`, `init`, `verify`, `close`.
 
+### 5. Remote Browser (Browserbase)
+
+Run commands on cloud browsers via [Browserbase](https://browserbase.com) — supports multiple sessions with different proxies and logged-in accounts:
+
+```bash
+# Install bb CLI and set API key
+export BROWSERBASE_API_KEY=your_key
+
+# Create a session (with optional proxy/context)
+bb sessions create --json
+
+# Run opencli commands on the remote browser
+opencli --session <session-id> reddit get-comments <post-id>
+opencli --session <session-id> bilibili comments BV1xxx
+```
+
+Session creation, proxy configuration, and persistent login contexts are managed by `bb` CLI. OpenCLI validates the session and connects via CDP WebSocket.
+
 ### Update
 
 ```bash

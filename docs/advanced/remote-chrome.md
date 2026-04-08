@@ -47,6 +47,78 @@ curl http://127.0.0.1:9222/json/version
 opencli doctor
 ```
 
+## Browserbase (Cloud Browser)
+
+[Browserbase](https://browserbase.com) provides managed cloud browsers with proxy support, persistent login contexts, and stealth mode.
+
+### Setup
+
+```bash
+# Install bb CLI and configure API key
+export BROWSERBASE_API_KEY=your_key
+export BROWSERBASE_PROJECT_ID=your_project_id
+```
+
+### Create a Session
+
+Use `bb` CLI to create sessions with the configuration you need:
+
+```bash
+# Basic session
+bb sessions create --json
+
+# With US proxy
+bb sessions create --proxy us --json
+
+# With persistent login context (preserves cookies across sessions)
+bb contexts create --json          # One-time: create a context
+bb sessions create --context <context-id> --json  # Use the context
+```
+
+### Run OpenCLI Commands
+
+```bash
+# Via --session flag
+opencli --session <session-id> reddit get-comments <post-id> --limit 5
+
+# Or via environment variable
+export BROWSERBASE_SESSION_ID=<session-id>
+opencli bilibili comments BV1xxx --limit 5
+```
+
+### Multi-Session Parallel Execution
+
+```bash
+# Create sessions with different proxies/accounts
+S1=$(bb sessions create --proxy us --context ctx-reddit --json | jq -r .id)
+S2=$(bb sessions create --proxy jp --context ctx-bilibili --json | jq -r .id)
+
+# Run in parallel
+opencli --session $S1 reddit get-comments <post> &
+opencli --session $S2 bilibili comments BV1xxx &
+wait
+
+# Release sessions when done
+bb sessions release $S1
+bb sessions release $S2
+```
+
+### Error Handling
+
+OpenCLI validates sessions before connecting. If a session is missing or expired, it provides actionable guidance:
+
+```
+Browserbase session "abc123" not found.
+  Create one with: bb sessions create
+```
+
+### Notes
+
+- OpenCLI only consumes sessions — all session/proxy/context management is done via `bb` CLI
+- Priority: `--session` > `BROWSERBASE_SESSION_ID` > `OPENCLI_CDP_ENDPOINT` > local BrowserBridge
+- Without `--session` or `BROWSERBASE_SESSION_ID`, behavior is unchanged (uses local browser)
+- Persistent contexts save cookies/localStorage — log in once, reuse across sessions
+
 ## CI/CD Integration
 
 For CI/CD environments, use a real Chrome instance with `xvfb`:

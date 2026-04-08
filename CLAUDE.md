@@ -51,9 +51,20 @@ Fast path loads pre-compiled `cli-manifest.json` for instant YAML registration w
 
 `IPage` interface (src/types.ts) abstracts browser interaction. Two implementations:
 - **BrowserBridge**: Chrome extension + local daemon (WebSocket on port 19825) for logged-in sessions
-- **CDPBridge**: Direct Chrome DevTools Protocol for Electron apps
+- **CDPBridge**: Direct Chrome DevTools Protocol for Electron apps and remote browsers
 
 Anti-detection stealth patches in `src/browser/stealth.ts`.
+
+### Browserbase (Remote Browser)
+
+OpenCLI supports running commands on [Browserbase](https://browserbase.com) cloud browsers. OpenCLI is a consumer only — use `bb` CLI to create/manage sessions, then pass the session ID to opencli:
+
+```bash
+bb sessions create --json                        # Create session (bb CLI)
+opencli --session <id> reddit get-comments <post> # Execute on remote browser
+```
+
+Priority chain: `--session` / `BROWSERBASE_SESSION_ID` → `OPENCLI_CDP_ENDPOINT` → Electron auto-detect → BrowserBridge (default). Implementation in `src/browserbase.ts` (validation only, ~30 lines).
 
 ### Strategy Enum
 
