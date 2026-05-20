@@ -14,6 +14,7 @@
 | `opencli reddit subreddit` | Posts from a specific subreddit, with sort and time filters |
 | `opencli reddit subreddit-info` | **Subreddit metadata (subscribers, active, NSFW, created, description)** |
 | `opencli reddit read` | Read a post thread with comments |
+| `opencli reddit get-comments` | Flat top-level comments with reply-able IDs |
 | `opencli reddit user` | View a user profile |
 | `opencli reddit user-posts` | A user's submitted posts |
 | `opencli reddit user-comments` | A user's comments |
@@ -54,6 +55,9 @@ opencli reddit read 1abc123 --depth 2
 # Read with "more comments" expansion via /api/morechildren.json
 opencli reddit read 1abc123 --depth 3 --expand-more --expand-rounds 3
 
+# Get reply-able comment IDs for automation
+opencli reddit get-comments 1abc123 --sort old --limit 100
+
 # Comment on a post
 opencli reddit comment 1abc123 "Great post"
 
@@ -85,6 +89,10 @@ Reddit's "more comments" stubs by calling `/api/morechildren.json` up to
 itself rejects the request with 401/403, that's surfaced as
 `AuthRequiredError` because writeable/expand endpoints often require a logged-
 in session even though the post listing is public.
+
+`get-comments` is optimized for follow-up automation: it returns `comment_id`,
+`author`, `score`, `text`, `replies_count`, and `time` for up to 100 top-level
+comments. Use `read --expand-more` when you need the threaded conversation tree.
 
 ## Prerequisites
 

@@ -9,6 +9,7 @@
 | `opencli xiaohongshu search` | Search notes by keyword (returns title, author, likes, URL) |
 | `opencli xiaohongshu note` | Read full note content (title, author, description, likes, collects, comments, tags) |
 | `opencli xiaohongshu comments` | Read comments from a note (`--with-replies` for nested 楼中楼 replies) |
+| `opencli xiaohongshu reply` | Reply to a note comment by `comment_id` |
 | `opencli xiaohongshu feed` | Home feed recommendations (via Pinia store interception) |
 | `opencli xiaohongshu notifications` | User notifications (mentions, likes, connections) |
 | `opencli xiaohongshu user` | Get public notes from a user profile |
@@ -33,6 +34,9 @@ opencli xiaohongshu note "https://www.xiaohongshu.com/search_result/<id>?xsec_to
 # Read comments with nested replies (楼中楼)
 opencli xiaohongshu comments "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." --with-replies --limit 20
 
+# Reply to a comment returned by xiaohongshu comments
+opencli xiaohongshu reply "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." "<comment_id>" "谢谢分享"
+
 # JSON output
 opencli xiaohongshu search 旅行 -f json
 
@@ -51,6 +55,14 @@ opencli xiaohongshu delete-note 6a08ba0b000000000702a893 --execute
 
 > Note: `note` and `comments` now require a full signed note URL with `xsec_token`. `download` accepts either a signed note URL or an `xhslink` short link. Bare note IDs are no longer reliable on xiaohongshu.
 > `delete-note` operates in creator center and accepts a 24-character note ID or exact Xiaohongshu note URL; it defaults to dry-run verification and only deletes with `--execute`.
+
+## Comments
+
+`comments` returns `comment_id`, `author`, `text`, `likes`, `time`,
+`is_reply`, and `reply_to`. Pass `--with-replies` to include nested 楼中楼
+replies in the same flat output. `reply` uses the `comment_id` from
+`comments`; when a platform-side ID lookup fails, it can also use
+`--comment-text` and `--comment-author` for fuzzy matching.
 
 ## Prerequisites
 

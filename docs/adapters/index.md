@@ -2,6 +2,10 @@
 
 Run `opencli list` for the live registry.
 
+For comment extraction and reply workflows across Twitter/X, YouTube, Reddit,
+LinkedIn, Instagram, TikTok, and Xiaohongshu, see
+[Social Comment Support](./social-comments.md).
+
 ## Browser Adapters
 
 | Site                                     | Commands                                                                                                                                                                                                                                                         | Mode                                |
@@ -23,7 +27,7 @@ Run `opencli list` for the live registry.
 | **[bloomberg](./browser/bloomberg.md)**     | `main` `markets` `economics` `industries` `tech` `politics` `businessweek` `opinions` `feeds` `news`                                                                                                                                                             | 🌐 / 🔐                             |
 | **[weibo](./browser/weibo.md)**             | `hot` `search` `feed` `user` `user-posts` `me` `post` `favorites` `publish` `delete` `comments`                                                                                                                                                                   | 🔐 Browser                          |
 | **[toutiao](./browser/toutiao.md)**         | `articles` `hot`                                                                                                                                                                                                                                                 | 🌐 / 🔐                             |
-| **[linkedin](./browser/linkedin.md)**       | `search` `people-search` `timeline`                                                                                                                                                                                                                              | 🔐 Browser                          |
+| **[linkedin](./browser/linkedin.md)**       | `connect` `inbox` `people-search` `safe-send` `salesnav-inbox` `salesnav-message` `salesnav-search` `salesnav-thread` `search` `sent-invitations` `thread-snapshot` `timeline`                                                                                  | 🔐 Browser                          |
 | **[linkedin-learning](./browser/linkedin-learning.md)** | `search` `trending` `course`                                                                                                                                                                                                                         | 🔐 Browser                          |
 | **[coupang](./browser/coupang.md)**         | `search` `product` `add-to-cart`                                                                                                                                                                                                                                  | 🔐 Browser                          |
 | **[boss](./browser/boss.md)**               | `search` `detail` `recommend` `joblist` `greet` `batchgreet` `send` `chatlist` `chatmsg` `invite` `mark` `exchange` `resume` `stats`                                                                                                                             | 🔐 Browser                          |

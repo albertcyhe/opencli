@@ -120,6 +120,39 @@ describe('commanderAdapter arg passing', () => {
     );
   });
 
+  it('passes root --browserbase-account to browser commands before session fallback', async () => {
+    const program = new Command();
+    program
+      .option('--session <id>', 'Browserbase session ID')
+      .option('--browserbase-account <name>', 'Browserbase account profile');
+    const siteCmd = program.command('paperreview');
+    const browserCmd = {
+      ...cmd,
+      browser: true,
+      func: vi.fn(async () => []),
+    } as unknown as CliCommand;
+    registerCommandToProgram(siteCmd, browserCmd);
+
+    await program.parseAsync([
+      'node',
+      'opencli',
+      '--session',
+      'sess_123',
+      '--browserbase-account',
+      'x-main-1',
+      'paperreview',
+      'submit',
+      './paper.pdf',
+    ]);
+
+    expect(mockExecuteCommand).toHaveBeenCalledWith(
+      expect.objectContaining({ site: 'paperreview', name: 'submit' }),
+      expect.objectContaining({ pdf: './paper.pdf' }),
+      false,
+      { prepared: true, browserbaseAccount: 'x-main-1' },
+    );
+  });
+
   it('rejects invalid bool values before calling executeCommand', async () => {
     const program = new Command();
     const siteCmd = program.command('paperreview');

@@ -27,6 +27,13 @@ export interface CDPTarget {
   webSocketDebuggerUrl?: string;
 }
 
+interface CDPTargetInfo {
+  targetId?: string;
+  type?: string;
+  url?: string;
+  title?: string;
+}
+
 interface RuntimeEvaluateResult {
   result?: {
     value?: unknown;
@@ -49,6 +56,7 @@ export const CDP_RESPONSE_BODY_CAPTURE_LIMIT = 8 * 1024 * 1024;
 
 export class CDPBridge implements IBrowserFactory {
   private _ws: WebSocket | null = null;
+  private _sessionId: string | null = null;
   private _idCounter = 0;
   private _pending = new Map<number, { resolve: (val: unknown) => void; reject: (err: Error) => void; timer: ReturnType<typeof setTimeout> }>();
   private _eventListeners = new Map<string, Set<(params: unknown) => void>>();
@@ -82,8 +90,7 @@ export class CDPBridge implements IBrowserFactory {
         clearTimeout(timeout);
         this._ws = ws;
         try {
-          await this.send('Page.enable');
-          await this.send('Page.addScriptToEvaluateOnNewDocument', { source: generateStealthJs() });
+          await this.preparePageTarget();
         } catch (err) {
           ws.close();
           reject(err instanceof Error ? err : new Error(String(err)));
@@ -131,6 +138,7 @@ export class CDPBridge implements IBrowserFactory {
       this._ws.close();
       this._ws = null;
     }
+    this._sessionId = null;
     for (const p of this._pending.values()) {
       clearTimeout(p.timer);
       p.reject(new Error('CDP connection closed'));
@@ -140,6 +148,10 @@ export class CDPBridge implements IBrowserFactory {
   }
 
   async send(method: string, params: Record<string, unknown> = {}, timeoutMs: number = CDP_SEND_TIMEOUT): Promise<unknown> {
+    return this.sendRaw(method, params, timeoutMs, this._sessionId);
+  }
+
+  private async sendRaw(method: string, params: Record<string, unknown> = {}, timeoutMs: number = CDP_SEND_TIMEOUT, sessionId: string | null = null): Promise<unknown> {
     if (!this._ws || this._ws.readyState !== WebSocket.OPEN) {
       throw new Error('CDP connection is not open');
     }
@@ -150,8 +162,42 @@ export class CDPBridge implements IBrowserFactory {
         reject(new Error(`CDP command '${method}' timed out after ${timeoutMs / 1000}s`));
       }, timeoutMs);
       this._pending.set(id, { resolve, reject, timer });
-      this._ws!.send(JSON.stringify({ id, method, params }));
+      this._ws!.send(JSON.stringify({
+        id,
+        method,
+        params,
+        ...(sessionId ? { sessionId } : {}),
+      }));
     });
+  }
+
+  private async preparePageTarget(): Promise<void> {
+    try {
+      await this.send('Page.enable');
+    } catch (err) {
+      if (!isMissingCdpMethodError(err, 'Page.enable')) throw err;
+      await this.attachToBrowserLevelPageTarget();
+      await this.send('Page.enable');
+    }
+    await this.send('Page.addScriptToEvaluateOnNewDocument', { source: generateStealthJs() });
+  }
+
+  private async attachToBrowserLevelPageTarget(): Promise<void> {
+    const targets = await this.sendRaw('Target.getTargets') as { targetInfos?: CDPTargetInfo[] };
+    let target = Array.isArray(targets.targetInfos)
+      ? selectBrowserLevelTarget(targets.targetInfos)
+      : undefined;
+    if (!target?.targetId) {
+      const created = await this.sendRaw('Target.createTarget', { url: 'about:blank' }) as { targetId?: string };
+      if (!created.targetId) throw new Error('Browser-level CDP endpoint did not create a page target');
+      target = { targetId: created.targetId, type: 'page', url: 'about:blank' };
+    }
+    const attached = await this.sendRaw('Target.attachToTarget', {
+      targetId: target.targetId,
+      flatten: true,
+    }) as { sessionId?: string };
+    if (!attached.sessionId) throw new Error('Browser-level CDP endpoint did not return an attached sessionId');
+    this._sessionId = attached.sessionId;
   }
 
   on(event: string, handler: (params: unknown) => void): void {
@@ -484,6 +530,42 @@ function matchesCookieDomain(cookieDomain: string, targetDomain: string): boolea
   const normalizedTargetDomain = targetDomain.replace(/^\./, '').toLowerCase();
   return normalizedTargetDomain === normalizedCookieDomain
     || normalizedTargetDomain.endsWith(`.${normalizedCookieDomain}`);
+}
+
+function isMissingCdpMethodError(error: unknown, method: string): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+  return message.includes(method) && message.includes("wasn't found");
+}
+
+function selectBrowserLevelTarget(targets: CDPTargetInfo[]): CDPTargetInfo | undefined {
+  const preferredPattern = compilePreferredPattern(process.env.OPENCLI_CDP_TARGET);
+  const ranked = targets
+    .map((target, index) => ({ target, index, score: scoreBrowserLevelTarget(target, preferredPattern) }))
+    .filter(({ score }) => Number.isFinite(score))
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.index - b.index;
+    });
+  return ranked[0]?.target;
+}
+
+function scoreBrowserLevelTarget(target: CDPTargetInfo, preferredPattern?: RegExp): number {
+  if (!target.targetId) return Number.NEGATIVE_INFINITY;
+  const type = (target.type ?? '').toLowerCase();
+  const url = (target.url ?? '').toLowerCase();
+  const title = (target.title ?? '').toLowerCase();
+  const haystack = `${title} ${url}`;
+  if (haystack.includes('devtools')) return Number.NEGATIVE_INFINITY;
+  if (type === 'background_page' || type === 'service_worker') return Number.NEGATIVE_INFINITY;
+  if (type !== 'page' && type !== 'webview' && type !== 'app') return Number.NEGATIVE_INFINITY;
+
+  let score = 0;
+  if (preferredPattern && preferredPattern.test(haystack)) score += 1000;
+  if (type === 'page') score += 120;
+  else if (type === 'webview') score += 100;
+  else if (type === 'app') score += 90;
+  if (!url || url === 'about:blank') score += 5;
+  return score;
 }
 
 function selectCDPTarget(targets: CDPTarget[]): CDPTarget | undefined {
