@@ -16,7 +16,7 @@ import { serializeCommand, formatArgSummary } from './serialization.js';
 import { render as renderOutput } from './output.js';
 import { PKG_VERSION } from './version.js';
 import { printCompletionScript } from './completion.js';
-import { loadExternalClis, executeExternalCli, installExternalCli, registerExternalCli, isBinaryInstalled } from './external.js';
+import { loadExternalClis, executeExternalCli, installExternalCli, registerExternalCli, isBinaryInstalled, formatExternalCliLabel } from './external.js';
 import { registerAllCommands } from './commanderAdapter.js';
 import { classifyAdapter, formatRootAdapterHelpText, installCommanderNamespaceStructuredHelp, installStructuredHelp, leadingPositionalFromUsage, rootHelpData, type RootAdapterGroups } from './help.js';
 import { EXIT_CODES, getErrorMessage, BrowserConnectError } from './errors.js';
@@ -627,7 +627,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
         for (const ext of externalClis) {
           const isInstalled = isBinaryInstalled(ext.binary);
           const tag = isInstalled ? '[installed]' : '[auto-install]';
-          console.log(`    ${ext.name} ${tag}${ext.description ? ` — ${ext.description}` : ''}`);
+          console.log(`    ${formatExternalCliLabel(ext)} ${tag}${ext.description ? ` — ${ext.description}` : ''}`);
         }
         console.log();
       }
@@ -777,8 +777,8 @@ Examples:
   }
 
   /** Wrap browser actions with error handling and optional --json output */
-  function browserAction(fn: (page: Awaited<ReturnType<typeof getBrowserPage>>, ...args: any[]) => Promise<unknown>) {
-    return async (...args: any[]) => {
+  function browserAction<Args extends unknown[]>(fn: (page: Awaited<ReturnType<typeof getBrowserPage>>, ...args: Args) => Promise<unknown>) {
+    return async (...args: Args) => {
       let page: Awaited<ReturnType<typeof getBrowserPage>> | null = null;
       try {
         const command = args.at(-1) instanceof Command ? args.at(-1) as Command : undefined;
@@ -3240,6 +3240,7 @@ cli({
     .action((opts) => {
       const rows = loadExternalClis().map((ext) => ({
         name: ext.name,
+        package: ext.package ?? '',
         binary: ext.binary,
         installed: isBinaryInstalled(ext.binary),
         description: ext.description ?? '',
@@ -3248,7 +3249,7 @@ cli({
       }));
       renderOutput(rows, {
         fmt: opts.format,
-        columns: ['name', 'binary', 'installed', 'description', 'homepage', 'tags'],
+        columns: ['name', 'package', 'binary', 'installed', 'description', 'homepage', 'tags'],
         title: 'opencli/external/list',
         source: 'opencli external list',
       });
@@ -3307,6 +3308,10 @@ cli({
   // Classification derives from each adapter's `domain` field — see classifyAdapter.
   // External CLIs are taken from the externalClis registry (passthrough binaries).
   const externalNames = externalClis.map(ext => ext.name);
+  const externalHelpEntries = externalClis.map(ext => ({
+    name: ext.name,
+    label: formatExternalCliLabel(ext),
+  }));
   const siteDomains = new Map<string, string | undefined>();
   for (const [, cmd] of getRegistry()) {
     if (!siteDomains.has(cmd.site)) siteDomains.set(cmd.site, cmd.domain);
@@ -3317,7 +3322,7 @@ cli({
     if (classifyAdapter(siteDomains.get(site)) === 'app') apps.push(site);
     else sites.push(site);
   }
-  const adapterGroups: RootAdapterGroups = { external: externalNames, apps, sites };
+  const adapterGroups: RootAdapterGroups = { external: externalHelpEntries, apps, sites };
   const adapterNameSet = new Set<string>([...externalNames, ...siteNames]);
   installCommanderNamespaceStructuredHelp(browser, { globalCommand: program, description: originalBrowserDescription });
   installCommanderNamespaceStructuredHelp(daemonCmd, { globalCommand: program, description: originalDaemonDescription });

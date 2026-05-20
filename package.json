@@ -1,6 +1,6 @@
 {
   "name": "@jackwener/opencli",
-  "version": "1.7.19",
+  "version": "1.8.0",
   "publishConfig": {
     "access": "public"
   },
@@ -42,7 +42,7 @@
     "dev": "tsx src/main.ts",
     "dev:bun": "bun src/main.ts",
     "build": "npm run clean-dist && npm run copy-yaml && npm run build-manifest",
-    "prebuild-manifest": "tsc --build",
+    "prebuild-manifest": "tsc --build && node -e \"require('fs').chmodSync('dist/src/main.js', 0o755)\"",
     "build-manifest": "tsx src/build-manifest.ts",
     "clean-dist": "node scripts/clean-dist.cjs",
     "copy-yaml": "node scripts/copy-yaml.cjs",
@@ -98,5 +98,11 @@
     "typescript": "^6.0.2",
     "vitepress": "^1.6.4",
     "vitest": "^4.1.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.10",
+    "vitepress": {
+      "vite": "6.4.2"
+    }
   }
 }
