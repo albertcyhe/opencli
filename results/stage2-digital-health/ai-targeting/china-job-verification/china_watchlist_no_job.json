@@ -1,0 +1,677 @@
+[
+  {
+    "companyName": "医联",
+    "aliases": "Medlinker",
+    "city": "成都",
+    "categories": "chronic_disease_management; clinical_workflow; internet_healthcare",
+    "opportunityScore": 75,
+    "website": "https://www.medlinker.com/",
+    "watchReason": "BOSS 可返回医联成都职位，但本轮未核验到 AI/大模型/算法岗位；51job 被 WAF 滑块拦截。"
+  },
+  {
+    "companyName": "深圳市理邦精密仪器股份有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 75,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "天津致远慧图科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management; rehabilitation; remote_patient_monitoring; samd",
+    "opportunityScore": 73,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "武汉兰丁智能医学股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 72,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "智云健康",
+    "aliases": "ClouDr",
+    "city": "杭州",
+    "categories": "chronic_disease_management; clinical_workflow; internet_healthcare; online_consultation",
+    "opportunityScore": 70,
+    "website": "https://www.cloudr.cn/",
+    "watchReason": "公开搜索未核验到 active AI/大模型/算法岗位；BOSS/51job 未完成可审计核验。"
+  },
+  {
+    "companyName": "北京品驰医疗设备股份有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 68,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市埃微医疗信息技术有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 67,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "上海镜影信息科技有限公司",
+    "aliases": "",
+    "city": "上海",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 66,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "华思（天津）医疗健康管理有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "health_management_platform; remote_patient_monitoring; samd",
+    "opportunityScore": 65,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "景昱医疗科技（苏州）股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; online_consultation; remote_patient_monitoring; samd",
+    "opportunityScore": 65,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "北京至真互联网技术有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "chronic_disease_management; clinical_workflow; samd",
+    "opportunityScore": 64,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "成都云卫康医疗科技有限公司",
+    "aliases": "",
+    "city": "成都",
+    "categories": "remote_patient_monitoring; samd; sleep_health",
+    "opportunityScore": 64,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳星康医疗科技有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "clinical_workflow; remote_patient_monitoring; samd",
+    "opportunityScore": 64,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management; remote_patient_monitoring",
+    "opportunityScore": 63,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "纳龙健康科技股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring; samd",
+    "opportunityScore": 61,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "上海鹰瞳医疗科技有限公司",
+    "aliases": "",
+    "city": "上海",
+    "categories": "chronic_disease_management; clinical_workflow; samd",
+    "opportunityScore": 60,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "山东正心医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; remote_patient_monitoring",
+    "opportunityScore": 60,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳硅基智能科技有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "chronic_disease_management; clinical_workflow; samd",
+    "opportunityScore": 60,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "方舟健客",
+    "aliases": "方舟云康; Jianke",
+    "city": "广州",
+    "categories": "chronic_disease_management; internet_healthcare; pharmacy_ecommerce",
+    "opportunityScore": 58,
+    "website": "https://www.jianke.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "北京致远慧图科技有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "chronic_disease_management; clinical_workflow; samd",
+    "opportunityScore": 57,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "妙手医生",
+    "aliases": "妙手; Miaoshou Doctor",
+    "city": "北京",
+    "categories": "clinical_workflow; online_consultation; pharmacy_ecommerce",
+    "opportunityScore": 57,
+    "website": "https://www.miaoshou.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "长沙爱孕记医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring; samd",
+    "opportunityScore": 57,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "苏州体素信息科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management; clinical_workflow; samd",
+    "opportunityScore": 56,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "合肥合滨智能机器人有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; remote_patient_monitoring",
+    "opportunityScore": 54,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "春雨医生",
+    "aliases": "Chunyu Doctor",
+    "city": "北京",
+    "categories": "clinical_workflow; online_consultation",
+    "opportunityScore": 52,
+    "website": "https://www.chunyuyisheng.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "丁香园",
+    "aliases": "DXY",
+    "city": "杭州",
+    "categories": "clinical_workflow; health_management_platform; patient_engagement",
+    "opportunityScore": 51,
+    "website": "https://www.dxy.cn/",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "广州安必平医药科技股份有限公司",
+    "aliases": "",
+    "city": "广州",
+    "categories": "clinical_workflow; samd",
+    "opportunityScore": 51,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "广西医准智能科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; samd",
+    "opportunityScore": 51,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市保身欣科技电子有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 49,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "上海远心医疗科技有限公司",
+    "aliases": "",
+    "city": "上海",
+    "categories": "remote_patient_monitoring; samd",
+    "opportunityScore": 48,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "北京新网医讯技术有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "remote_patient_monitoring; samd",
+    "opportunityScore": 48,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "海南齐佳智能科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "mental_health; rehabilitation; samd",
+    "opportunityScore": 48,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "北京锐视康科技发展有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "remote_patient_monitoring; samd",
+    "opportunityScore": 47,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "微脉",
+    "aliases": "Weimai",
+    "city": "杭州",
+    "categories": "health_management_platform; internet_healthcare; patient_engagement",
+    "opportunityScore": 47,
+    "website": "https://www.myweimai.com/",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "伯乐实验有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management; remote_patient_monitoring",
+    "opportunityScore": 46,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "安徽爱视睿医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow",
+    "opportunityScore": 46,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司Abbott Diabetes Care Ltd.",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management; remote_patient_monitoring",
+    "opportunityScore": 46,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市安普康科技有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 45,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "健客",
+    "aliases": "健客网; Jianke",
+    "city": "广州",
+    "categories": "internet_healthcare; pharmacy_ecommerce",
+    "opportunityScore": 44,
+    "website": "https://www.jianke.com/",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "叮当快药",
+    "aliases": "叮当健康",
+    "city": "北京",
+    "categories": "internet_healthcare; pharmacy_ecommerce",
+    "opportunityScore": 44,
+    "website": "https://www.ddky.com/",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "好大夫在线",
+    "aliases": "Haodf",
+    "city": "北京",
+    "categories": "online_consultation; samd",
+    "opportunityScore": 44,
+    "website": "https://www.haodf.com/",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市绘云生物科技有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "clinical_workflow; samd",
+    "opportunityScore": 44,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "健康160",
+    "aliases": "就医160",
+    "city": "深圳",
+    "categories": "internet_healthcare; samd",
+    "opportunityScore": 43,
+    "website": "https://www.91160.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "苏州塞伯坦医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; samd",
+    "opportunityScore": 43,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "青岛远程科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 43,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "麦康迪（绍兴）科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow; samd",
+    "opportunityScore": 43,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "武汉康录生物技术股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow",
+    "opportunityScore": 41,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "江西思维智光医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "mental_health",
+    "opportunityScore": 41,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "瑞海胜（厦门）康复用品有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "rehabilitation",
+    "opportunityScore": 41,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "中山瑞福医疗器械科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "chronic_disease_management",
+    "opportunityScore": 40,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "思澜科技（成都）有限公司",
+    "aliases": "",
+    "city": "成都",
+    "categories": "remote_patient_monitoring; sleep_health",
+    "opportunityScore": 40,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "亳州融健医疗用品有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "rehabilitation; samd",
+    "opportunityScore": 39,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "微医",
+    "aliases": "WeDoctor; 挂号网",
+    "city": "杭州",
+    "categories": "internet_healthcare",
+    "opportunityScore": 39,
+    "website": "https://www.guahao.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "思派健康",
+    "aliases": "Medbanks; 思派网络",
+    "city": "北京",
+    "categories": "health_management_platform; patient_engagement; pharmacy_ecommerce",
+    "opportunityScore": 39,
+    "website": "https://www.medbanks.cn/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "成都尚医信息科技有限公司",
+    "aliases": "尚医科技; R Plus Health; 术康",
+    "city": "成都",
+    "categories": "rehabilitation; samd",
+    "opportunityScore": 39,
+    "website": "",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "深圳市亚辉龙生物科技股份有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "chronic_disease_management",
+    "opportunityScore": 39,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市伯劳特生物制品有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "chronic_disease_management",
+    "opportunityScore": 39,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "美敦力糖尿病科技（成都）有限公司",
+    "aliases": "",
+    "city": "成都",
+    "categories": "chronic_disease_management",
+    "opportunityScore": 39,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "北京新兴阳升科技有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "remote_patient_monitoring; sleep_health",
+    "opportunityScore": 38,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "北京航天卡迪技术开发研究所",
+    "aliases": "",
+    "city": "北京",
+    "categories": "remote_patient_monitoring; sleep_health",
+    "opportunityScore": 38,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳京柏医疗科技股份有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "rehabilitation",
+    "opportunityScore": 38,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市宝润科技有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "samd",
+    "opportunityScore": 38,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "云智康医疗科技（内蒙古）有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring; sleep_health",
+    "opportunityScore": 37,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "广州视景医疗软件有限公司",
+    "aliases": "",
+    "city": "广州",
+    "categories": "digital_therapeutics; samd",
+    "opportunityScore": 37,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "河南华南医电科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring; sleep_health",
+    "opportunityScore": 37,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳麦科田生物医疗技术股份有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "samd",
+    "opportunityScore": 36,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "湖南朗开医疗科技有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 36,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "武汉市九头鸟医疗仪器开发有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "rehabilitation",
+    "opportunityScore": 35,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "济民健康管理股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "health_management_platform",
+    "opportunityScore": 35,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "上海微创医疗机器人（集团）股份有限公司",
+    "aliases": "",
+    "city": "上海",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 34,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "南京普爱医疗设备股份有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow",
+    "opportunityScore": 34,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "圆心科技",
+    "aliases": "Yuanxin Technology; 圆心医疗",
+    "city": "北京",
+    "categories": "health_management_platform; patient_engagement; pharmacy_ecommerce",
+    "opportunityScore": 34,
+    "website": "https://www.yuanxin.com/",
+    "watchReason": "公开搜索未核验到 active AI/LLM/算法岗位。"
+  },
+  {
+    "companyName": "安健科技（重庆）有限公司",
+    "aliases": "",
+    "city": "",
+    "categories": "clinical_workflow",
+    "opportunityScore": 34,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "深圳市资福医疗技术有限公司",
+    "aliases": "",
+    "city": "深圳",
+    "categories": "samd",
+    "opportunityScore": 34,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  },
+  {
+    "companyName": "维斯安（北京）医疗器械有限公司",
+    "aliases": "",
+    "city": "北京",
+    "categories": "remote_patient_monitoring",
+    "opportunityScore": 34,
+    "website": "",
+    "watchReason": "no_active_ai_job_verified_in_public_china_pass"
+  }
+]

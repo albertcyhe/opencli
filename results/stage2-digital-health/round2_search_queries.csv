@@ -1,0 +1,172 @@
+queryId,query,status,reason
+round2_q001,北京 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q002,北京 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q003,北京 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q004,北京 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q005,北京 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q006,北京 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q007,北京 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q008,北京 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q009,北京 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q010,北京 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q011,北京 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q012,北京 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q013,北京 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q014,北京 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q015,北京 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q016,上海 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q017,上海 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q018,上海 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q019,上海 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q020,上海 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q021,上海 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q022,上海 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q023,上海 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q024,上海 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q025,上海 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q026,上海 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q027,上海 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q028,上海 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q029,上海 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q030,上海 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q031,广州 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q032,广州 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q033,广州 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q034,广州 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q035,广州 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q036,广州 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q037,广州 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q038,广州 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q039,广州 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q040,广州 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q041,广州 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q042,广州 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q043,广州 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q044,广州 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q045,广州 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q046,深圳 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q047,深圳 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q048,深圳 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q049,深圳 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q050,深圳 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q051,深圳 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q052,深圳 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q053,深圳 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q054,深圳 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q055,深圳 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q056,深圳 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q057,深圳 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q058,深圳 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q059,深圳 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q060,深圳 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q061,杭州 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q062,杭州 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q063,杭州 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q064,杭州 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q065,杭州 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q066,杭州 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q067,杭州 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q068,杭州 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q069,杭州 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q070,杭州 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q071,杭州 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q072,杭州 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q073,杭州 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q074,杭州 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q075,杭州 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q076,成都 数字医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q077,成都 互联网医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q078,成都 互联网医院,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q079,成都 在线问诊,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q080,成都 医药电商,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q081,成都 慢病管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q082,成都 远程监测,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q083,成都 患者管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q084,成都 康复,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q085,成都 心理健康,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q086,成都 睡眠管理,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q087,成都 认知训练,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q088,成都 医疗软件,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q089,成都 AI医疗,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q090,成都 健康管理平台,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q091,United States digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q092,United States telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q093,United States virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q094,United States remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q095,United States chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q096,United States digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q097,United States cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q098,United States mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q099,United States rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q100,United Kingdom digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q101,United Kingdom telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q102,United Kingdom virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q103,United Kingdom remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q104,United Kingdom chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q105,United Kingdom digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q106,United Kingdom cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q107,United Kingdom mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q108,United Kingdom rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q109,Germany digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q110,Germany telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q111,Germany virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q112,Germany remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q113,Germany chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q114,Germany digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q115,Germany cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q116,Germany mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q117,Germany rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q118,France digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q119,France telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q120,France virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q121,France remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q122,France chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q123,France digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q124,France cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q125,France mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q126,France rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q127,Switzerland digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q128,Switzerland telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q129,Switzerland virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q130,Switzerland remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q131,Switzerland chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q132,Switzerland digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q133,Switzerland cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q134,Switzerland mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q135,Switzerland rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q136,Sweden digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q137,Sweden telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q138,Sweden virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q139,Sweden remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q140,Sweden chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q141,Sweden digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q142,Sweden cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q143,Sweden mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q144,Sweden rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q145,Portugal digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q146,Portugal telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q147,Portugal virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q148,Portugal remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q149,Portugal chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q150,Portugal digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q151,Portugal cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q152,Portugal mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q153,Portugal rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q154,Netherlands digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q155,Netherlands telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q156,Netherlands virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q157,Netherlands remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q158,Netherlands chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q159,Netherlands digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q160,Netherlands cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q161,Netherlands mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q162,Netherlands rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q163,Spain digital health,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q164,Spain telehealth,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q165,Spain virtual care,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q166,Spain remote patient monitoring,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q167,Spain chronic disease management,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q168,Spain digital pharmacy,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q169,Spain cardiac rehab,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q170,Spain mental health app,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.
+round2_q171,Spain rehabilitation software,not_executed,No search API credentials and OpenCLI Browser Bridge is unavailable; queries are emitted for the next run.

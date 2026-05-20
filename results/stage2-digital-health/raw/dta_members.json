@@ -1,0 +1,460 @@
+{
+  "rows": [
+    {
+      "name": "Akili",
+      "memberSlug": "akili-interactive",
+      "memberUrl": "https://dtxalliance.org/members/akili-interactive/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/Akili_Logo_Blue_RGB-146x58.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "AmpHealth",
+      "memberSlug": "amp-health",
+      "memberUrl": "https://dtxalliance.org/members/amp-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/06/AmpHealth_Logo-1-146x33.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "ANDHealthLogo Green transparent",
+      "memberSlug": "andhealth",
+      "memberUrl": "https://dtxalliance.org/members/andhealth/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/05/ANDHealthLogo_Green_transparent-146x36.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo APACMed",
+      "memberSlug": "apacmed",
+      "memberUrl": "https://dtxalliance.org/members/apacmed/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/04/Logo-APACMed-127x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "AP",
+      "memberSlug": "arnold-porter",
+      "memberUrl": "https://dtxalliance.org/members/arnold-porter/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/03/AP_RGB-146x17.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Rx",
+      "memberSlug": "astellas",
+      "memberUrl": "https://dtxalliance.org/members/astellas/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/Rx-logo-1-1-146x47.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "AZ",
+      "memberSlug": "astrazeneca",
+      "memberUrl": "https://dtxalliance.org/members/astrazeneca/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/09/AZ-logo-horizontal_Office_AZ-logo-horizontal-col_AZ_CMYK_H_COL-146x48.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "image001",
+      "memberSlug": "axena",
+      "memberUrl": "https://dtxalliance.org/members/axena/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/04/image001.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Big Health",
+      "memberSlug": "big-health",
+      "memberUrl": "https://dtxalliance.org/members/big-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/10/Big-Health-Logo-146x29.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Brown",
+      "memberSlug": "carney-institute-for-brain-science",
+      "memberUrl": "https://dtxalliance.org/members/carney-institute-for-brain-science/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/09/Brown-logo-146x73.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "CaryHealth",
+      "memberSlug": "caryhealth",
+      "memberUrl": "https://dtxalliance.org/members/caryhealth/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/12/CaryHealth-Logotype_lightbg-2-146x30.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "C4TBH",
+      "memberSlug": "center-for-technology-and-behavioral-health-at-dartmouth",
+      "memberUrl": "https://dtxalliance.org/members/center-for-technology-and-behavioral-health-at-dartmouth/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/03/C4TBH-logo-final-1-146x44.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "logo",
+      "memberSlug": "chinese-academy-of-medical-sciences-peking-union-medical-college",
+      "memberUrl": "https://dtxalliance.org/members/chinese-academy-of-medical-sciences-peking-union-medical-college/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/06/logo-10260ef357fe79d2f6449875c3b0c8cc-1-90x90.jpeg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo Chugai",
+      "memberSlug": "chugai-pharma-europe",
+      "memberUrl": "https://dtxalliance.org/members/chugai-pharma-europe/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/11/Logo_Chugai-146x75.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "CVHP",
+      "memberSlug": "clearview",
+      "memberUrl": "https://dtxalliance.org/members/clearview/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/03/CVHP-logo-146x41.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo Click Therapeutics",
+      "memberSlug": "clicktherapeutics",
+      "memberUrl": "https://dtxalliance.org/members/clicktherapeutics/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/11/Logo-Click-Therapeutics-146x39.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "full gardient dark text@2x",
+      "memberSlug": "cognito",
+      "memberUrl": "https://dtxalliance.org/members/cognito/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/11/full-gardient-dark-text@2x-4-146x37.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "image001",
+      "memberSlug": "continuous-precision-medicine",
+      "memberUrl": "https://dtxalliance.org/members/continuous-precision-medicine/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/06/image001-3-146x61.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Curavit horizontal",
+      "memberSlug": "curavit",
+      "memberUrl": "https://dtxalliance.org/members/curavit/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/10/Curavit_horizontal-logo-90x90.jpeg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "NEW",
+      "memberSlug": "dariohealth-corp",
+      "memberUrl": "https://dtxalliance.org/members/dariohealth-corp/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/02/NEW-logo-2022-color-90x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "TheDedhamGroup FinalLogo",
+      "memberSlug": "dedham-group",
+      "memberUrl": "https://dtxalliance.org/members/dedham-group/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/04/TheDedhamGroup_FinalLogo_Color-1-146x64.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "DeepWell Gradient Stacked",
+      "memberSlug": "deepwell-dtx",
+      "memberUrl": "https://dtxalliance.org/members/deepwell-dtx/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/09/DeepWell_Gradient-Stacked-146x88.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Original on Transparent",
+      "memberSlug": "dtxcc",
+      "memberUrl": "https://dtxalliance.org/members/dtxcc/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/10/Original-on-Transparent-146x23.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo",
+      "memberSlug": "duplocloud",
+      "memberUrl": "https://dtxalliance.org/members/duplocloud/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/03/Logo-colorLogo-ver-color-2-146x77.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo EverEx",
+      "memberSlug": "everex",
+      "memberUrl": "https://dtxalliance.org/members/everex/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/09/Logo_EverEx-146x40.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "logo eversana",
+      "memberSlug": "eversana",
+      "memberUrl": "https://dtxalliance.org/members/eversana/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/09/logo-eversana-146x25.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo with Eve",
+      "memberSlug": "evidation",
+      "memberUrl": "https://dtxalliance.org/members/evidation/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/06/Logo-with-Eve-146x49.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Floreo",
+      "memberSlug": "floreo",
+      "memberUrl": "https://dtxalliance.org/members/floreo/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/09/Floreo-Logo-126x90.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "France Biotech",
+      "memberSlug": "france-biotech",
+      "memberUrl": "https://dtxalliance.org/members/france-biotech/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/10/France-Biotech-logo-EN-png-123x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Freespira Flag",
+      "memberSlug": "freespira-inc",
+      "memberUrl": "https://dtxalliance.org/members/freespira-inc/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/Freespira_Flag_logo_FullColor_20201106_Flag_Vert-89x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "SVDGV",
+      "memberSlug": "germandigitalhealthcareassociation",
+      "memberUrl": "https://dtxalliance.org/members/germandigitalhealthcareassociation/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/06/SVDGV-Logo-1-146x40.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "GlobalMD",
+      "memberSlug": "globalmd",
+      "memberUrl": "https://dtxalliance.org/members/globalmd/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/05/GlobalMD-logo-92x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "HelloBetter NoPadding",
+      "memberSlug": "hellobetter",
+      "memberUrl": "https://dtxalliance.org/members/hellobetter/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/03/HelloBetter_NoPadding-146x24.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "BG remover",
+      "memberSlug": "idea-pharma",
+      "memberUrl": "https://dtxalliance.org/members/idea-pharma/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/10/BG-remover-146x58.jpeg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "top img01 removebg preview e1729534734852",
+      "memberSlug": "japan-digital-health-alliance-jadha",
+      "memberUrl": "https://dtxalliance.org/members/japan-digital-health-alliance-jadha/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/10/top_img01-removebg-preview-e1729534734852-146x78.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "jogo",
+      "memberSlug": "jogo",
+      "memberUrl": "https://dtxalliance.org/members/jogo/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/jogo-2-1-136x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Lindus Health",
+      "memberSlug": "lindus-health",
+      "memberUrl": "https://dtxalliance.org/members/lindus-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/07/Lindus-Health-Logo-90x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "MDERX",
+      "memberSlug": "mdrex",
+      "memberUrl": "https://dtxalliance.org/members/mdrex/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/02/MDERX-logo-e1709740805294-88x90.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "medrhythms",
+      "memberSlug": "medrhythms",
+      "memberUrl": "https://dtxalliance.org/members/medrhythms/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/medrhythms-146x30.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Medscape Education",
+      "memberSlug": "medscape",
+      "memberUrl": "https://dtxalliance.org/members/medscape/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/09/Medscape-Education-Logo_CMYK-1-146x39.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Mindset Health",
+      "memberSlug": "mindset-health",
+      "memberUrl": "https://dtxalliance.org/members/mindset-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/10/Mindset-Health_Logo_k-146x46.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "mintz vert",
+      "memberSlug": "mintz",
+      "memberUrl": "https://dtxalliance.org/members/mintz/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/05/mintz_vert_rgb_for_web-71x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Stacked",
+      "memberSlug": "nixon-law",
+      "memberUrl": "https://dtxalliance.org/members/nixon-law/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/04/Stacked-Logo-Dark-350w-86x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Nox Health",
+      "memberSlug": "nox-health",
+      "memberUrl": "https://dtxalliance.org/members/nox-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2025/03/Nox-Health-Logo_Stacked-146x72.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "OPH",
+      "memberSlug": "otsuka-precision-health",
+      "memberUrl": "https://dtxalliance.org/members/otsuka-precision-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/09/OPH_Logo_Primary_Color-1-146x37.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "PatientPoint Stack",
+      "memberSlug": "patient-point",
+      "memberUrl": "https://dtxalliance.org/members/patient-point/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/08/PatientPoint-Stack-Logo-NM-2024-CMYK-Orange-Gray-146x76.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "perfood",
+      "memberSlug": "perfood",
+      "memberUrl": "https://dtxalliance.org/members/perfood/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/07/perfood_logo_signet_name_high-146x34.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Pfizer",
+      "memberSlug": "pfizer",
+      "memberUrl": "https://dtxalliance.org/members/pfizer/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/03/Pfizer-Logo-Color-RGB-146x60.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "PQH",
+      "memberSlug": "platform-q-health",
+      "memberUrl": "https://dtxalliance.org/members/platform-q-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/11/PQH-Logo-146x29.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "PropellerHealth",
+      "memberSlug": "propeller-health",
+      "memberUrl": "https://dtxalliance.org/members/propeller-health/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/PropellerHealth-logo-stacked-blue-146x45.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "radian",
+      "memberSlug": "radian",
+      "memberUrl": "https://dtxalliance.org/members/radian/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2025/01/radian-logo-black-146x73.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Remepy",
+      "memberSlug": "remepy",
+      "memberUrl": "https://dtxalliance.org/members/remepy/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/11/Remepy-Logo-black-146x30.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "220110 SANOFI",
+      "memberSlug": "sanofi-2",
+      "memberUrl": "https://dtxalliance.org/members/sanofi-2/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/10/220110-SANOFI-LOGO-CMYK-1-1-146x67.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "SKH Vertical",
+      "memberSlug": "sidekick",
+      "memberUrl": "https://dtxalliance.org/members/sidekick/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2022/04/SKH_Vertical_Color_Vector-118x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Sidley",
+      "memberSlug": "sidleyaustin",
+      "memberUrl": "https://dtxalliance.org/members/sidleyaustin/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/12/Sidley-Logo-146x37.jpg",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "sc",
+      "memberSlug": "scalable-care",
+      "memberUrl": "https://dtxalliance.org/members/scalable-care/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/08/sc-logo-146x61.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Logo Copy",
+      "memberSlug": "ssi-strategy",
+      "memberUrl": "https://dtxalliance.org/members/ssi-strategy/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/03/Logo-Copy-146x49.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "soihtu",
+      "memberSlug": "soihtu-dtx",
+      "memberUrl": "https://dtxalliance.org/members/soihtu-dtx/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2025/01/soihtu_logo_orange-e1737040624159-112x90.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Dakiyama Digital Red with Outline",
+      "memberSlug": "takeda",
+      "memberUrl": "https://dtxalliance.org/members/takeda/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/07/Dakiyama_Digital_Red_with_Outline-146x81.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "tenac.io",
+      "memberSlug": "tenac-io",
+      "memberUrl": "https://dtxalliance.org/members/tenac-io/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2024/07/tenac.io-logo-146x24.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "OUS Viatris",
+      "memberSlug": "viatris",
+      "memberUrl": "https://dtxalliance.org/members/viatris/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2025/02/OUS_Viatris_Logo_Horiz_RGB-6-146x41.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "welldoc",
+      "memberSlug": "welldoc",
+      "memberUrl": "https://dtxalliance.org/members/welldoc/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/welldoc-146x32.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "WELT",
+      "memberSlug": "welt",
+      "memberUrl": "https://dtxalliance.org/members/welt/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/01/WELT_LOGO_BLACK-146x27.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "On LightBlueCoral",
+      "memberSlug": "woebot",
+      "memberUrl": "https://dtxalliance.org/members/woebot/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2021/10/On-LightBlueCoral-146x18.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    },
+    {
+      "name": "Xealth®",
+      "memberSlug": "xealth",
+      "memberUrl": "https://dtxalliance.org/members/xealth/",
+      "logoUrl": "https://dtxalliance.org/wp-content/uploads/2023/01/Xealth®-logo-BLUE-146x45.png",
+      "sourceUrl": "https://dtxalliance.org/engage/dta-members/"
+    }
+  ],
+  "errors": []
+}

@@ -185,6 +185,23 @@ export interface ErrorEnvelope {
 
 // ── Utilities ───────────────────────────────────────────────────────────────
 
+type CliErrorShape = Error & {
+  code: string;
+  hint?: string;
+  exitCode: ExitCode;
+};
+
+function isCliErrorShape(err: unknown): err is CliErrorShape {
+  if (err instanceof CliError) return true;
+  if (!err || (typeof err !== 'object' && typeof err !== 'function')) return false;
+  const maybe = err as Record<string, unknown>;
+  return (
+    typeof maybe.message === 'string' &&
+    typeof maybe.code === 'string' &&
+    typeof maybe.exitCode === 'number'
+  );
+}
+
 /** Extract a human-readable message from an unknown caught value. */
 export function getErrorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
@@ -212,7 +229,7 @@ export function toEnvelope(err: unknown): ErrorEnvelope {
     receiptPath: traceReceipt.receiptPath,
     status: traceReceipt.status,
   } : undefined;
-  if (err instanceof CliError) {
+  if (isCliErrorShape(err)) {
     return {
       ok: false,
       error: {

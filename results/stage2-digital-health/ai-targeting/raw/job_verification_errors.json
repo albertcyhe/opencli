@@ -1,0 +1,552 @@
+[
+  {
+    "companyName": "RecoveryPlus.health",
+    "url": "https://www.recoveryplus.health/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "RecoveryPlus.health",
+    "url": "https://www.recoveryplus.health/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "医联",
+    "url": "https://www.medlinker.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "智云健康",
+    "url": "https://www.cloudr.cn/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Biofourmis",
+    "url": "https://www.biofourmis.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Glooko",
+    "url": "https://glooko.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Glooko",
+    "url": "https://glooko.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Glooko",
+    "url": "https://glooko.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Glooko",
+    "url": "https://api.greenhouse.io/v1/boards/glooko/embed/jobs?content=true",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Amwell",
+    "url": "https://business.amwell.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Amwell",
+    "url": "https://business.amwell.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Amwell",
+    "url": "https://business.amwell.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Amwell",
+    "url": "https://business.amwell.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Amwell",
+    "url": "https://boards.greenhouse.io/embed/job_board/js?for=amwell",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "方舟健客",
+    "url": "https://www.jianke.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Mindmaze SA",
+    "url": "https://www.mindmaze.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Mindmaze SA",
+    "url": "https://www.mindmaze.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Mindmaze SA",
+    "url": "https://www.mindmaze.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "妙手医生",
+    "url": "https://www.miaoshou.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Doctolib",
+    "url": "https://www.doctolib.fr/",
+    "error": "company_timeout_45000ms"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "平安健康",
+    "url": "https://www.pagd.net/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/careers",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "url": "https://www.aptardigitalhealth.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "春雨医生",
+    "url": "https://www.chunyuyisheng.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Big Health, Inc.",
+    "url": "https://www.bighealth.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Big Health, Inc.",
+    "url": "https://www.bighealth.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Big Health, Inc.",
+    "url": "https://www.bighealth.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Big Health, Inc.",
+    "url": "https://www.bighealth.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Big Health, Inc.",
+    "url": "mailto:careers@bighealth.com",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "mySugr",
+    "url": "https://www.mysugr.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "mySugr",
+    "url": "https://www.mysugr.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "mySugr",
+    "url": "https://www.mysugr.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "mySugr",
+    "url": "https://www.mysugr.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/careers",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/careers/",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/jobs",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/jobs/",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/join-us",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "Babylon Health",
+    "url": "https://www.babylonhealth.com/career",
+    "error": "fetch failed"
+  },
+  {
+    "companyName": "medrhythms",
+    "url": "https://www.medrhythms.com/",
+    "error": "company_timeout_45000ms"
+  },
+  {
+    "companyName": "Sword Health",
+    "url": "https://swordhealth.com/",
+    "error": "company_timeout_45000ms"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "微脉",
+    "url": "https://www.myweimai.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "welldoc",
+    "url": "https://www.welldoc.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "welldoc",
+    "url": "https://www.welldoc.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "welldoc",
+    "url": "https://www.welldoc.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "welldoc",
+    "url": "https://www.welldoc.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健客",
+    "url": "https://www.jianke.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/careers",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/careers/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/jobs",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/jobs/",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/join-us",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "叮当快药",
+    "url": "https://www.ddky.com/career",
+    "error": "HTTP 404"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/careers",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/careers/",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/jobs",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/jobs/",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/join-us",
+    "error": "HTTP 521"
+  },
+  {
+    "companyName": "健康160",
+    "url": "https://www.91160.com/career",
+    "error": "HTTP 521"
+  }
+]

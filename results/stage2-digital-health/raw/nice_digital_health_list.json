@@ -1,0 +1,605 @@
+{
+  "rows": [
+    {
+      "code": "HTG778",
+      "title": "Digital technologies to support self-management of asthma: early-use assessment (HTG778)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 5 May 2026",
+      "publishedDate": "2026-05-05",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg778"
+    },
+    {
+      "code": "HTG712",
+      "title": "Digital technologies for managing non-specific low back pain: early value assessment (HTG712)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 30 April 2026 Published : 5 March 2024",
+      "publishedDate": "2024-03-05",
+      "updatedDate": "2026-04-30",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg712"
+    },
+    {
+      "code": "HTG776",
+      "title": "Digital technologies for applying algorithms to spirometry to support asthma and COPD diagnosis in primary care and community diagnostic centres: early-use assessment (HTG776)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 2 April 2026",
+      "publishedDate": "2026-04-02",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg776"
+    },
+    {
+      "code": "HTG746",
+      "title": "Artificial intelligence (AI) technologies for assessing and triaging skin lesions referred to the urgent suspected skin cancer pathway: early value assessment (HTG746)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 17 March 2026 Published : 1 May 2025",
+      "publishedDate": "2025-05-01",
+      "updatedDate": "2026-03-17",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg746"
+    },
+    {
+      "code": "HTG736",
+      "title": "Digital technologies to support self-management of COPD: early value assessment (HTG736)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 3 February 2026 Published : 19 December 2024",
+      "publishedDate": "2024-12-19",
+      "updatedDate": "2026-02-03",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg736"
+    },
+    {
+      "code": "HTG768",
+      "title": "Digital self-help for eating disorders: early value assessment (HTG768)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 22 January 2026",
+      "publishedDate": "2026-01-22",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg768"
+    },
+    {
+      "code": "HTG766",
+      "title": "Digital technologies for managing mild to moderate symptoms of hip or knee osteoarthritis: early value assessment (HTG766)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 22 January 2026",
+      "publishedDate": "2026-01-22",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg766"
+    },
+    {
+      "code": "HTG761",
+      "title": "Digital platforms to support cardiac rehabilitation: early value assessment (HTG761)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 4 December 2025",
+      "publishedDate": "2025-12-04",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg761"
+    },
+    {
+      "code": "HTG718",
+      "title": "Digital technologies to deliver pulmonary rehabilitation programmes for adults with COPD: early value assessment (HTG718)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 17 September 2025 Published : 30 April 2024",
+      "publishedDate": "2024-04-30",
+      "updatedDate": "2025-09-17",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg718"
+    },
+    {
+      "code": "HTG756",
+      "title": "Digital front door technologies to gather service user information for NHS Talking Therapies for anxiety and depression assessments: early value assessment (HTG756)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 24 July 2025",
+      "publishedDate": "2025-07-24",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg756"
+    },
+    {
+      "code": "HTG748",
+      "title": "Digital therapy for chronic tic disorders and Tourette syndrome: early value assessment (HTG748)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 7 May 2025",
+      "publishedDate": "2025-05-07",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg748"
+    },
+    {
+      "code": "HTG743",
+      "title": "Robot-assisted surgery for orthopaedic procedures: early value assessment (HTG743)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 17 April 2025",
+      "publishedDate": "2025-04-17",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg743"
+    },
+    {
+      "code": "HTG742",
+      "title": "Robot-assisted surgery for soft tissue procedures: early value assessment (HTG742)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 17 April 2025",
+      "publishedDate": "2025-04-17",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg742"
+    },
+    {
+      "code": "HTG696",
+      "title": "Artificial intelligence (AI)-derived software to analyse chest X-rays for suspected lung cancer in primary care referrals: early value assessment (HTG696)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 10 February 2025 Published : 28 September 2023",
+      "publishedDate": "2023-09-28",
+      "updatedDate": "2025-02-10",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg696"
+    },
+    {
+      "code": "HTG739",
+      "title": "Artificial intelligence (AI) technologies to help detect fractures on X-rays in urgent care: early value assessment (HTG739)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 14 January 2025",
+      "publishedDate": "2025-01-14",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg739"
+    },
+    {
+      "code": "HTG675",
+      "title": "Digitally enabled therapies for adults with depression: early value assessment (HTG675)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 14 January 2025 Published : 16 May 2023",
+      "publishedDate": "2023-05-16",
+      "updatedDate": "2025-01-14",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg675"
+    },
+    {
+      "code": "HTG730",
+      "title": "Heart failure algorithms for remote monitoring in people with cardiac implantable electronic devices (HTG730)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 24 October 2024",
+      "publishedDate": "2024-10-24",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg730"
+    },
+    {
+      "code": "HTG708",
+      "title": "Artificial intelligence (AI)-derived software to help clinical decision making in stroke (HTG708)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 2 May 2024 Published : 23 January 2024",
+      "publishedDate": "2024-01-23",
+      "updatedDate": "2024-05-02",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg708"
+    },
+    {
+      "code": "HTG716",
+      "title": "GaitSmart rehabilitation exercise programme for gait and mobility issues (HTG716)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 3 April 2024",
+      "publishedDate": "2024-04-03",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg716"
+    },
+    {
+      "code": "HTG713",
+      "title": "Digital health technologies to help manage symptoms of psychosis and prevent relapse in adults and young people: early value assessment (HTG713)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 25 March 2024",
+      "publishedDate": "2024-03-25",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg713"
+    },
+    {
+      "code": "HTG664",
+      "title": "ProKnow cloud-based system for radiotherapy data storage, communication and management: early value assessment (HTG664)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 14 March 2024 Published : 28 March 2023",
+      "publishedDate": "2023-03-28",
+      "updatedDate": "2024-03-14",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg664"
+    },
+    {
+      "code": "HTG700",
+      "title": "Digital technologies for delivering multidisciplinary weight-management services: early value assessment (HTG700)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 6 March 2024 Published : 26 October 2023",
+      "publishedDate": "2023-10-26",
+      "updatedDate": "2024-03-06",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg700"
+    },
+    {
+      "code": "HTG657",
+      "title": "Devices for remote monitoring of Parkinson’s disease (HTG657)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 25 January 2024 Published : 25 January 2023",
+      "publishedDate": "2023-01-25",
+      "updatedDate": "2024-01-25",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg657"
+    },
+    {
+      "code": "HTG676",
+      "title": "Digitally enabled therapies for adults with anxiety disorders: early value assessment (HTG676)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 14 December 2023 Published : 16 May 2023",
+      "publishedDate": "2023-05-16",
+      "updatedDate": "2023-12-14",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg676"
+    },
+    {
+      "code": "HTG701",
+      "title": "Virtual reality technologies for treating agoraphobia or agoraphobic avoidance: early value assessment (HTG701)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 15 November 2023",
+      "publishedDate": "2023-11-15",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg701"
+    },
+    {
+      "code": "HTG697",
+      "title": "Virtual ward platform technologies for acute respiratory infections: early value assessment (HTG697)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 12 October 2023",
+      "publishedDate": "2023-10-12",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg697"
+    },
+    {
+      "code": "HTG694",
+      "title": "KardiaMobile 6L for measuring cardiac QT interval in adults having antipsychotic medication: early value assessment (HTG694)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 26 September 2023",
+      "publishedDate": "2023-09-26",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg694"
+    },
+    {
+      "code": "HTG660",
+      "title": "Guided self-help digital cognitive behavioural therapy for children and young people with mild to moderate symptoms of anxiety or low mood: early value assessment (HTG660)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 5 September 2023 Published : 8 February 2023",
+      "publishedDate": "2023-02-08",
+      "updatedDate": "2023-09-05",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg660"
+    },
+    {
+      "code": "HTG665",
+      "title": "Genedrive MT-RNR1 ID Kit for detecting a genetic variant to guide antibiotic use and prevent hearing loss in babies: early value assessment (HTG665)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 10 August 2023 Published : 30 March 2023",
+      "publishedDate": "2023-03-30",
+      "updatedDate": "2023-08-10",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg665"
+    },
+    {
+      "code": "HTG606",
+      "title": "KardiaMobile for detecting atrial fibrillation (HTG606)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 25 July 2023 Published : 6 January 2022",
+      "publishedDate": "2022-01-06",
+      "updatedDate": "2023-07-25",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg606"
+    },
+    {
+      "code": "HTG687",
+      "title": "Artificial intelligence (AI)-derived computer-aided detection (CAD) software for detecting and measuring lung nodules in CT scan images (HTG687)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 5 July 2023",
+      "publishedDate": "2023-07-05",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg687"
+    },
+    {
+      "code": "HTG682",
+      "title": "FibroScan for assessing liver fibrosis and cirrhosis outside secondary and specialist care (HTG682)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 7 June 2023",
+      "publishedDate": "2023-06-07",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg682"
+    },
+    {
+      "code": "HTG677",
+      "title": "Automated ankle brachial pressure index measurement devices to detect peripheral arterial disease in people with leg ulcers (HTG677)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 24 May 2023",
+      "publishedDate": "2023-05-24",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg677"
+    },
+    {
+      "code": "HTG678",
+      "title": "MRI fusion biopsy systems for diagnosing prostate cancer (HTG678)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 24 May 2023",
+      "publishedDate": "2023-05-24",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg678"
+    },
+    {
+      "code": "HTG671",
+      "title": "AposHealth for knee osteoarthritis (HTG671)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 11 April 2023",
+      "publishedDate": "2023-04-11",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg671"
+    },
+    {
+      "code": "HTG663",
+      "title": "CaRi-Heart for predicting cardiac risk in suspected coronary artery disease: early value assessment (HTG663)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 9 March 2023",
+      "publishedDate": "2023-03-09",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg663"
+    },
+    {
+      "code": "HTG655",
+      "title": "MRI-based technologies for assessing non-alcoholic fatty liver disease (HTG655)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 12 January 2023",
+      "publishedDate": "2023-01-12",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg655"
+    },
+    {
+      "code": "HTG642",
+      "title": "Magtrace and Sentimag system for locating sentinel lymph nodes for breast cancer (HTG642)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 5 October 2022",
+      "publishedDate": "2022-10-05",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg642"
+    },
+    {
+      "code": "HTG630",
+      "title": "PLGF-based testing to help diagnose suspected preterm pre-eclampsia (HTG630)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 27 July 2022",
+      "publishedDate": "2022-07-27",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg630"
+    },
+    {
+      "code": "HTG465",
+      "title": "Thopaz+ portable digital system for managing chest drains (HTG465)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 6 June 2022 Published : 21 March 2018",
+      "publishedDate": "2018-03-21",
+      "updatedDate": "2022-06-06",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg465"
+    },
+    {
+      "code": "HTG624",
+      "title": "Sleepio to treat insomnia and insomnia symptoms (HTG624)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 20 May 2022",
+      "publishedDate": "2022-05-20",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg624"
+    },
+    {
+      "code": "HTG429",
+      "title": "HeartFlow FFRCT for estimating fractional flow reserve from coronary CT angiography (HTG429)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 19 May 2021 Published : 13 February 2017",
+      "publishedDate": "2017-02-13",
+      "updatedDate": "2021-05-19",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg429"
+    },
+    {
+      "code": "HTG571",
+      "title": "QAngio XA 3D QFR and CAAS vFFR imaging software for assessing coronary stenosis during invasive coronary angiography (HTG571)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 17 March 2021",
+      "publishedDate": "2021-03-17",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg571"
+    },
+    {
+      "code": "HTG562",
+      "title": "Zio XT for detecting cardiac arrhythmias (HTG562)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 1 December 2020",
+      "publishedDate": "2020-12-01",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg562"
+    },
+    {
+      "code": "HTG557",
+      "title": "Testing strategies for Lynch syndrome in people with endometrial cancer (HTG557)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 28 October 2020",
+      "publishedDate": "2020-10-28",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg557"
+    },
+    {
+      "code": "HTG553",
+      "title": "Implantable cardiac monitors to detect atrial fibrillation after cryptogenic stroke (HTG553)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 2 September 2020",
+      "publishedDate": "2020-09-02",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg553"
+    },
+    {
+      "code": "HTG552",
+      "title": "High-sensitivity troponin tests for the early rule out of NSTEMI (HTG552)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 26 August 2020",
+      "publishedDate": "2020-08-26",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg552"
+    },
+    {
+      "code": "HTG544",
+      "title": "Tests to help assess risk of acute kidney injury for people being considered for critical care admission (ARCHITECT and Alinity i Urine NGAL assays, BioPorto NGAL test and NephroCheck test) (HTG544)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 17 June 2020",
+      "publishedDate": "2020-06-17",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg544"
+    },
+    {
+      "code": "HTG400",
+      "title": "SepsiTest assay for rapidly identifying bloodstream bacteria and fungi (HTG400)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 19 February 2020 Published : 10 February 2016",
+      "publishedDate": "2016-02-10",
+      "updatedDate": "2020-02-19",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg400"
+    },
+    {
+      "code": "HTG385",
+      "title": "Virtual Touch Quantification to diagnose and monitor liver fibrosis in chronic hepatitis B and C (HTG385)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 17 January 2020 Published : 23 September 2015",
+      "publishedDate": "2015-09-23",
+      "updatedDate": "2020-01-17",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg385"
+    },
+    {
+      "code": "HTG533",
+      "title": "gammaCore for cluster headache (HTG533)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 3 December 2019",
+      "publishedDate": "2019-12-03",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg533"
+    },
+    {
+      "code": "HTG530",
+      "title": "Point-of-care creatinine devices to assess kidney function before CT imaging with intravenous contrast (HTG530)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 13 November 2019",
+      "publishedDate": "2019-11-13",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg530"
+    },
+    {
+      "code": "HTG531",
+      "title": "Rapid tests for group A streptococcal infections in people with a sore throat (HTG531)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 13 November 2019",
+      "publishedDate": "2019-11-13",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg531"
+    },
+    {
+      "code": "HTG521",
+      "title": "Therapeutic monitoring of TNF-alpha inhibitors in rheumatoid arthritis (HTG521)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 10 July 2019",
+      "publishedDate": "2019-07-10",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg521"
+    },
+    {
+      "code": "HTG508",
+      "title": "Lead-I ECG devices for detecting symptomatic atrial fibrillation using single time point testing in primary care (HTG508)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 8 May 2019",
+      "publishedDate": "2019-05-08",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg508"
+    },
+    {
+      "code": "HTG476",
+      "title": "Biomarker tests to help diagnose preterm labour in women with intact membranes (HTG476)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 4 July 2018",
+      "publishedDate": "2018-07-04",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg476"
+    },
+    {
+      "code": "HTG467",
+      "title": "Adjunctive colposcopy technologies for assessing suspected cervical abnormalities: the DYSIS colposcope with DYSISmap and the ZedScan I (HTG467)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 25 April 2018",
+      "publishedDate": "2018-04-25",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg467"
+    },
+    {
+      "code": "HTG353",
+      "title": "Atrial fibrillation and heart valve disease: self-monitoring coagulation status using point-of-care coagulometers (the CoaguChek XS system) (HTG353)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 19 December 2017 Published : 24 September 2014",
+      "publishedDate": "2014-09-24",
+      "updatedDate": "2017-12-19",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg353"
+    },
+    {
+      "code": "HTG453",
+      "title": "Tests in secondary care to identify people at high risk of ovarian cancer (HTG453)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 15 November 2017",
+      "publishedDate": "2017-11-15",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg453"
+    },
+    {
+      "code": "HTG281",
+      "title": "New generation cardiac CT scanners (Aquilion ONE, Brilliance iCT, Discovery CT750 HD and Somatom Definition Flash) for cardiac imaging in people with suspected or known coronary artery disease in whom imaging is difficult with earlier generation CT scanners (HTG281)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Last updated : 6 July 2017 Published : 25 January 2012",
+      "publishedDate": "2012-01-25",
+      "updatedDate": "2017-07-06",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg281"
+    },
+    {
+      "code": "HTG441",
+      "title": "Multiple frequency bioimpedance devices to guide fluid management in people with chronic kidney disease having dialysis (HTG441)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 21 June 2017",
+      "publishedDate": "2017-06-21",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg441"
+    },
+    {
+      "code": "HTG438",
+      "title": "Virtual chromoendoscopy to assess colorectal polyps during colonoscopy (HTG438)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 10 May 2017",
+      "publishedDate": "2017-05-10",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg438"
+    },
+    {
+      "code": "HTG430",
+      "title": "Molecular testing strategies for Lynch syndrome in people with colorectal cancer (HTG430)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 22 February 2017",
+      "publishedDate": "2017-02-22",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg430"
+    },
+    {
+      "code": "HTG420",
+      "title": "High-throughput non-invasive prenatal testing for fetal RHD genotype (HTG420)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 9 November 2016",
+      "publishedDate": "2016-11-09",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg420"
+    },
+    {
+      "code": "HTG413",
+      "title": "ImmunoCAP ISAC 112 for multiplex allergen testing (HTG413)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 18 May 2016",
+      "publishedDate": "2016-05-18",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg413"
+    },
+    {
+      "code": "HTG388",
+      "title": "VivaScope 1500 and 3000 imaging systems for detecting skin cancer lesions (HTG388)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 11 November 2015",
+      "publishedDate": "2015-11-11",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg388"
+    },
+    {
+      "code": "HTG386",
+      "title": "Procalcitonin testing for diagnosing and monitoring sepsis (ADVIA Centaur BRAHMS PCT assay, BRAHMS PCT Sensitive Kryptor assay, Elecsys BRAHMS PCT assay, LIAISON BRAHMS PCT assay and VIDAS BRAHMS PCT assay) (HTG386)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 7 October 2015",
+      "publishedDate": "2015-10-07",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg386"
+    },
+    {
+      "code": "HTG360",
+      "title": "Fluorouracil chemotherapy: The My5‑FU assay for guiding dose adjustment (HTG360)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 10 December 2014",
+      "publishedDate": "2014-12-10",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg360"
+    },
+    {
+      "code": "HTG348",
+      "title": "Detecting, managing and monitoring haemostasis: viscoelastometric point‑of‑care testing (ROTEM, TEG and Sonoclot systems) (HTG348)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 20 August 2014",
+      "publishedDate": "2014-08-20",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg348"
+    },
+    {
+      "code": "HTG316",
+      "title": "EGFR‑TK mutation testing in adults with locally advanced or metastatic non-small-cell lung cancer (HTG316)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 14 August 2013",
+      "publishedDate": "2013-08-14",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg316"
+    },
+    {
+      "code": "HTG315",
+      "title": "Intraoperative tests (RD‑100i OSNA system and Metasin test) for detecting sentinel lymph node metastases in breast cancer (HTG315)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 7 August 2013",
+      "publishedDate": "2013-08-07",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg315"
+    },
+    {
+      "code": "HTG292",
+      "title": "Depth of anaesthesia monitors – Bispectral Index (BIS), E-Entropy and Narcotrend-Compact M (HTG292)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 21 November 2012",
+      "publishedDate": "2012-11-21",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg292"
+    },
+    {
+      "code": "HTG274",
+      "title": "The EOS 2D/3D imaging system (HTG274)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 26 October 2011",
+      "publishedDate": "2011-10-26",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg274"
+    },
+    {
+      "code": "HTG78",
+      "title": "Computed tomographic colonography (virtual colonoscopy) (HTG78)",
+      "metadata": "Product type: Guidance Programme: HealthTech guidance Published : 22 June 2005",
+      "publishedDate": "2005-06-22",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/htg78"
+    },
+    {
+      "code": "QS210",
+      "title": "Acute respiratory infection in over 16s: initial assessment and management including virtual wards (hospital at home) (QS210)",
+      "metadata": "Product type: Quality standard Published : 31 October 2023",
+      "publishedDate": "2023-10-31",
+      "updatedDate": "",
+      "sourceUrl": "https://www.nice.org.uk/guidance/qs210"
+    }
+  ],
+  "errors": []
+}

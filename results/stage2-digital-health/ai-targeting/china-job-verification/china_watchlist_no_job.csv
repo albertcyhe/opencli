@@ -1,0 +1,76 @@
+companyName,aliases,city,categories,opportunityScore,website,watchReason
+医联,Medlinker,成都,chronic_disease_management; clinical_workflow; internet_healthcare,75,https://www.medlinker.com/,BOSS 可返回医联成都职位，但本轮未核验到 AI/大模型/算法岗位；51job 被 WAF 滑块拦截。
+深圳市理邦精密仪器股份有限公司,,深圳,clinical_workflow; remote_patient_monitoring; samd,75,,no_active_ai_job_verified_in_public_china_pass
+天津致远慧图科技有限公司,,,chronic_disease_management; rehabilitation; remote_patient_monitoring; samd,73,,no_active_ai_job_verified_in_public_china_pass
+武汉兰丁智能医学股份有限公司,,,clinical_workflow; remote_patient_monitoring; samd,72,,no_active_ai_job_verified_in_public_china_pass
+智云健康,ClouDr,杭州,chronic_disease_management; clinical_workflow; internet_healthcare; online_consultation,70,https://www.cloudr.cn/,公开搜索未核验到 active AI/大模型/算法岗位；BOSS/51job 未完成可审计核验。
+北京品驰医疗设备股份有限公司,,北京,clinical_workflow; remote_patient_monitoring; samd,68,,no_active_ai_job_verified_in_public_china_pass
+深圳市埃微医疗信息技术有限公司,,深圳,clinical_workflow; remote_patient_monitoring; samd,67,,no_active_ai_job_verified_in_public_china_pass
+上海镜影信息科技有限公司,,上海,clinical_workflow; remote_patient_monitoring; samd,66,,no_active_ai_job_verified_in_public_china_pass
+华思（天津）医疗健康管理有限公司,,,health_management_platform; remote_patient_monitoring; samd,65,,no_active_ai_job_verified_in_public_china_pass
+景昱医疗科技（苏州）股份有限公司,,,clinical_workflow; online_consultation; remote_patient_monitoring; samd,65,,no_active_ai_job_verified_in_public_china_pass
+北京至真互联网技术有限公司,,北京,chronic_disease_management; clinical_workflow; samd,64,,no_active_ai_job_verified_in_public_china_pass
+成都云卫康医疗科技有限公司,,成都,remote_patient_monitoring; samd; sleep_health,64,,no_active_ai_job_verified_in_public_china_pass
+深圳星康医疗科技有限公司,,深圳,clinical_workflow; remote_patient_monitoring; samd,64,,no_active_ai_job_verified_in_public_china_pass
+英国雅培糖尿病护理公司,,,chronic_disease_management; remote_patient_monitoring,63,,no_active_ai_job_verified_in_public_china_pass
+纳龙健康科技股份有限公司,,,remote_patient_monitoring; samd,61,,no_active_ai_job_verified_in_public_china_pass
+上海鹰瞳医疗科技有限公司,,上海,chronic_disease_management; clinical_workflow; samd,60,,no_active_ai_job_verified_in_public_china_pass
+山东正心医疗科技有限公司,,,clinical_workflow; remote_patient_monitoring,60,,no_active_ai_job_verified_in_public_china_pass
+深圳硅基智能科技有限公司,,深圳,chronic_disease_management; clinical_workflow; samd,60,,no_active_ai_job_verified_in_public_china_pass
+方舟健客,方舟云康; Jianke,广州,chronic_disease_management; internet_healthcare; pharmacy_ecommerce,58,https://www.jianke.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+北京致远慧图科技有限公司,,北京,chronic_disease_management; clinical_workflow; samd,57,,no_active_ai_job_verified_in_public_china_pass
+妙手医生,妙手; Miaoshou Doctor,北京,clinical_workflow; online_consultation; pharmacy_ecommerce,57,https://www.miaoshou.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+长沙爱孕记医疗科技有限公司,,,remote_patient_monitoring; samd,57,,no_active_ai_job_verified_in_public_china_pass
+苏州体素信息科技有限公司,,,chronic_disease_management; clinical_workflow; samd,56,,no_active_ai_job_verified_in_public_china_pass
+合肥合滨智能机器人有限公司,,,clinical_workflow; remote_patient_monitoring,54,,no_active_ai_job_verified_in_public_china_pass
+春雨医生,Chunyu Doctor,北京,clinical_workflow; online_consultation,52,https://www.chunyuyisheng.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+丁香园,DXY,杭州,clinical_workflow; health_management_platform; patient_engagement,51,https://www.dxy.cn/,no_active_ai_job_verified_in_public_china_pass
+广州安必平医药科技股份有限公司,,广州,clinical_workflow; samd,51,,no_active_ai_job_verified_in_public_china_pass
+广西医准智能科技有限公司,,,clinical_workflow; samd,51,,no_active_ai_job_verified_in_public_china_pass
+深圳市保身欣科技电子有限公司,,深圳,remote_patient_monitoring,49,,no_active_ai_job_verified_in_public_china_pass
+上海远心医疗科技有限公司,,上海,remote_patient_monitoring; samd,48,,no_active_ai_job_verified_in_public_china_pass
+北京新网医讯技术有限公司,,北京,remote_patient_monitoring; samd,48,,no_active_ai_job_verified_in_public_china_pass
+海南齐佳智能科技有限公司,,,mental_health; rehabilitation; samd,48,,no_active_ai_job_verified_in_public_china_pass
+北京锐视康科技发展有限公司,,北京,remote_patient_monitoring; samd,47,,no_active_ai_job_verified_in_public_china_pass
+微脉,Weimai,杭州,health_management_platform; internet_healthcare; patient_engagement,47,https://www.myweimai.com/,no_active_ai_job_verified_in_public_china_pass
+伯乐实验有限公司,,,chronic_disease_management; remote_patient_monitoring,46,,no_active_ai_job_verified_in_public_china_pass
+安徽爱视睿医疗科技有限公司,,,clinical_workflow,46,,no_active_ai_job_verified_in_public_china_pass
+英国雅培糖尿病护理公司Abbott Diabetes Care Ltd.,,,chronic_disease_management; remote_patient_monitoring,46,,no_active_ai_job_verified_in_public_china_pass
+深圳市安普康科技有限公司,,深圳,remote_patient_monitoring,45,,no_active_ai_job_verified_in_public_china_pass
+健客,健客网; Jianke,广州,internet_healthcare; pharmacy_ecommerce,44,https://www.jianke.com/,no_active_ai_job_verified_in_public_china_pass
+叮当快药,叮当健康,北京,internet_healthcare; pharmacy_ecommerce,44,https://www.ddky.com/,no_active_ai_job_verified_in_public_china_pass
+好大夫在线,Haodf,北京,online_consultation; samd,44,https://www.haodf.com/,no_active_ai_job_verified_in_public_china_pass
+深圳市绘云生物科技有限公司,,深圳,clinical_workflow; samd,44,,no_active_ai_job_verified_in_public_china_pass
+健康160,就医160,深圳,internet_healthcare; samd,43,https://www.91160.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+苏州塞伯坦医疗科技有限公司,,,clinical_workflow; samd,43,,no_active_ai_job_verified_in_public_china_pass
+青岛远程科技有限公司,,,remote_patient_monitoring,43,,no_active_ai_job_verified_in_public_china_pass
+麦康迪（绍兴）科技有限公司,,,clinical_workflow; samd,43,,no_active_ai_job_verified_in_public_china_pass
+武汉康录生物技术股份有限公司,,,clinical_workflow,41,,no_active_ai_job_verified_in_public_china_pass
+江西思维智光医疗科技有限公司,,,mental_health,41,,no_active_ai_job_verified_in_public_china_pass
+瑞海胜（厦门）康复用品有限公司,,,rehabilitation,41,,no_active_ai_job_verified_in_public_china_pass
+中山瑞福医疗器械科技有限公司,,,chronic_disease_management,40,,no_active_ai_job_verified_in_public_china_pass
+思澜科技（成都）有限公司,,成都,remote_patient_monitoring; sleep_health,40,,no_active_ai_job_verified_in_public_china_pass
+亳州融健医疗用品有限公司,,,rehabilitation; samd,39,,no_active_ai_job_verified_in_public_china_pass
+微医,WeDoctor; 挂号网,杭州,internet_healthcare,39,https://www.guahao.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+思派健康,Medbanks; 思派网络,北京,health_management_platform; patient_engagement; pharmacy_ecommerce,39,https://www.medbanks.cn/,公开搜索未核验到 active AI/LLM/算法岗位。
+成都尚医信息科技有限公司,尚医科技; R Plus Health; 术康,成都,rehabilitation; samd,39,,公开搜索未核验到 active AI/LLM/算法岗位。
+深圳市亚辉龙生物科技股份有限公司,,深圳,chronic_disease_management,39,,no_active_ai_job_verified_in_public_china_pass
+深圳市伯劳特生物制品有限公司,,深圳,chronic_disease_management,39,,no_active_ai_job_verified_in_public_china_pass
+美敦力糖尿病科技（成都）有限公司,,成都,chronic_disease_management,39,,no_active_ai_job_verified_in_public_china_pass
+北京新兴阳升科技有限公司,,北京,remote_patient_monitoring; sleep_health,38,,no_active_ai_job_verified_in_public_china_pass
+北京航天卡迪技术开发研究所,,北京,remote_patient_monitoring; sleep_health,38,,no_active_ai_job_verified_in_public_china_pass
+深圳京柏医疗科技股份有限公司,,深圳,rehabilitation,38,,no_active_ai_job_verified_in_public_china_pass
+深圳市宝润科技有限公司,,深圳,samd,38,,no_active_ai_job_verified_in_public_china_pass
+云智康医疗科技（内蒙古）有限公司,,,remote_patient_monitoring; sleep_health,37,,no_active_ai_job_verified_in_public_china_pass
+广州视景医疗软件有限公司,,广州,digital_therapeutics; samd,37,,no_active_ai_job_verified_in_public_china_pass
+河南华南医电科技有限公司,,,remote_patient_monitoring; sleep_health,37,,no_active_ai_job_verified_in_public_china_pass
+深圳麦科田生物医疗技术股份有限公司,,深圳,samd,36,,no_active_ai_job_verified_in_public_china_pass
+湖南朗开医疗科技有限公司,,,remote_patient_monitoring,36,,no_active_ai_job_verified_in_public_china_pass
+武汉市九头鸟医疗仪器开发有限公司,,,rehabilitation,35,,no_active_ai_job_verified_in_public_china_pass
+济民健康管理股份有限公司,,,health_management_platform,35,,no_active_ai_job_verified_in_public_china_pass
+上海微创医疗机器人（集团）股份有限公司,,上海,remote_patient_monitoring,34,,no_active_ai_job_verified_in_public_china_pass
+南京普爱医疗设备股份有限公司,,,clinical_workflow,34,,no_active_ai_job_verified_in_public_china_pass
+圆心科技,Yuanxin Technology; 圆心医疗,北京,health_management_platform; patient_engagement; pharmacy_ecommerce,34,https://www.yuanxin.com/,公开搜索未核验到 active AI/LLM/算法岗位。
+安健科技（重庆）有限公司,,,clinical_workflow,34,,no_active_ai_job_verified_in_public_china_pass
+深圳市资福医疗技术有限公司,,深圳,samd,34,,no_active_ai_job_verified_in_public_china_pass
+维斯安（北京）医疗器械有限公司,,北京,remote_patient_monitoring,34,,no_active_ai_job_verified_in_public_china_pass

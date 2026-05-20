@@ -3,6 +3,7 @@ import { getRegistry } from '@jackwener/opencli/registry';
 import { ArgumentError, EmptyResultError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './drug-label.js';
 import './food-recall.js';
+import './device-510k.js';
 
 const origFetch = global.fetch;
 afterEach(() => { global.fetch = origFetch; });
@@ -39,6 +40,20 @@ const sampleRecall = {
     report_date: '20260415',
     recall_initiation_date: '20260410',
     termination_date: null,
+};
+
+const sampleDevice510k = {
+    k_number: 'K233195',
+    applicant: 'Canon Medical Systems Corporation',
+    device_name: 'Aplio i900 Software Diagnostic Ultrasound System',
+    product_code: 'IYN',
+    decision_date: '2024-01-24',
+    decision_description: 'Substantially Equivalent',
+    clearance_type: 'Traditional',
+    advisory_committee_description: 'Radiology',
+    city: 'Otawara-Shi',
+    state: '',
+    country_code: 'JP',
 };
 
 describe('openfda drug-label', () => {
@@ -110,5 +125,30 @@ describe('openfda food-recall', () => {
         // Verify both clauses survived URL encoding (the literal `+AND+` should NOT be percent-escaped).
         expect(calls[0]).toContain('+AND+');
         expect(calls[0]).toContain('salmonella');
+    });
+});
+
+describe('openfda device-510k', () => {
+    const cmd = getRegistry().get('openfda/device-510k');
+
+    it('rejects unsupported fields before fetching', async () => {
+        const fetchMock = vi.fn();
+        global.fetch = fetchMock;
+        await expect(cmd.func({ query: 'software', field: 'bad' })).rejects.toBeInstanceOf(ArgumentError);
+        expect(fetchMock).not.toHaveBeenCalled();
+    });
+
+    it('shapes FDA 510(k) records and emits detail source URL', async () => {
+        global.fetch = vi.fn(() => Promise.resolve(new Response(JSON.stringify({ results: [sampleDevice510k] }), { status: 200 })));
+        const rows = await cmd.func({ query: 'software', field: 'deviceName', limit: 1 });
+        expect(rows).toHaveLength(1);
+        expect(rows[0]).toMatchObject({
+            rank: 1,
+            kNumber: 'K233195',
+            applicant: 'Canon Medical Systems Corporation',
+            deviceName: 'Aplio i900 Software Diagnostic Ultrasound System',
+            productCode: 'IYN',
+            sourceUrl: 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K233195',
+        });
     });
 });

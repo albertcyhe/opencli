@@ -1,0 +1,3522 @@
+[
+  {
+    "companyName": "Fella Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.fellahealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "面向肥胖和代谢健康的远程医疗/健康管理产品。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Fella Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.ycombinator.com/companies/fella-health/jobs",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "YC 招聘页显示 Fella 为 fully remote team，并在岗位中强调远程团队协作。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "成都尚医信息科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/cf-pharmtech-and-chengdu-shangyi-launch-the-home-based-recovery-program-for-discharged-covid-19-patients-and-announce-todays-global-release-of-the-r-plus-health-free-app-301219070.html",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开新闻称成都尚医与合作方发布 R Plus Health 居家康复 App，为出院患者提供康复计划和居家恢复支持。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "成都尚医信息科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://m.newseed.cn/company/43464",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开企业资料显示为成都公司，适合中文主动联系和本地生态切入。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "智云健康",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.cloudr.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "官网展示慢病管理、互联网医院和患者服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "智云健康",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.cloudr.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "杭州总部/中国业务明确，可本地中文主动联系。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳硅基智能科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.sibionics.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "糖尿病连续血糖监测和数字化管理相关产品。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "深圳硅基智能科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.sibionics.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "深圳公司，中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "GlucoSenseDigital",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://glucosensedigital.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "AI-powered diabetes management product positioning.",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "GlucoSenseDigital",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://glucosensedigital.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "招聘页称 fully remote team，帮助 worldwide 用户管理糖尿病。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "蚂蚁集团健康事业群 / 数字医疗",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.mianshima.com/job/5/25030403589666",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位显示医疗大模型医学专家/医疗 Agent 方向，说明其有医疗 AI 产品线。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "蚂蚁集团健康事业群 / 数字医疗",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://talent.antgroup.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "蚂蚁集团杭州/中国团队可触达。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Hinge Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.hingehealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "数字肌骨诊所，面向疼痛、运动功能和物理治疗管理。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Hinge Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://jobs.ashbyhq.com/hinge-health",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位主要为美国地点或美国远程，不满足 global remote 严格口径。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Sword Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://swordhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "数字物理治疗和 MSK care 平台，强调 AI care 和临床团队。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Sword Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://swordhealth.com/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位通常按 US / Portugal / UK 等地区招聘，未找到 worldwide remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "医联",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.medlinker.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "互联网医疗平台，Stage 2 已标记为慢病管理、临床工作流和互联网医疗。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "医联",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.medlinker.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "成都公司/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Curable",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.curable.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "慢性疼痛教育、练习和行为干预 App。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Curable",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.curable.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 worldwide/global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "RecoveryPlus.health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.recoveryplus.health/about/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公司介绍其虚拟慢病管理、心脏/肺康复和远程患者支持服务。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "RecoveryPlus.health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.recoveryplus.health/about/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到严格 worldwide/global remote 证据；只能进入 target pool 或 unknown watchlist。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "华佗大数据健康（杭州）有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://jobs.niuqizp.com/job-vms55CzZC.html",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开招聘公告称其为医疗数据+AI全栈应用解决方案提供方，旗下云上华佗是人工智能数字健康科技平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "华佗大数据健康（杭州）有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://jobs.niuqizp.com/job-vms55CzZC.html",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "杭州公司且公开招聘 AI Agent 方向，适合主动联系。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "华大生命科学研究院 / BGI",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.lipind.com/position/detail/963421",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位要求把组学分析流程转成自然语言交互体验，技术栈含 LangChain / LlamaIndex。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "华大生命科学研究院 / BGI",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.genomics.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "深圳/杭州生态可触达。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Lark Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.lark.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "AI-powered chronic disease prevention and management coaching.",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Lark Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.lark.com/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Omada Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.omadahealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "虚拟慢病管理平台，覆盖 diabetes、hypertension、musculoskeletal 等慢病项目。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Omada Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://job-boards.greenhouse.io/omadahealth",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开职位远程地点为 Remote, USA 等，不满足 global remote。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Virta Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.virtahealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "面向 2 型糖尿病和肥胖的虚拟代谢健康 care。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Virta Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.virtahealth.com/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开招聘以美国远程/美国岗位为主，不满足 global remote。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Kaia Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://kaiahealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "数字 MSK 平台，提供运动治疗、教育和行为支持。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Kaia Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://kaiahealth.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 worldwide/global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Lin Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.lin.health/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "面向慢性疼痛的虚拟 care 和 coaching。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Lin Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.lin.health/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位/团队入口未证明 worldwide remote，按 restricted/unknown 处理。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "阿里健康",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.alihealth.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "阿里健康提供医药健康和互联网医疗服务，并有医疗大模型/智能问答岗位线索。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "阿里健康",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.alihealth.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "杭州/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Glooko",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://glooko.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "糖尿病数据管理、远程监测和患者/临床团队工具。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Glooko",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://glooko.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 worldwide/global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Welldoc",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.welldoc.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "糖尿病数字疗法和心代谢数字健康产品。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Welldoc",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.welldoc.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "医渡科技",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.yidutechgroup.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "医疗数据智能和 AI 平台公司，服务临床研究和医疗健康场景。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "医渡科技",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.yidutechgroup.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "中国公司/公开上市主体可触达。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "方舟健客",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.jianke.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "互联网医疗和医药电商平台，Stage 2 已标记慢病管理与药房电商。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "方舟健客",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.jianke.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "广州公司/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "上海鹰瞳医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.airdoc.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "AI 视网膜影像筛查，覆盖糖尿病视网膜病变和慢病风险相关场景。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "上海鹰瞳医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.airdoc.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "上海公司/中国市场明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Biofourmis",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.biofourmis.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "AI驱动远程患者监测和虚拟护理平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Biofourmis",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.biofourmis.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "MoreGoodDays",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.moregooddays.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "慢性疼痛数字项目，结合疼痛教育、心理和行为干预。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "MoreGoodDays",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.moregooddays.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到明确 global remote 工作政策。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Noom",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.noom.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "体重管理和行为改变数字健康产品。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Noom",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.noom.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位多按国家/地区招聘，未确认 global remote。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "平安健康",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.pagd.net/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "互联网医疗和健康服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "平安健康",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.pagd.net/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "上海/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "京东健康",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.jdh.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "京东健康提供在线医疗、医药健康商品和健康服务。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "京东健康",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.jdh.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Carepatron",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.carepatron.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "医疗实践管理、远程医疗、患者管理和工作流平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Carepatron",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.carepatron.com/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "careers 页面强调 global team / remote work 文化。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Wysa",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.wysa.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "AI mental health support and coaching product.",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Wysa",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.wysa.com/careers",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未找到严格 global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Big Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.bighealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "数字疗法产品覆盖 sleep 和 mental health。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Big Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.bighealth.com/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开岗位通常受 US/UK 等地区限制，未找到 global remote 证据。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "微医",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.guahao.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "互联网医院和在线医疗服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "微医",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.guahao.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "杭州/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Newpage",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://newpage.io/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "数字健康产品开发与技术服务公司，服务医疗健康产品建设。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Newpage",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://newpage.io/careers/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "careers 页面称 global team、100% remote。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京康恒医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.kanghengmed.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "慢病管理和医疗软件相关业务线索，需后续核验具体产品成熟度。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "北京康恒医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.kanghengmed.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京公司/中国业务可触达。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "远心医疗",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示为 remote_patient_monitoring / samd 候选。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "远心医疗",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "上海注册主体可触达。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "丁香园",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.dxy.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "医学专业社区和健康服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "丁香园",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.dxy.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "杭州/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "好大夫在线",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.haodf.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "在线问诊和医生患者服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "好大夫在线",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.haodf.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Headspace Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.headspace.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "心理健康、冥想和睡眠平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "Headspace Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://job-boards.greenhouse.io/hs",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "公开远程岗位多为 United States，不满足 global remote。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "圆心科技",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.yuanxin.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "医疗健康服务与药房/患者服务平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "圆心科技",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.yuanxin.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "成都云卫康医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 NMPA/UDI 证据显示其为睡眠/远程监测相关医疗软件候选。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "成都云卫康医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "注册主体在成都，适合本地进一步核验和联系。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "妙手医生",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.miaoshou.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "在线医疗和医药健康服务平台，Stage 2 标记为在线问诊和药房电商相关。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "妙手医生",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.miaoshou.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "思派健康",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.medbanks.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "患者服务和特药/健康管理相关平台，Stage 2 标记为患者互动和药房电商。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "思派健康",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.medbanks.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "春雨医生",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.chunyuyisheng.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "在线问诊和健康咨询平台。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "春雨医生",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.chunyuyisheng.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "叮当快药",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.ddky.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "医药健康到家服务平台，适合长期用药和慢病患者运营场景。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "叮当快药",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.ddky.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "北京/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "江西思维智光医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示为 mental_health 相关 NMPA/UDI 候选。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "江西思维智光医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "中国注册主体可触达，但城市需进一步核验。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "健康160",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.91160.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "预约挂号和互联网医疗服务平台，具备患者入口和复诊服务场景。",
+    "evidenceStrength": "strong_product_or_company_site"
+  },
+  {
+    "companyName": "健康160",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.91160.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "深圳/中国业务明确。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "天津致远慧图科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697549021014420230320104547712",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; rehabilitation; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "天津致远慧图科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697549021014420230320104547712",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "腾讯医疗健康（深圳）有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697541034009820250217120028629",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; mental_health; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "腾讯医疗健康（深圳）有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697541034009820250217120028629",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0502179100284920241010051926155",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0502179100284920241010051926155",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "云智康医疗科技（内蒙古）有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=13ff18ac57eb4e89a3dee8cc6d094806",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "云智康医疗科技（内蒙古）有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=13ff18ac57eb4e89a3dee8cc6d094806",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "伯乐实验有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=036105223607342025092803570325",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "伯乐实验有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=036105223607342025092803570325",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京新兴阳升科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697568534000720230304082002422",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京新兴阳升科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697568534000720230304082002422",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京至真互联网技术有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697508757001920221110021746316",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; clinical_workflow; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京至真互联网技术有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697508757001920221110021746316",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京致远慧图科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697516973001020220120030704594",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; clinical_workflow; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京致远慧图科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697516973001020220120030704594",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京航天卡迪技术开发研究所",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0692066571720120251017011019242",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京航天卡迪技术开发研究所",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0692066571720120251017011019242",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "思澜科技（成都）有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=4425365e8e2f450280940b64ac1c59dc",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "思澜科技（成都）有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=4425365e8e2f450280940b64ac1c59dc",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "河南华南医电科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697456412010520230131012921496",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "河南华南医电科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697456412010520230131012921496",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "苏州体素信息科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697517062001020221026035231561",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; clinical_workflow; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "苏州体素信息科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697517062001020221026035231561",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司Abbott Diabetes Care Ltd.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=00093815713579202205260441100",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "英国雅培糖尿病护理公司Abbott Diabetes Care Ltd.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=00093815713579202205260441100",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "上海镜影信息科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697755044001020260417012010264",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "上海镜影信息科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697755044001020260417012010264",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京品驰医疗设备股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0695980960560920250409110149243",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京品驰医疗设备股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0695980960560920250409110149243",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "华思（天津）医疗健康管理有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697452953104520250828052918072",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: health_management_platform; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "华思（天津）医疗健康管理有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697452953104520250828052918072",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "山东正心医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697246767051220240530041724743",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "山东正心医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697246767051220240530041724743",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "武汉兰丁智能医学股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975866142710202507090242481",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "武汉兰丁智能医学股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975866142710202507090242481",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市保身欣科技电子有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0692048530807820260512095841386",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市保身欣科技电子有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0692048530807820260512095841386",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市埃微医疗信息技术有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697996622005720260407052252779",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市埃微医疗信息技术有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697996622005720260407052252779",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市安普康科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0694672552335320260512092607521",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市安普康科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0694672552335320260512092607521",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市理邦精密仪器股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=069444138319332023122702190811",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市理邦精密仪器股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=069444138319332023122702190811",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "纳龙健康科技股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697614113017020260424042209895",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "纳龙健康科技股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697614113017020260424042209895",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "长沙爱孕记医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=273c8003f6164690916f8a3fdc31996c",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "长沙爱孕记医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=273c8003f6164690916f8a3fdc31996c",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "青岛远程科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697510300027820231010040328484",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "青岛远程科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697510300027820231010040328484",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Abbott Diabetes Care, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K060768",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Abbott Diabetes Care, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K060768",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Livongo",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.teladochealth.com/livongo",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; internet_healthcare; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Livongo",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.teladochealth.com/livongo",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Teladoc Health, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1477449",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; internet_healthcare; mental_health; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Teladoc Health, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.teladochealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "中山瑞福医疗器械科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=ca378ffe533249bca57eb24c4317f7e3",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "中山瑞福医疗器械科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=ca378ffe533249bca57eb24c4317f7e3",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "内特斯医疗系统DBA艾泰克有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=00382830027298202208310434215",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "内特斯医疗系统DBA艾泰克有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=00382830027298202208310434215",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "天津怡和嘉业医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=5D6A46D9CFDD2650AD9CA4CBBD7F6D20",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "天津怡和嘉业医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=5D6A46D9CFDD2650AD9CA4CBBD7F6D20",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "武汉市九头鸟医疗仪器开发有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697548329202720260418110923009",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "武汉市九头鸟医疗仪器开发有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697548329202720260418110923009",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳京柏医疗科技股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0695174055061120260430020307433",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳京柏医疗科技股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0695174055061120260430020307433",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市亚辉龙生物科技股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1f59cb8b-b489-41ac-8ddf-c5f2d5198b24",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市亚辉龙生物科技股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1f59cb8b-b489-41ac-8ddf-c5f2d5198b24",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市伯劳特生物制品有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0694076750016720240529031730243",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市伯劳特生物制品有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0694076750016720240529031730243",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "瑞海胜（厦门）康复用品有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975872081720202603040234192",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "瑞海胜（厦门）康复用品有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975872081720202603040234192",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "美敦力糖尿病科技（成都）有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0076300063270020230207115542933",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "美敦力糖尿病科技（成都）有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0076300063270020230207115542933",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "上海微创医疗机器人（集团）股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697162154189720250714111901457",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "上海微创医疗机器人（集团）股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697162154189720250714111901457",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "上海远心医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697830410015020251126054846763",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "上海远心医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697830410015020251126054846763",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京新网医讯技术有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975940490058202301090405080",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京新网医讯技术有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975940490058202301090405080",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "北京锐视康科技发展有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697399055003620220429111501082",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "北京锐视康科技发展有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697399055003620220429111501082",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "合肥合滨智能机器人有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697545144001620240327110556534",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "合肥合滨智能机器人有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697545144001620240327110556534",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "广西雅斯生物科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=16bcea9cc731422194ffa7c765da0323",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "广西雅斯生物科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=16bcea9cc731422194ffa7c765da0323",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "景昱医疗科技（苏州）股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697037781066020250718070235628",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; online_consultation; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "景昱医疗科技（苏州）股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697037781066020250718070235628",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市美连医疗电子股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1694441404251920260511110759856",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市美连医疗电子股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1694441404251920260511110759856",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳星康医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697521590151720260512042339217",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳星康医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697521590151720260512042339217",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "湖南朗开医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1697725918018420240314040805176",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "湖南朗开医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=1697725918018420240314040805176",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "维斯安（北京）医疗器械有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=3adb79ab002c4672af6070c9f3c1cf7b",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "维斯安（北京）医疗器械有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=3adb79ab002c4672af6070c9f3c1cf7b",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "辽宁迪浩生物科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=a66841e0-6ec2-410b-aeec-aa0aea963e57",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "辽宁迪浩生物科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=a66841e0-6ec2-410b-aeec-aa0aea963e57",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "ACON Laboratories, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K101371",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "ACON Laboratories, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K101371",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Agamatrix, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K103544",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Agamatrix, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K103544",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Prosomnus Sleep Technologies",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K221889",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Prosomnus Sleep Technologies",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K221889",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "亳州融健医疗用品有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06973774191615202604020500141",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "亳州融健医疗用品有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06973774191615202604020500141",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "徐州市科健高新技术有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975283415138202205101045050",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "徐州市科健高新技术有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975283415138202205101045050",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "河北深灵医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697758417001320250519034302079",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "河北深灵医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697758417001320250519034302079",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "海南齐佳智能科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=895bdefe706046a3bb310582ade31a21",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health; rehabilitation; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "海南齐佳智能科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=895bdefe706046a3bb310582ade31a21",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "海口安至科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697723824006220250623012627084",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "海口安至科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697723824006220250623012627084",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市昭蓝生物科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06973880810523202310110930463",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市昭蓝生物科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06973880810523202310110930463",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "深圳市艾利特医疗科技有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697070604106220250928113343202",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "深圳市艾利特医疗科技有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697070604106220250928113343202",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "赛尔生物",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975491760105202206230544050",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "赛尔生物",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=06975491760105202206230544050",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "长沙奥科维电子有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697621210001920230423020207567",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "长沙奥科维电子有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697621210001920230423020207567",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Dexcom, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K192787",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Dexcom, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K192787",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Doctolib",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://connect.doctolib.com/about-doctolib",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: online_consultation; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Doctolib",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.doctolib.fr/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Hewlett-Packard GmbH",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K991773",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Hewlett-Packard GmbH",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K991773",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "健客",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.jianke.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare; pharmacy_ecommerce",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "健客",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.jianke.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "微脉",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.myweimai.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: health_management_platform; internet_healthcare; patient_engagement",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "微脉",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.myweimai.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Akili",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://dtxalliance.org/members/akili-interactive/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: digital_therapeutics; mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Akili",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.akiliinteractive.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bio-Rad Laboratories",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070546",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bio-Rad Laboratories",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070546",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Impact Applications, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K181223",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Impact Applications, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K181223",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Lifescan, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K120558",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Lifescan, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K120558",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "medrhythms",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://dtxalliance.org/members/medrhythms/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: digital_therapeutics; rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "medrhythms",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.medrhythms.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Mindmaze SA",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K173931",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: digital_therapeutics; rehabilitation; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Mindmaze SA",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.mindmaze.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Quinton, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K864949",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Quinton, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K864949",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K170669",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; digital_therapeutics; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Voluntis Sa.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.aptardigitalhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "上海联影智能科技股份有限公司",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697419760002920220614032338768",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: clinical_workflow; health_management_platform; patient_engagement; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "上海联影智能科技股份有限公司",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://udi.nmpa.gov.cn/showDetailCX.html?deviceRecordKey=0697419760002920220614032338768",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 显示中国主体或中国城市。",
+    "evidenceStrength": "strong_reachability"
+  },
+  {
+    "companyName": "Amwell",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://business.amwell.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Amwell",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://business.amwell.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Arzco Medical Electronics, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K904943",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Arzco Medical Electronics, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K904943",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Babylon Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.babylonhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Babylon Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.babylonhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bd Becton Dickinson Vacutainer Systems Preanalytic",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K780939",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bd Becton Dickinson Vacutainer Systems Preanalytic",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K780939",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Boston Scientific Cardiac Diagnostic Technologies, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K243349",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Boston Scientific Cardiac Diagnostic Technologies, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K243349",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Cambridge Heart, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K983102",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Cambridge Heart, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K983102",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Capsule Technologie Sas",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K200856",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Capsule Technologie Sas",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K200856",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Cedars-Sinai Medical Center",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K172609",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Cedars-Sinai Medical Center",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K172609",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Conmedcorp",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K963787",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Conmedcorp",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K963787",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Conphar, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K813385",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Conphar, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K813385",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Corventis, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K090696",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: health_management_platform; patient_engagement; remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Corventis, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K090696",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Current Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://currenthealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Current Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://currenthealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Diagnostic Monitoring Software",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K133014",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Diagnostic Monitoring Software",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K133014",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Galix Biomedical Instrumentation, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K971670",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Galix Biomedical Instrumentation, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K971670",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "General Life Biotechnology Co., Ltd.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K123090",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "General Life Biotechnology Co., Ltd.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K123090",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Infopia Co, Ltd.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K132406",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Infopia Co, Ltd.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K132406",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Instrumentation Laboratory CO",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K771977",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Instrumentation Laboratory CO",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K771977",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Lawrence Medical Systems, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K874885",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Lawrence Medical Systems, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K874885",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Macon & Co., Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K902802",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Macon & Co., Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K902802",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Microlife Intellectual Property GmbH",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K171937",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Microlife Intellectual Property GmbH",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K171937",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Murata Vios, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K241728",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Murata Vios, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K241728",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Nikomed U.S.A., Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K950473",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Nikomed U.S.A., Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K950473",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Omega Critical Care Limited",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K081776",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Omega Critical Care Limited",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K081776",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Paceart, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K012407",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Paceart, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K012407",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Philips Medical Systems, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K922622",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Philips Medical Systems, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K922622",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Ppg Industries, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K912627",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Ppg Industries, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K912627",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "R D Intl.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K960312",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "R D Intl.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K960312",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "R2 Corp.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K832516",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "R2 Corp.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K832516",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Roche Diagnostics",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K121679",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Roche Diagnostics",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K121679",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Sk Med",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K031860",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Sk Med",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K031860",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Tomtec Imaging Systems GmbH",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K090461",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Tomtec Imaging Systems GmbH",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K090461",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Zoe Medical, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K130740",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: remote_patient_monitoring",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Zoe Medical, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K130740",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Abbott Laboratories",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K001993",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Abbott Laboratories",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K001993",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Advanced Brain Monitoring, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K120450",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Advanced Brain Monitoring, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K120450",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Animas Corp.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K063674",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Animas Corp.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K063674",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Apnicure, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K130538",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Apnicure, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K130538",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Apple, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K240929",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Apple, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K240929",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Argus Cognitive, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K223322",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Argus Cognitive, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K223322",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Arkray Factory USA, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K093819",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Arkray Factory USA, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K093819",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bayer Healthcare, LLC",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K082486",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bayer Healthcare, LLC",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K082486",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bemco Mattress Co.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K834344",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bemco Mattress Co.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K834344",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bio-Rad",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K052838",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bio-Rad",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K052838",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bioness, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K123636",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bioness, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K123636",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Bionime Corporation",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K113007",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Bionime Corporation",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K113007",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Cara Care",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://cara.care/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Cara Care",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://cara.care/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Cereve, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=DEN140032",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Cereve, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=DEN140032",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Craniofacial Pain Center of Idaho",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K082849",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Craniofacial Pain Center of Idaho",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K082849",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Cybex",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K843739",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Cybex",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K843739",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Diamond Orthotic Laboratory",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K202499",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Diamond Orthotic Laboratory",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K202499",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Dynadx Corporation",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070855",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Dynadx Corporation",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070855",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "E-San Limited",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K061328",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "E-San Limited",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K061328",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Ergoline GmbH",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K212883",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Ergoline GmbH",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K212883",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Happiest Baby, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=DEN210039",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Happiest Baby, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=DEN210039",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "HelloBetter",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://hellobetter.de/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: digital_therapeutics; mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "HelloBetter",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://hellobetter.de/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Hill-Rom, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K945729",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Hill-Rom, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K945729",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "I-Rep, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K822906",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "I-Rep, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K822906",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Influence, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K972023",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Influence, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K972023",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Jintronix, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K143034",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Jintronix, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K143034",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "M2 Group Holdings, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K100567",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "M2 Group Holdings, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K100567",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Mahana Therapeutics, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K211372",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Mahana Therapeutics, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K211372",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Medicaa (Uruguay) S.A.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070085",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Medicaa (Uruguay) S.A.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K070085",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Medical Analysis Systems, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K042717",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Medical Analysis Systems, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K042717",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Mycare Team, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K073699",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Mycare Team, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K073699",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "mySugr",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.mysugr.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "mySugr",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.mysugr.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Nakagawa Dental Clinic",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K060122",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Nakagawa Dental Clinic",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K060122",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Nautilus Sports/Medical Industries, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K861206",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Nautilus Sports/Medical Industries, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K861206",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Neurofield, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K252951",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Neurofield, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K252951",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Neurotronics, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K142774",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Neurotronics, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K142774",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Neurovalens , Ltd.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K230826",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Neurovalens , Ltd.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K230826",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Nihon Kohden America, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K983072",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Nihon Kohden America, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K983072",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Omega Results",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K963631",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Omega Results",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K963631",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Onera B.V.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K253668",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Onera B.V.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K253668",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Oviva",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://oviva.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Oviva",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://oviva.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Oxehealth Limited",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K233618",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Oxehealth Limited",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K233618",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Primus, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K896582",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Primus, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K896582",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Quantimetrix Corp.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K103744",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Quantimetrix Corp.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K103744",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Raye'S, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K022407",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Raye'S, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K022407",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Recovr,Inc",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K151446",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Recovr,Inc",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K151446",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Respironics, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K003499",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Respironics, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K003499",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Shiley, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K844138",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Shiley, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K844138",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Sidekick Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.sidekickhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management; digital_therapeutics",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Sidekick Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.sidekickhealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Sleep Specialists, LLC",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K100160",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Sleep Specialists, LLC",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K100160",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Sweetspot Diabetes Care, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K111509",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Sweetspot Diabetes Care, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K111509",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Symcare Personalized Health Solutions, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K093789",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: chronic_disease_management",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Symcare Personalized Health Solutions, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K093789",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "The ScottCare Corporation",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K250259",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "The ScottCare Corporation",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K250259",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "The Snore Reliever Company, LLC",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K092942",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: sleep_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "The Snore Reliever Company, LLC",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K092942",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Universal Gym Equipment, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K873659",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: rehabilitation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Universal Gym Equipment, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K873659",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Wfr/Aquaplast Corp.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K032156",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Wfr/Aquaplast Corp.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K032156",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Woebot Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://woebothealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: digital_therapeutics; mental_health",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Woebot Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://woebothealth.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Medtronic, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K153160",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: health_management_platform; patient_engagement",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Medtronic, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K153160",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Ada Health",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://ada.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: health_management_platform; online_consultation; patient_engagement",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Ada Health",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://ada.com/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Entra Health Systems",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K132930",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Entra Health Systems",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K132930",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Kry/Livi",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.livi.co.uk/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare; online_consultation",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Kry/Livi",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.livi.co.uk/",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Medaica, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K223166",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Medaica, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K223166",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Rtx Healthcare A/S",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K041816",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Rtx Healthcare A/S",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K041816",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "United Health Group, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K171406",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare; samd",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "United Health Group, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K171406",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Vignet, Inc.",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K113446",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Vignet, Inc.",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K113446",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  },
+  {
+    "companyName": "Viterion Telehealthcare, LLC",
+    "sourceType": "product_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K030419",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "Stage 2 categories: internet_healthcare",
+    "evidenceStrength": "medium_stage2_evidence"
+  },
+  {
+    "companyName": "Viterion Telehealthcare, LLC",
+    "sourceType": "reachability_evidence",
+    "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?id=K030419",
+    "capturedAt": "2026-05-19",
+    "evidenceSummary": "未确认全球远程。",
+    "evidenceStrength": "limited_or_unknown_reachability"
+  }
+]

@@ -1999,6 +1999,124 @@
     "sourceFile": "bbc/topic.js"
   },
   {
+    "site": "bfarm",
+    "name": "diga-detail",
+    "description": "Read one BfArM DiGA DeviceDefinition by FHIR id or DiGA id (requires BFARM_DIGA_TOKEN)",
+    "access": "read",
+    "domain": "diga.bfarm.de",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "id",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "FHIR id or 5-digit DiGA id"
+      }
+    ],
+    "columns": [
+      "field",
+      "value"
+    ],
+    "type": "js",
+    "modulePath": "bfarm/diga-detail.js",
+    "sourceFile": "bfarm/diga-detail.js"
+  },
+  {
+    "site": "bfarm",
+    "name": "diga-list",
+    "description": "List BfArM DiGA FHIR DeviceDefinition records (requires BFARM_DIGA_TOKEN)",
+    "access": "read",
+    "domain": "diga.bfarm.de",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 100,
+        "required": false,
+        "help": "Max rows requested with _count (default 100)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "fhirId",
+      "digaId",
+      "name",
+      "manufacturer",
+      "status",
+      "indication",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "bfarm/diga-list.js",
+    "sourceFile": "bfarm/diga-list.js"
+  },
+  {
+    "site": "bfarm",
+    "name": "diga-web-detail",
+    "description": "Read visible fields from a public BfArM DiGA directory page without the FHIR API token",
+    "access": "read",
+    "domain": "diga.bfarm.de",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "url-or-query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Full DiGA URL or product/DiGA id search term"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "bfarm/diga-web-detail.js",
+    "sourceFile": "bfarm/diga-web-detail.js"
+  },
+  {
+    "site": "bfarm",
+    "name": "diga-web-list",
+    "description": "List publicly rendered BfArM DiGA directory entries without the FHIR API token",
+    "access": "read",
+    "domain": "diga.bfarm.de",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": false,
+        "help": "Optional DiGA/product/company search term"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 100,
+        "required": false,
+        "help": "Max rows (default 100)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "manufacturer",
+      "indication",
+      "status",
+      "url",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "bfarm/diga-web-list.js",
+    "sourceFile": "bfarm/diga-web-list.js"
+  },
+  {
     "site": "bilibili",
     "name": "comments",
     "description": "获取 B站视频评论（使用官方 API + WBI 签名）",
@@ -5676,6 +5794,133 @@
     "sourceFile": "coingecko/trending.js"
   },
   {
+    "site": "companieshouse",
+    "name": "company",
+    "description": "Read one UK Companies House company profile",
+    "access": "read",
+    "domain": "company-information.service.gov.uk",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "company-number",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "UK company number"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "companieshouse/company.js",
+    "sourceFile": "companieshouse/company.js"
+  },
+  {
+    "site": "companieshouse",
+    "name": "search",
+    "description": "Search UK Companies House companies (requires COMPANIES_HOUSE_API_KEY)",
+    "access": "read",
+    "domain": "company-information.service.gov.uk",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company name or number"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (1-100, default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "companyNumber",
+      "companyStatus",
+      "companyType",
+      "dateOfCreation",
+      "address",
+      "url"
+    ],
+    "type": "js",
+    "modulePath": "companieshouse/search.js",
+    "sourceFile": "companieshouse/search.js"
+  },
+  {
+    "site": "companieshouse",
+    "name": "web-company",
+    "description": "Read public UK Companies House company page fields without an API key",
+    "access": "read",
+    "domain": "company-information.service.gov.uk",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "company-number-or-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "UK company number or public Companies House URL"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "companieshouse/web-company.js",
+    "sourceFile": "companieshouse/web-company.js"
+  },
+  {
+    "site": "companieshouse",
+    "name": "web-search",
+    "description": "Search public UK Companies House pages without an API key",
+    "access": "read",
+    "domain": "company-information.service.gov.uk",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company name or number"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "companyNumber",
+      "companyStatus",
+      "address",
+      "url",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "companieshouse/web-search.js",
+    "sourceFile": "companieshouse/web-search.js"
+  },
+  {
     "site": "coupang",
     "name": "add-to-cart",
     "description": "Add a Coupang product to cart using logged-in browser session",
@@ -5883,6 +6128,167 @@
     "type": "js",
     "modulePath": "crates/search.js",
     "sourceFile": "crates/search.js"
+  },
+  {
+    "site": "crunchbase",
+    "name": "funding-rounds",
+    "description": "Read Crunchbase funding rounds for one organization (requires CRUNCHBASE_API_KEY)",
+    "access": "read",
+    "domain": "crunchbase.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "id",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Crunchbase organization permalink or UUID"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 25,
+        "required": false,
+        "help": "Max rows (default 25)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "roundName",
+      "announcedOn",
+      "investmentType",
+      "moneyRaised",
+      "leadInvestors",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "crunchbase/funding-rounds.js",
+    "sourceFile": "crunchbase/funding-rounds.js"
+  },
+  {
+    "site": "crunchbase",
+    "name": "organization",
+    "description": "Read one Crunchbase organization by permalink or UUID (requires CRUNCHBASE_API_KEY)",
+    "access": "read",
+    "domain": "crunchbase.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "id",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Crunchbase organization permalink or UUID"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "crunchbase/organization.js",
+    "sourceFile": "crunchbase/organization.js"
+  },
+  {
+    "site": "crunchbase",
+    "name": "web-funding-rounds",
+    "description": "Read visible public Crunchbase funding rows without the API key",
+    "access": "read",
+    "domain": "crunchbase.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "slug-or-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Crunchbase organization slug or full organization URL"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 25,
+        "required": false,
+        "help": "Max rows (default 25)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "roundName",
+      "announcedOn",
+      "investmentType",
+      "moneyRaised",
+      "leadInvestors",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "crunchbase/web-funding-rounds.js",
+    "sourceFile": "crunchbase/web-funding-rounds.js"
+  },
+  {
+    "site": "crunchbase",
+    "name": "web-organization",
+    "description": "Read visible public Crunchbase organization fields without the API key",
+    "access": "read",
+    "domain": "crunchbase.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "slug-or-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Crunchbase organization slug or full URL"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "crunchbase/web-organization.js",
+    "sourceFile": "crunchbase/web-organization.js"
+  },
+  {
+    "site": "crunchbase",
+    "name": "web-search",
+    "description": "Search publicly rendered Crunchbase organization links without the API key",
+    "access": "read",
+    "domain": "crunchbase.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Organization keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 10,
+        "required": false,
+        "help": "Max rows (default 10)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "url",
+      "description",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "crunchbase/web-search.js",
+    "sourceFile": "crunchbase/web-search.js"
   },
   {
     "site": "ctrip",
@@ -8827,6 +9233,35 @@
     "navigateBefore": "https://creator.douyin.com"
   },
   {
+    "site": "dta",
+    "name": "members",
+    "description": "List Digital Therapeutics Alliance member organization pages",
+    "access": "read",
+    "domain": "dtxalliance.org",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 200,
+        "required": false,
+        "help": "Max rows (default 200)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "memberSlug",
+      "memberUrl",
+      "logoUrl",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "dta/members.js",
+    "sourceFile": "dta/members.js"
+  },
+  {
     "site": "eastmoney",
     "name": "announcement",
     "description": "上市公司公告（按交易所筛选）",
@@ -9775,6 +10210,29 @@
     "modulePath": "facebook/search.js",
     "sourceFile": "facebook/search.js",
     "navigateBefore": "https://www.facebook.com"
+  },
+  {
+    "site": "fda",
+    "name": "device-downloads",
+    "description": "List official FDA downloadable 510(k) device clearance files",
+    "access": "read",
+    "domain": "fda.gov",
+    "strategy": "public",
+    "browser": false,
+    "args": [],
+    "columns": [
+      "rank",
+      "dataset",
+      "period",
+      "fileName",
+      "format",
+      "url",
+      "sourceUrl",
+      "notes"
+    ],
+    "type": "js",
+    "modulePath": "fda/device-downloads.js",
+    "sourceFile": "fda/device-downloads.js"
   },
   {
     "site": "flathub",
@@ -12961,6 +13419,143 @@
     "navigateBefore": "https://www.instagram.com"
   },
   {
+    "site": "itjuzi",
+    "name": "company",
+    "description": "Search licensed IT桔子 company data through ITJUZI_API_BASE",
+    "access": "read",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "description",
+      "city",
+      "industry",
+      "website",
+      "source"
+    ],
+    "type": "js",
+    "modulePath": "itjuzi/company.js",
+    "sourceFile": "itjuzi/company.js"
+  },
+  {
+    "site": "itjuzi",
+    "name": "financing",
+    "description": "Search licensed IT桔子 financing data through ITJUZI_API_BASE",
+    "access": "read",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company or financing keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "round",
+      "amount",
+      "currency",
+      "date",
+      "investors",
+      "source"
+    ],
+    "type": "js",
+    "modulePath": "itjuzi/financing.js",
+    "sourceFile": "itjuzi/financing.js"
+  },
+  {
+    "site": "itjuzi",
+    "name": "web-company",
+    "description": "Read visible IT桔子 company/financing fields in the browser profile without licensed API credentials",
+    "access": "read",
+    "domain": "itjuzi.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "company-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "IT桔子 company URL or numeric/company id path segment"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "itjuzi/web-company.js",
+    "sourceFile": "itjuzi/web-company.js"
+  },
+  {
+    "site": "itjuzi",
+    "name": "web-search",
+    "description": "Search visible IT桔子 web results in the browser profile without licensed API credentials",
+    "access": "read",
+    "domain": "itjuzi.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company or financing keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "description",
+      "city",
+      "industry",
+      "website",
+      "url",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "itjuzi/web-search.js",
+    "sourceFile": "itjuzi/web-search.js"
+  },
+  {
     "site": "jd",
     "name": "add-cart",
     "description": "京东加入购物车",
@@ -15473,6 +16068,115 @@
     "navigateBefore": "https://medium.com"
   },
   {
+    "site": "mhealthbelgium",
+    "name": "app-detail",
+    "description": "Read visible fields from one mHealthBELGIUM app page",
+    "access": "read",
+    "domain": "mhealthbelgium.be",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "mHealthBELGIUM app URL"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "mhealthbelgium/app-detail.js",
+    "sourceFile": "mhealthbelgium/app-detail.js"
+  },
+  {
+    "site": "mhealthbelgium",
+    "name": "app-list",
+    "description": "List rendered mHealthBELGIUM medical mobile applications",
+    "access": "read",
+    "domain": "mhealthbelgium.be",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 100,
+        "required": false,
+        "help": "Max rows (default 100)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "level",
+      "description",
+      "url"
+    ],
+    "type": "js",
+    "modulePath": "mhealthbelgium/app-list.js",
+    "sourceFile": "mhealthbelgium/app-list.js"
+  },
+  {
+    "site": "mobile-health",
+    "name": "merge-evidence",
+    "description": "Merge OpenCLI research exports into normalized mobile-health company evidence tables",
+    "access": "read",
+    "strategy": "local",
+    "browser": false,
+    "args": [
+      {
+        "name": "input",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "JSON/CSV file or directory of OpenCLI exports"
+      },
+      {
+        "name": "table",
+        "type": "str",
+        "default": "companies",
+        "required": false,
+        "help": "Output logical table",
+        "choices": [
+          "companies",
+          "products",
+          "financing",
+          "evidence"
+        ]
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 1000,
+        "required": false,
+        "help": "Max rows (default 1000)"
+      }
+    ],
+    "columns": [
+      "table",
+      "companyName",
+      "jurisdiction",
+      "city",
+      "registeredCapital",
+      "businessScope",
+      "productName",
+      "round",
+      "amount",
+      "sourceType",
+      "sourceUrl",
+      "confidence",
+      "evidenceCount"
+    ],
+    "type": "js",
+    "modulePath": "mobile-health/merge-evidence.js",
+    "sourceFile": "mobile-health/merge-evidence.js"
+  },
+  {
     "site": "mubu",
     "name": "doc",
     "description": "读取幕布文档内容（默认输出 Markdown，可用 --output text 输出纯文本）",
@@ -15674,6 +16378,189 @@
     "modulePath": "mubu/search.js",
     "sourceFile": "mubu/search.js",
     "navigateBefore": "https://mubu.com"
+  },
+  {
+    "site": "nice",
+    "name": "digital-health-detail",
+    "description": "Read basic metadata from one NICE guidance page",
+    "access": "read",
+    "domain": "nice.org.uk",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "code-or-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Guidance code such as htg778, or a full NICE guidance URL"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "nice/digital-health-detail.js",
+    "sourceFile": "nice/digital-health-detail.js"
+  },
+  {
+    "site": "nice",
+    "name": "digital-health-list",
+    "description": "List NICE products on the digital health topic",
+    "access": "read",
+    "domain": "nice.org.uk",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "status",
+        "type": "str",
+        "default": "Published",
+        "required": false,
+        "help": "NICE status query value, e.g. Published or InDevelopment"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 75,
+        "required": false,
+        "help": "Max rows (1-200, default 75)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "code",
+      "title",
+      "metadata",
+      "publishedDate",
+      "updatedDate",
+      "url"
+    ],
+    "type": "js",
+    "modulePath": "nice/digital-health-list.js",
+    "sourceFile": "nice/digital-health-list.js"
+  },
+  {
+    "site": "nmpa",
+    "name": "device-registration-search",
+    "description": "Search NMPA domestic medical device registration records via the official government-service endpoint",
+    "access": "read",
+    "domain": "app.gjzwfw.gov.cn",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "product-name",
+        "type": "str",
+        "required": false,
+        "help": "Product name / 产品名称"
+      },
+      {
+        "name": "registrant",
+        "type": "str",
+        "required": false,
+        "help": "Registrant name / 注册人名称"
+      },
+      {
+        "name": "registration-number",
+        "type": "str",
+        "required": false,
+        "help": "Registration certificate number / 注册证编号"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 25,
+        "required": false,
+        "help": "Max rows (1-100, default 25)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "registrationNumber",
+      "registrant",
+      "registeredAddress",
+      "manufacturingAddress",
+      "productName",
+      "productClass",
+      "model",
+      "intendedUse",
+      "approvalDate",
+      "expiryDate",
+      "attachmentUrl",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "nmpa/device-registration-search.js",
+    "sourceFile": "nmpa/device-registration-search.js"
+  },
+  {
+    "site": "nmpa",
+    "name": "udi-detail",
+    "description": "Read one NMPA UDI detail page by deviceRecordKey",
+    "access": "read",
+    "domain": "udi.nmpa.gov.cn",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "deviceRecordKey",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "deviceRecordKey from nmpa udi-search"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "nmpa/udi-detail.js",
+    "sourceFile": "nmpa/udi-detail.js"
+  },
+  {
+    "site": "nmpa",
+    "name": "udi-search",
+    "description": "Search NMPA medical device UDI records by product, company, or identifier",
+    "access": "read",
+    "domain": "udi.nmpa.gov.cn",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Product identifier, product name, or company name"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 25,
+        "required": false,
+        "help": "Max rows (1-100, default 25)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "primaryDeviceId",
+      "agencyName",
+      "companyName",
+      "productName",
+      "specification",
+      "deviceEndDateStatus",
+      "deviceRecordKey",
+      "detailUrl",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "nmpa/udi-search.js",
+    "sourceFile": "nmpa/udi-search.js"
   },
   {
     "site": "notebooklm",
@@ -17368,6 +18255,233 @@
     "sourceFile": "openalex/work.js"
   },
   {
+    "site": "opencorporates",
+    "name": "company",
+    "description": "Read one OpenCorporates company by jurisdiction and company number",
+    "access": "read",
+    "domain": "opencorporates.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "jurisdiction-code",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Jurisdiction code, e.g. gb or us_de"
+      },
+      {
+        "name": "company-number",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Registry company number"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "companyNumber",
+      "jurisdictionCode",
+      "companyType",
+      "status",
+      "inactive",
+      "incorporationDate",
+      "registeredAddress",
+      "registryUrl",
+      "opencorporatesUrl"
+    ],
+    "type": "js",
+    "modulePath": "opencorporates/company.js",
+    "sourceFile": "opencorporates/company.js"
+  },
+  {
+    "site": "opencorporates",
+    "name": "search",
+    "description": "Search OpenCorporates companies (requires OPENCORPORATES_API_TOKEN)",
+    "access": "read",
+    "domain": "opencorporates.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company name or identifier"
+      },
+      {
+        "name": "jurisdiction-code",
+        "type": "str",
+        "required": false,
+        "help": "Optional OpenCorporates jurisdiction code, e.g. gb, us_de, fr"
+      },
+      {
+        "name": "country-code",
+        "type": "str",
+        "required": false,
+        "help": "Optional country code, e.g. us, gb, de"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (1-100, default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "companyNumber",
+      "jurisdictionCode",
+      "companyType",
+      "status",
+      "inactive",
+      "incorporationDate",
+      "registeredAddress",
+      "registryUrl",
+      "opencorporatesUrl"
+    ],
+    "type": "js",
+    "modulePath": "opencorporates/search.js",
+    "sourceFile": "opencorporates/search.js"
+  },
+  {
+    "site": "opencorporates",
+    "name": "web-company",
+    "description": "Read visible fields from one public OpenCorporates company page without an API token",
+    "access": "read",
+    "domain": "opencorporates.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "company-number-or-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company number or full OpenCorporates URL"
+      },
+      {
+        "name": "jurisdiction-code",
+        "type": "str",
+        "required": false,
+        "help": "Jurisdiction code when passing a company number"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "opencorporates/web-company.js",
+    "sourceFile": "opencorporates/web-company.js"
+  },
+  {
+    "site": "opencorporates",
+    "name": "web-search",
+    "description": "Search publicly rendered OpenCorporates company pages without an API token",
+    "access": "read",
+    "domain": "opencorporates.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company name or identifier"
+      },
+      {
+        "name": "jurisdiction-code",
+        "type": "str",
+        "required": false,
+        "help": "Optional OpenCorporates jurisdiction code, e.g. us_de, gb"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "companyNumber",
+      "jurisdictionCode",
+      "status",
+      "address",
+      "url",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "opencorporates/web-search.js",
+    "sourceFile": "opencorporates/web-search.js"
+  },
+  {
+    "site": "openfda",
+    "name": "device-510k",
+    "description": "Search FDA 510(k) medical device clearances through openFDA",
+    "access": "read",
+    "domain": "fda.gov",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Search term, company, device name, product code, or K number"
+      },
+      {
+        "name": "field",
+        "type": "str",
+        "default": "all",
+        "required": false,
+        "help": "Search field: all, applicant, deviceName, productCode, kNumber",
+        "choices": [
+          "all",
+          "applicant",
+          "deviceName",
+          "productCode",
+          "kNumber"
+        ]
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 25,
+        "required": false,
+        "help": "Max rows (1-100, default 25)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "kNumber",
+      "applicant",
+      "deviceName",
+      "productCode",
+      "decisionDate",
+      "decision",
+      "clearanceType",
+      "advisoryCommittee",
+      "city",
+      "state",
+      "country",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "openfda/device-510k.js",
+    "sourceFile": "openfda/device-510k.js"
+  },
+  {
     "site": "openfda",
     "name": "drug-label",
     "description": "Search FDA-approved drug labels (brand or generic name)",
@@ -17979,6 +19093,84 @@
     "type": "js",
     "modulePath": "paperreview/submit.js",
     "sourceFile": "paperreview/submit.js"
+  },
+  {
+    "site": "pharmcube",
+    "name": "investgo-import",
+    "description": "Normalize a licensed PharmCube InvestGO CSV export",
+    "access": "read",
+    "strategy": "local",
+    "browser": false,
+    "args": [
+      {
+        "name": "file",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "CSV export path"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 500,
+        "required": false,
+        "help": "Max rows (default 500)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "productOrPipeline",
+      "businessScope",
+      "round",
+      "amount",
+      "currency",
+      "date",
+      "investors",
+      "source"
+    ],
+    "type": "js",
+    "modulePath": "pharmcube/investgo-import.js",
+    "sourceFile": "pharmcube/investgo-import.js"
+  },
+  {
+    "site": "pitchbook",
+    "name": "import",
+    "description": "Normalize a licensed PitchBook CSV export into OpenCLI rows",
+    "access": "read",
+    "strategy": "local",
+    "browser": false,
+    "args": [
+      {
+        "name": "file",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "CSV export path"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 500,
+        "required": false,
+        "help": "Max rows (default 500)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "companyName",
+      "description",
+      "hqLocation",
+      "website",
+      "financingStatus",
+      "lastFinancingDate",
+      "lastFinancingSize",
+      "investors",
+      "source"
+    ],
+    "type": "js",
+    "modulePath": "pitchbook/import.js",
+    "sourceFile": "pitchbook/import.js"
   },
   {
     "site": "pixiv",
@@ -18811,6 +20003,144 @@
     "type": "js",
     "modulePath": "pypi/package.js",
     "sourceFile": "pypi/package.js"
+  },
+  {
+    "site": "qcc",
+    "name": "baseinfo",
+    "description": "Read Qichacha base company information by keyword (requires QCC_API_KEY and QCC_SECRET_KEY)",
+    "access": "read",
+    "domain": "api.qichacha.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "keyword",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Exact company name or credit code"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "creditCode",
+      "operName",
+      "status",
+      "registeredCapital",
+      "startDate",
+      "address",
+      "businessScope",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "qcc/baseinfo.js",
+    "sourceFile": "qcc/baseinfo.js"
+  },
+  {
+    "site": "qcc",
+    "name": "search",
+    "description": "Search Qichacha companies (requires QCC_API_KEY and QCC_SECRET_KEY)",
+    "access": "read",
+    "domain": "api.qichacha.com",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "creditCode",
+      "operName",
+      "status",
+      "registeredCapital",
+      "startDate",
+      "address",
+      "businessScope",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "qcc/search.js",
+    "sourceFile": "qcc/search.js"
+  },
+  {
+    "site": "qcc",
+    "name": "web-baseinfo",
+    "description": "Read visible Qichacha company base information from the browser profile without QCC OpenAPI credentials",
+    "access": "read",
+    "domain": "qcc.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "firm-url",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Qichacha firm URL or KeyNo"
+      }
+    ],
+    "columns": [
+      "field",
+      "value",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "qcc/web-baseinfo.js",
+    "sourceFile": "qcc/web-baseinfo.js"
+  },
+  {
+    "site": "qcc",
+    "name": "web-search",
+    "description": "Search visible Qichacha web results in the browser profile without QCC OpenAPI credentials",
+    "access": "read",
+    "domain": "qcc.com",
+    "strategy": "public",
+    "browser": true,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company keyword"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "name",
+      "creditCode",
+      "legalRepresentative",
+      "registeredCapital",
+      "status",
+      "address",
+      "url",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "qcc/web-search.js",
+    "sourceFile": "qcc/web-search.js"
   },
   {
     "site": "quark",
@@ -20657,6 +21987,123 @@
     "type": "js",
     "modulePath": "rubygems/search.js",
     "sourceFile": "rubygems/search.js"
+  },
+  {
+    "site": "sec",
+    "name": "company",
+    "description": "Search SEC company tickers by name or ticker",
+    "access": "read",
+    "domain": "sec.gov",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "query",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "Company name or ticker"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "cik",
+      "ticker",
+      "title",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "sec/company.js",
+    "sourceFile": "sec/company.js"
+  },
+  {
+    "site": "sec",
+    "name": "filings",
+    "description": "List recent SEC EDGAR submissions for one CIK",
+    "access": "read",
+    "domain": "sec.gov",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "cik",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "CIK, with or without leading zeroes"
+      },
+      {
+        "name": "form",
+        "type": "str",
+        "required": false,
+        "help": "Optional form filter, e.g. D, 10-K, S-1"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "form",
+      "accessionNumber",
+      "filingDate",
+      "reportDate",
+      "primaryDocument",
+      "primaryDocDescription",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "sec/filings.js",
+    "sourceFile": "sec/filings.js"
+  },
+  {
+    "site": "sec",
+    "name": "form-d",
+    "description": "List recent SEC Form D filings for one CIK",
+    "access": "read",
+    "domain": "sec.gov",
+    "strategy": "public",
+    "browser": false,
+    "args": [
+      {
+        "name": "cik",
+        "type": "str",
+        "required": true,
+        "positional": true,
+        "help": "CIK, with or without leading zeroes"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "default": 20,
+        "required": false,
+        "help": "Max rows (default 20)"
+      }
+    ],
+    "columns": [
+      "rank",
+      "form",
+      "accessionNumber",
+      "filingDate",
+      "reportDate",
+      "primaryDocument",
+      "primaryDocDescription",
+      "sourceUrl"
+    ],
+    "type": "js",
+    "modulePath": "sec/form-d.js",
+    "sourceFile": "sec/form-d.js"
   },
   {
     "site": "sinablog",

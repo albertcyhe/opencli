@@ -1,0 +1,54 @@
+companyName,aliases,region,country,city,categoryHint,seedReason,seedSourceUrl,priority
+成都尚医信息科技有限公司,尚医科技; R Plus Health; 术康,China,CN,成都,rehabilitation; digital_therapeutics; health_management_platform,用户点名；公开新闻显示其与 CF PharmTech 发布 R Plus Health 居家康复 App,https://www.prnewswire.com/news-releases/cf-pharmtech-and-chengdu-shangyi-launch-the-home-based-recovery-program-for-discharged-covid-19-patients-and-announce-todays-global-release-of-the-r-plus-health-free-app-301219070.html,1
+RecoveryPlus.health,Recovery Plus USA Inc; Recovery Plus,US,US,New York,remote_patient_monitoring; rehabilitation; chronic_disease_management; virtual care,用户点名；虚拟慢病管理和心肺康复服务,https://www.recoveryplus.health/about/,1
+Omada Health,,US,US,San Francisco,chronic_disease_management; virtual care; remote_patient_monitoring,知名美国数字慢病管理公司,https://www.omadahealth.com/,1
+Livongo,Livongo Health; Teladoc Health chronic care,US,US,Mountain View,chronic_disease_management; remote_patient_monitoring,知名慢病管理/远程监测公司，后并入 Teladoc Health,https://www.teladochealth.com/livongo,1
+Hinge Health,,US,US,San Francisco,rehabilitation; digital_musculoskeletal_clinic; virtual care,知名数字肌骨康复公司,https://www.hingehealth.com/,1
+Akili,Akili Interactive; Akili Interactive Labs; EndeavorRx,US,US,Boston,digital_therapeutics; cognitive; pediatric ADHD,知名数字疗法/认知治疗公司,https://www.akiliinteractive.com/,1
+Click Therapeutics,,US,US,New York,digital_therapeutics; mental_health,知名处方数字疗法公司,https://clicktherapeutics.com/,1
+Big Health,Sleepio; Daylight,US,US,San Francisco,digital_therapeutics; sleep_health; mental_health,知名睡眠/心理数字疗法公司,https://www.bighealth.com/,1
+Kaia Health,,US,US,New York,rehabilitation; musculoskeletal; digital_therapeutics,数字肌骨/康复公司,https://www.kaiahealth.com/,1
+Noom,Noom Health,US,US,New York,chronic_disease_management; weight management; behavior change,知名体重和慢病行为改变数字健康公司,https://www.noom.com/,1
+Headspace Health,Headspace; Ginger,US,US,Santa Monica,mental_health; virtual care,知名数字心理健康公司,https://organizations.headspace.com/,1
+Sidekick Health,,Europe,IS,Reykjavik,digital_therapeutics; chronic_disease_management,欧洲数字疗法/慢病管理公司,https://www.sidekickhealth.com/,1
+Voluntis,Aptar Digital Health; Theraxium,Europe,FR,Paris,digital_therapeutics; samd,法国数字疗法公司，后并入 Aptar Digital Health,https://www.aptardigitalhealth.com/,1
+Orexo digital therapeutics,Orexo; MODIA; deprexis,Europe,SE,Uppsala,digital_therapeutics; mental_health; substance use,瑞典药企数字疗法业务,https://www.orexo.com/therapeutic-focus/opioid-use-disorder-oud/,1
+MindMaze,,Europe,CH,Lausanne,rehabilitation; neurorehabilitation; digital therapeutics,瑞士神经康复数字健康公司,https://www.mindmaze.com/,1
+Sword Health,,Europe,PT,Porto,rehabilitation; musculoskeletal; virtual care,葡萄牙/美国数字肌骨康复公司,https://swordhealth.com/,1
+Ada Health,,Europe,DE,Berlin,clinical_workflow; symptom assessment; patient engagement,德国 AI 问诊/症状评估公司,https://ada.com/,1
+Babylon Health,Babylon,Europe,GB,London,telehealth; online_consultation; virtual care,英国知名远程医疗平台，历史主体需标记存续状态,https://www.babylonhealth.com/,1
+Kry/Livi,Kry; Livi,Europe,SE,Stockholm,online_consultation; telehealth; virtual care,欧洲在线问诊平台,https://www.livi.co.uk/,1
+Doctolib,,Europe,FR,Paris,online_consultation; clinical_workflow; digital medical platform,欧洲医疗预约/远程问诊平台,https://connect.doctolib.com/about-doctolib,1
+微医,WeDoctor; 挂号网,China,CN,杭州,internet_healthcare; online_consultation; health_management_platform,中国知名互联网医疗平台,https://www.guahao.com/,1
+平安健康,平安好医生; Ping An Good Doctor,China,CN,上海,internet_healthcare; online_consultation; health_management_platform,中国知名互联网医疗平台,https://www.pagd.net/,1
+京东健康,JD Health,China,CN,北京,internet_healthcare; pharmacy_ecommerce; online_consultation,中国知名互联网医疗/医药电商平台,https://www.jdh.com/,1
+阿里健康,Alibaba Health,China,CN,杭州,internet_healthcare; pharmacy_ecommerce; health_management_platform,中国知名互联网医疗/医药电商平台,https://www.alihealth.cn/,1
+丁香园,DXY,China,CN,杭州,digital medical platform; clinical_workflow; patient engagement,中国知名医生/医疗健康平台,https://www.dxy.cn/,1
+医联,Medlinker,China,CN,成都,internet_healthcare; online_consultation; chronic_disease_management,成都互联网医疗平台,https://www.medlinker.com/,1
+妙手医生,妙手; Miaoshou Doctor,China,CN,北京,online_consultation; pharmacy_ecommerce; internet_healthcare,中国在线问诊/医药电商平台,https://www.miaoshou.com/,1
+健客,健客网; Jianke,China,CN,广州,pharmacy_ecommerce; internet_healthcare,中国医药电商/互联网医疗平台,https://www.jianke.com/,1
+智云健康,ClouDr,China,CN,杭州,chronic_disease_management; internet_healthcare; health_management_platform,中国慢病管理和数字医疗平台,https://www.cloudr.cn/,1
+圆心科技,Yuanxin Technology; 圆心医疗,China,CN,北京,pharmacy_ecommerce; internet_healthcare; patient engagement,中国院外患者服务/医药平台,https://www.yuanxin.com/,1
+方舟健客,方舟云康; Jianke,China,CN,广州,online_consultation; pharmacy_ecommerce; internet_healthcare,中国互联网医疗/慢病管理平台,https://www.jianke.com/,1
+思派健康,Medbanks; 思派网络,China,CN,北京,patient engagement; oncology patient management; specialty pharmacy,中国特药和患者管理平台,https://www.medbanks.cn/,1
+Teladoc Health,,US,US,Purchase,telehealth; virtual care; chronic_disease_management,美国远程医疗平台,https://www.teladochealth.com/,2
+Amwell,American Well,US,US,Boston,telehealth; virtual care,美国远程医疗平台,https://business.amwell.com/,2
+Virta Health,,US,US,Denver,chronic_disease_management; diabetes; virtual care,美国糖尿病/代谢慢病虚拟诊疗公司,https://www.virtahealth.com/,2
+Biofourmis,,US,US,Boston,remote_patient_monitoring; virtual care; digital therapeutics,远程监测和数字医学公司,https://www.biofourmis.com/,2
+Current Health,Best Buy Health Current Health,Europe,GB,Edinburgh,remote_patient_monitoring; hospital at home,英国远程患者监测公司,https://currenthealth.com/,2
+WellDoc,Welldoc; BlueStar,US,US,Columbia,digital_therapeutics; chronic_disease_management; diabetes,美国糖尿病数字疗法公司,https://www.welldoc.com/,2
+AppliedVR,,US,US,Los Angeles,digital_therapeutics; pain management,VR 数字疗法/疼痛管理公司,https://www.appliedvr.io/,2
+MedRhythms,,US,US,Portland,digital_therapeutics; rehabilitation; neurorehabilitation,神经康复数字疗法公司,https://www.medrhythms.com/,2
+Woebot Health,Woebot,US,US,San Francisco,mental_health; digital therapeutics,数字心理健康公司,https://woebothealth.com/,2
+Lark Health,,US,US,Mountain View,chronic_disease_management; diabetes; hypertension,AI 慢病管理公司,https://www.lark.com/,2
+Glooko,,US,US,Palo Alto,chronic_disease_management; diabetes; remote_patient_monitoring,糖尿病数据和远程监测平台,https://glooko.com/,2
+mySugr,Roche mySugr,Europe,AT,Vienna,chronic_disease_management; diabetes; mobile health,欧洲糖尿病管理 App,https://www.mysugr.com/,2
+Oviva,,Europe,CH,Zurich,chronic_disease_management; digital nutrition therapy,欧洲数字营养/慢病管理公司,https://oviva.com/,2
+Infermedica,,Europe,PL,Wroclaw,clinical_workflow; symptom assessment,欧洲症状评估/分诊平台,https://infermedica.com/,2
+HelloBetter,GET.ON Institut,Europe,DE,Hamburg,digital_therapeutics; mental_health; DiGA,德国 DiGA/心理数字疗法公司,https://hellobetter.de/,2
+Cara Care,HiDoc Technologies,Europe,DE,Berlin,digital_therapeutics; chronic_disease_management; gastrointestinal,德国消化疾病数字健康/DiGA 公司,https://cara.care/,2
+好大夫在线,Haodf,China,CN,北京,online_consultation; internet_healthcare,中国在线问诊平台,https://www.haodf.com/,2
+春雨医生,Chunyu Doctor,China,CN,北京,online_consultation; internet_healthcare,中国在线问诊平台,https://www.chunyuyisheng.com/,2
+叮当快药,叮当健康,China,CN,北京,pharmacy_ecommerce; internet_healthcare,中国医药电商/互联网医疗平台,https://www.ddky.com/,2
+微脉,Weimai,China,CN,杭州,internet_healthcare; patient engagement; online_consultation,杭州互联网医疗/患者服务平台,https://www.myweimai.com/,2
+健康160,就医160,China,CN,深圳,internet_healthcare; online_consultation; appointment platform,深圳互联网医疗服务平台,https://www.91160.com/,2

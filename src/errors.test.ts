@@ -101,6 +101,28 @@ describe('toEnvelope', () => {
     expect(envelope.error).not.toHaveProperty('help');
   });
 
+  it('converts CliError-shaped errors from a second module instance', () => {
+    const err = new Error('OPENCORPORATES_API_TOKEN is required') as Error & {
+      code: string;
+      hint: string;
+      exitCode: number;
+    };
+    err.code = 'CONFIG';
+    err.hint = 'Set OPENCORPORATES_API_TOKEN.';
+    err.exitCode = 78;
+
+    const envelope = toEnvelope(err);
+    expect(envelope).toEqual({
+      ok: false,
+      error: {
+        code: 'CONFIG',
+        message: 'OPENCORPORATES_API_TOKEN is required',
+        help: 'Set OPENCORPORATES_API_TOKEN.',
+        exitCode: 78,
+      },
+    });
+  });
+
   it('converts unknown Error to UNKNOWN envelope', () => {
     const envelope = toEnvelope(new Error('random failure'));
     expect(envelope).toEqual({

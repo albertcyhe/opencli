@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "failures": [],
+  "warnings": [
+    "Hinge Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Sword Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Omada Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Virta Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Lin Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Noom marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Big Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed.",
+    "Headspace Health marked restricted without a strong text pattern; keep in watchlist unless manually confirmed."
+  ],
+  "coverage": {
+    "chronic_pain_msk": true,
+    "metabolic_cardiovascular": true,
+    "mental_sleep_comorbidity": true
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "rows": [
+    {
+      "queryName": "Canon Medical Systems Corporation",
+      "cik": "0000016988",
+      "ticker": "CAJFF",
+      "title": "CANON INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=16988"
+    },
+    {
+      "queryName": "GE Medical Systems Ultrasound and Primary Care Diagnostics",
+      "cik": "0001692415",
+      "ticker": "CODX",
+      "title": "Co-Diagnostics, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1692415"
+    },
+    {
+      "queryName": "Stryker Corporation",
+      "cik": "0000310764",
+      "ticker": "SYK",
+      "title": "STRYKER CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=310764"
+    },
+    {
+      "queryName": "Canon, Inc.",
+      "cik": "0000016988",
+      "ticker": "CAJFF",
+      "title": "CANON INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=16988"
+    },
+    {
+      "queryName": "Hitachi Aloka Medical,Ltd. (Hitachi Aloka Medical",
+      "cik": "0000047710",
+      "ticker": "HTHIY",
+      "title": "HITACHI LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=47710"
+    },
+    {
+      "queryName": "Tenon Medical",
+      "cik": "0001560293",
+      "ticker": "TNON",
+      "title": "Tenon Medical, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1560293"
+    },
+    {
+      "queryName": "Canon Inc. -Medical Equipment Group",
+      "cik": "0000016988",
+      "ticker": "CAJFF",
+      "title": "CANON INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=16988"
+    },
+    {
+      "queryName": "Merit Medical Systems, Inc.",
+      "cik": "0000856982",
+      "ticker": "MMSI",
+      "title": "MERIT MEDICAL SYSTEMS INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=856982"
+    },
+    {
+      "queryName": "American Threshold Industries, Inc.",
+      "cik": "0000740664",
+      "ticker": "RFIL",
+      "title": "R F INDUSTRIES LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=740664"
+    },
+    {
+      "queryName": "Medical Industries America, Inc.",
+      "cik": "0000740664",
+      "ticker": "RFIL",
+      "title": "R F INDUSTRIES LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=740664"
+    },
+    {
+      "queryName": "Medtronic, Inc.",
+      "cik": "0001613103",
+      "ticker": "MDT",
+      "title": "Medtronic plc",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1613103"
+    },
+    {
+      "queryName": "Trex Enterprises Corp.",
+      "cik": "0001069878",
+      "ticker": "TREX",
+      "title": "TREX CO INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1069878"
+    },
+    {
+      "queryName": "Medtronic Minimed",
+      "cik": "0001613103",
+      "ticker": "MDT",
+      "title": "Medtronic plc",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1613103"
+    },
+    {
+      "queryName": "Medtronic Navigation, Inc. (Littleton)",
+      "cik": "0001613103",
+      "ticker": "MDT",
+      "title": "Medtronic plc",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1613103"
+    },
+    {
+      "queryName": "General Electric Co.",
+      "cik": "0000040545",
+      "ticker": "GE",
+      "title": "GENERAL ELECTRIC CO",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=40545"
+    },
+    {
+      "queryName": "Avita Corporation",
+      "cik": "0001762303",
+      "ticker": "RCEL",
+      "title": "AVITA Medical, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1762303"
+    },
+    {
+      "queryName": "Cook, Inc.",
+      "cik": "0001857853",
+      "ticker": "COOK",
+      "title": "Traeger, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1857853"
+    },
+    {
+      "queryName": "Sensus Healthcare",
+      "cik": "0001494891",
+      "ticker": "SRTS",
+      "title": "Sensus Healthcare, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1494891"
+    },
+    {
+      "queryName": "Cook Incorporated",
+      "cik": "0001857853",
+      "ticker": "COOK",
+      "title": "Traeger, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1857853"
+    },
+    {
+      "queryName": "Becton Dickinson Infusion Therapy Systems, Inc.",
+      "cik": "0000010795",
+      "ticker": "BDX",
+      "title": "BECTON DICKINSON & CO",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=10795"
+    },
+    {
+      "queryName": "Target Therapeutics",
+      "cik": "0000027419",
+      "ticker": "TGT",
+      "title": "TARGET CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=27419"
+    },
+    {
+      "queryName": "Polymedica Industries, Inc.",
+      "cik": "0000740664",
+      "ticker": "RFIL",
+      "title": "R F INDUSTRIES LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=740664"
+    },
+    {
+      "queryName": "Roche Diagnostics",
+      "cik": "0001692415",
+      "ticker": "CODX",
+      "title": "Co-Diagnostics, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1692415"
+    },
+    {
+      "queryName": "Ppg Industries, Inc.",
+      "cik": "0000079879",
+      "ticker": "PPG",
+      "title": "PPG INDUSTRIES INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=79879"
+    },
+    {
+      "queryName": "Boston Scientific Cardiac Diagnostic Technologies, Inc.",
+      "cik": "0000885725",
+      "ticker": "BSX",
+      "title": "BOSTON SCIENTIFIC CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=885725"
+    },
+    {
+      "queryName": "Hewlett-Packard GmbH",
+      "cik": "0001645590",
+      "ticker": "HPE",
+      "title": "Hewlett Packard Enterprise Co",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1645590"
+    },
+    {
+      "queryName": "Power Medical Interventions, Inc.",
+      "cik": "0001780731",
+      "ticker": "EPOW",
+      "title": "E-Power Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1780731"
+    },
+    {
+      "queryName": "Ortho Clinical Diagnostics",
+      "cik": "0001692415",
+      "ticker": "CODX",
+      "title": "Co-Diagnostics, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1692415"
+    },
+    {
+      "queryName": "Kimberly-Clark Corp.",
+      "cik": "0000055785",
+      "ticker": "KMB",
+      "title": "KIMBERLY CLARK CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=55785"
+    },
+    {
+      "queryName": "Medline Industries, Inc.",
+      "cik": "0002046386",
+      "ticker": "MDLN",
+      "title": "Medline Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=2046386"
+    },
+    {
+      "queryName": "Hewlett-Packard Co.",
+      "cik": "0001645590",
+      "ticker": "HPE",
+      "title": "Hewlett Packard Enterprise Co",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1645590"
+    },
+    {
+      "queryName": "Biotechnology, Inc.",
+      "cik": "0001706431",
+      "ticker": "VIR",
+      "title": "Vir Biotechnology, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1706431"
+    },
+    {
+      "queryName": "Abbott Laboratories",
+      "cik": "0000001800",
+      "ticker": "ABT",
+      "title": "ABBOTT LABORATORIES",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1800"
+    },
+    {
+      "queryName": "Tandem Diabetes Care, Inc.",
+      "cik": "0001438133",
+      "ticker": "TNDM",
+      "title": "TANDEM DIABETES CARE INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1438133"
+    },
+    {
+      "queryName": "Bio-Rad Laboratories",
+      "cik": "0000012208",
+      "ticker": "BIO",
+      "title": "BIO-RAD LABORATORIES, INC.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=12208"
+    },
+    {
+      "queryName": "E-San Limited",
+      "cik": "0000319655",
+      "ticker": "SJT",
+      "title": "SAN JUAN BASIN ROYALTY TRUST",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=319655"
+    },
+    {
+      "queryName": "Dexcom, Inc.",
+      "cik": "0001093557",
+      "ticker": "DXCM",
+      "title": "DEXCOM INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1093557"
+    },
+    {
+      "queryName": "Mycare Team, Inc.",
+      "cik": "0000318833",
+      "ticker": "TISI",
+      "title": "TEAM INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=318833"
+    },
+    {
+      "queryName": "Bio-Rad",
+      "cik": "0000012208",
+      "ticker": "BIO",
+      "title": "BIO-RAD LABORATORIES, INC.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=12208"
+    },
+    {
+      "queryName": "Auri-Stem Medical, Inc.",
+      "cik": "0001758766",
+      "ticker": "STEM",
+      "title": "STEM, INC.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1758766"
+    },
+    {
+      "queryName": "Sunrise SA",
+      "cik": "0002012706",
+      "ticker": "SUNS",
+      "title": "Sunrise Realty Trust, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=2012706"
+    },
+    {
+      "queryName": "Apple, Inc.",
+      "cik": "0000320193",
+      "ticker": "AAPL",
+      "title": "Apple Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=320193"
+    },
+    {
+      "queryName": "Bd Becton Dickinson Vacutainer Systems Preanalytic",
+      "cik": "0000010795",
+      "ticker": "BDX",
+      "title": "BECTON DICKINSON & CO",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=10795"
+    },
+    {
+      "queryName": "Ciba Corning Diagnostics Corp.",
+      "cik": "0001692415",
+      "ticker": "CODX",
+      "title": "Co-Diagnostics, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1692415"
+    },
+    {
+      "queryName": "Utah Medical Products, Inc.",
+      "cik": "0000706698",
+      "ticker": "UTMD",
+      "title": "UTAH MEDICAL PRODUCTS INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=706698"
+    },
+    {
+      "queryName": "Devon Industries, Inc.",
+      "cik": "0000740664",
+      "ticker": "RFIL",
+      "title": "R F INDUSTRIES LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=740664"
+    },
+    {
+      "queryName": "Mindmaze SA",
+      "cik": "0001854078",
+      "ticker": "RLFTY",
+      "title": "MindMaze Therapeutics Holding SA",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1854078"
+    },
+    {
+      "queryName": "Nautilus Sports/Medical Industries, Inc.",
+      "cik": "0000740664",
+      "ticker": "RFIL",
+      "title": "R F INDUSTRIES LTD",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=740664"
+    },
+    {
+      "queryName": "Cardiovascular Diagnostics, Inc.",
+      "cik": "0001692415",
+      "ticker": "CODX",
+      "title": "Co-Diagnostics, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1692415"
+    },
+    {
+      "queryName": "Insulet Corporation",
+      "cik": "0001145197",
+      "ticker": "PODD",
+      "title": "INSULET CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1145197"
+    },
+    {
+      "queryName": "Medtronic Vascular",
+      "cik": "0001613103",
+      "ticker": "MDT",
+      "title": "Medtronic plc",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1613103"
+    },
+    {
+      "queryName": "E.M. Adams",
+      "cik": "0000002230",
+      "ticker": "ADX",
+      "title": "ADAMS DIVERSIFIED EQUITY FUND, INC.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=2230"
+    },
+    {
+      "queryName": "Stryker Medical",
+      "cik": "0000310764",
+      "ticker": "SYK",
+      "title": "STRYKER CORP",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=310764"
+    },
+    {
+      "queryName": "Fresenius Medical Care North America",
+      "cik": "0001333141",
+      "ticker": "FMS",
+      "title": "Fresenius Medical Care AG",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1333141"
+    },
+    {
+      "queryName": "Fresenius Medical Care Renal Therapies Group, LLC",
+      "cik": "0001333141",
+      "ticker": "FMS",
+      "title": "Fresenius Medical Care AG",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1333141"
+    },
+    {
+      "queryName": "Brown",
+      "cik": "0000079282",
+      "ticker": "BRO",
+      "title": "BROWN & BROWN, INC.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=79282"
+    },
+    {
+      "queryName": "Pfizer",
+      "cik": "0000078003",
+      "ticker": "PFE",
+      "title": "PFIZER INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=78003"
+    },
+    {
+      "queryName": "radian",
+      "cik": "0000890926",
+      "ticker": "RDN",
+      "title": "RADIAN GROUP INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=890926"
+    },
+    {
+      "queryName": "220110 SANOFI",
+      "cik": "0001121404",
+      "ticker": "SNY",
+      "title": "Sanofi",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1121404"
+    },
+    {
+      "queryName": "OUS Viatris",
+      "cik": "0001792044",
+      "ticker": "VTRS",
+      "title": "Viatris Inc",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1792044"
+    },
+    {
+      "queryName": "Omada Health",
+      "cik": "0001611115",
+      "ticker": "OMDA",
+      "title": "Omada Health, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1611115"
+    },
+    {
+      "queryName": "Teladoc Health chronic care",
+      "cik": "0001477449",
+      "ticker": "TDOC",
+      "title": "Teladoc Health, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1477449"
+    },
+    {
+      "queryName": "Hinge Health",
+      "cik": "0001673743",
+      "ticker": "HNGE",
+      "title": "Hinge Health, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1673743"
+    },
+    {
+      "queryName": "MindMaze",
+      "cik": "0001854078",
+      "ticker": "RLFTY",
+      "title": "MindMaze Therapeutics Holding SA",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1854078"
+    },
+    {
+      "queryName": "Teladoc Health",
+      "cik": "0001477449",
+      "ticker": "TDOC",
+      "title": "Teladoc Health, Inc.",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1477449"
+    },
+    {
+      "queryName": "American Well",
+      "cik": "0001393584",
+      "ticker": "AMWL",
+      "title": "American Well Corp",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=1393584"
+    },
+    {
+      "queryName": "Best Buy Health Current Health",
+      "cik": "0000764478",
+      "ticker": "BBY",
+      "title": "BEST BUY CO INC",
+      "sourceUrl": "https://www.sec.gov/edgar/browse/?CIK=764478"
+    }
+  ],
+  "errors": []
+}
