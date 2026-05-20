@@ -95,6 +95,14 @@ Returns `rank`, `name`, `headline`, `location`, and `profile_url` from the rende
 
 `thread-snapshot` opens an exact messaging thread URL, validates `--max-scrolls` before navigation, scrolls for available history, and returns a JSON snapshot suitable for caller-side recipient safety checks.
 
+### Timeline comments
+
+`timeline` returns each visible feed post with a numeric `comments` count. This
+is the current LinkedIn comment surface in OpenCLI: it is useful for ranking and
+triage, but it does not extract comment-thread text and does not expose
+comment-write commands. Treat LinkedIn comment-thread automation as unsupported
+until a dedicated `linkedin comments` adapter exists.
+
 ### Sales Navigator commands
 
 `salesnav-search` uses the Sales Navigator lead search API and returns `rank`, `name`, `title`, `company`, `location`, `degree`, `profile_url`, `lead_url`, and `recipient_urn`. Missing lead identity or malformed API payloads fail typed instead of emitting unaddressable rows.

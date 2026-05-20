@@ -31,6 +31,8 @@ import { buildHtmlTreeJs, type HtmlTreeResult } from './browser/html-tree.js';
 import { buildExtractHtmlJs, runExtractFromHtml } from './browser/extract.js';
 import { analyzeSite, type PageSignals } from './browser/analyze.js';
 import { daemonRestart, daemonStatus, daemonStop } from './commands/daemon.js';
+import { registerBrowserbaseCommands } from './commands/browserbase.js';
+import { registerRunCommand } from './commands/run.js';
 import { log } from './logger.js';
 import { bindTab, BrowserCommandError, fetchDaemonStatus, sendCommand } from './browser/daemon-client.js';
 import { aliasForContextId, loadProfileConfig, renameProfile, resolveProfileContextId, setDefaultProfile } from './browser/profile.js';
@@ -559,6 +561,8 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
     .version(PKG_VERSION)
     .option('--profile <name>', 'Chrome profile/context alias for Browser Bridge commands')
     .option('--session <id>', 'Browserbase session ID for adapter browser commands')
+    .option('--browserbase-session <id>', 'Browserbase session ID for adapter browser commands')
+    .option('--browserbase-account <name>', 'Browserbase account profile for adapter browser commands')
     .enablePositionalOptions();
 
   // ── Built-in: list ────────────────────────────────────────────────────────
@@ -3183,6 +3187,13 @@ cli({
       }
     });
 
+  // ── Built-in: Browserbase account/session/proxy management ───────────────
+  const browserbaseCmd = registerBrowserbaseCommands(program);
+  const originalBrowserbaseDescription = browserbaseCmd.description();
+
+  // ── Built-in: batch run ──────────────────────────────────────────────────
+  registerRunCommand(program);
+
   // ── Built-in: daemon ──────────────────────────────────────────────────────
   const daemonCmd = program.command('daemon').description('Manage the opencli daemon');
   // Snapshot before applyRootSubcommandSummaries() rewrites .description() to a child-name listing.
@@ -3329,6 +3340,7 @@ cli({
   installCommanderNamespaceStructuredHelp(pluginCmd, { globalCommand: program, description: originalPluginDescription });
   installCommanderNamespaceStructuredHelp(adapterCmd, { globalCommand: program, description: originalAdapterDescription });
   installCommanderNamespaceStructuredHelp(profileCmd, { globalCommand: program, description: originalProfileDescription });
+  installCommanderNamespaceStructuredHelp(browserbaseCmd, { globalCommand: program, description: originalBrowserbaseDescription });
   program.configureHelp({
     visibleCommands: (command) => command.commands.filter(child => command !== program || !adapterNameSet.has(child.name())),
   });

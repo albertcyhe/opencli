@@ -10,6 +10,9 @@
 | `opencli instagram search` | Search users |
 | `opencli instagram user` | Get recent posts from a user |
 | `opencli instagram explore` | Discover trending posts |
+| `opencli instagram get-comments` | Get comments on a post with reply-able IDs |
+| `opencli instagram comment` | Comment on a post |
+| `opencli instagram reply` | Reply to a specific comment |
 | `opencli instagram followers` | List user's followers |
 | `opencli instagram following` | List user's following |
 | `opencli instagram saved` | Get your saved posts (or one collection) |
@@ -38,6 +41,14 @@ opencli instagram following nasa --limit 20
 # Get your saved posts (default "All posts" feed)
 opencli instagram saved --limit 10
 
+# Read comments from a post URL, or from a user's Nth recent post
+opencli instagram get-comments https://www.instagram.com/p/SHORTCODE/ --limit 50
+opencli instagram get-comments nasa --index 1 --limit 20
+
+# Write comments and replies
+opencli instagram comment nasa "Great post" --index 1
+opencli instagram reply nasa 18000000000000000 "Thanks" --index 1
+
 # Get posts from a specific collection (case-insensitive name match)
 opencli instagram saved --collection inspiration --limit 10
 
@@ -58,6 +69,13 @@ opencli instagram profile nasa -f json
 - `instagram collection-create <name>` calls `POST /api/v1/collections/create/` with a multipart `name` field. Instagram silently accepts duplicate names — the API just returns a new `collection_id` each time, so dedupe client-side if you care.
 - `instagram collection-delete <name-or-id>` calls `POST /api/v1/collections/{id}/delete/`. Pass either a case-insensitive collection name or a numeric `collection_id`. If the name resolves to multiple collections (e.g. duplicates from `collection-create`), the adapter throws and lists the candidate ids so you can disambiguate by passing the id explicitly. Unknown names list the available collections in the error message.
 - Saving an existing post directly into a named collection in one shot is not exposed by the web app's documented endpoints (`/api/v1/web/save/{pk}/save/` only writes to "All posts"). Use `instagram save` first, then move the post in the UI, or extend with the `/api/v1/collections/{id}/edit/` mutation.
+
+### Comments
+
+`get-comments` returns `comment_id`, `author`, `text`, `likes`,
+`replies_count`, and `time`. It accepts a post/reel URL or a username plus
+`--index` (`1` is the most recent post). `reply` expects the `comment_id` from
+`get-comments`; `comment` and `reply` require a logged-in browser session.
 
 ## Prerequisites
 

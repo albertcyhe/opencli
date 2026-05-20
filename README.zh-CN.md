@@ -154,10 +154,17 @@ Agent 在内部自动处理所有 `opencli browser` 命令——你只需用自�
 | `OPENCLI_BROWSER_COMMAND_TIMEOUT` | `60` | 单个浏览器命令超时（秒） |
 | `OPENCLI_CDP_ENDPOINT` | — | Chrome DevTools Protocol 端点，用于远程浏览器或 Electron 应用 |
 | `OPENCLI_CDP_TARGET` | — | 按 URL 子串过滤 CDP target（如 `detail.1688.com`） |
+| `BROWSERBASE_API_KEY` | — | Browserbase 云端浏览器、Context 和账号配置所需 API key |
+| `BROWSERBASE_PROJECT_ID` | — | Browserbase context/account 操作所需 project id |
+| `BROWSERBASE_SESSION_ID` | — | 现有 Browserbase session ID；等价于根参数 `--browserbase-session <id>` / 兼容参数 `--session <id>` |
 | `OPENCLI_VERBOSE` | `false` | 启用详细日志（`-v` 也可以） |
 | `DEBUG_SNAPSHOT` | — | 设为 `1` 输出 DOM 快照调试信息 |
 
 `opencli browser *` 必须紧跟一个 `<session>` 位置参数，默认使用前台窗口，并保留该 session 的 tab lease，直到你手动执行 `opencli browser <session> close` 或等空闲超时。浏览器型 adapter 默认使用后台 adapter 窗口并在命令结束后释放一次性 tab lease；如果需要调试最终页面，可以传 `--window foreground --keep-tab true`。
+
+Browserbase 现在可以由 OpenCLI 直接管理账号配置、持久 Context、账号绑定 proxy、Live View 登录 session 和并发任务池：`opencli browserbase account bootstrap ...`、`opencli --browserbase-account <name> <site> <command> ...`、`opencli run --browserbase ...`。已有 Browserbase session 仍可用 `--browserbase-session` 或兼容的 `--session`。详见 [`docs/advanced/browserbase.md`](./docs/advanced/browserbase.md)。
+
+社交平台评论能力见 [`docs/adapters/social-comments.md`](./docs/adapters/social-comments.md)，覆盖 Twitter/X、YouTube、Reddit、LinkedIn、Instagram、TikTok 和小红书。
 
 ## 内置命令
 
@@ -165,13 +172,16 @@ Agent 在内部自动处理所有 `opencli browser` 命令——你只需用自�
 
 | 站点 | 命令 |
 |------|------|
-| **xiaohongshu** | `search` `note` `comments` `notifications` `feed` `user` `download` `publish` `creator-notes` `creator-note-detail` `creator-notes-summary` `creator-profile` `creator-stats` |
+| **xiaohongshu** | `search` `note` `comments` `reply` `notifications` `feed` `user` `download` `publish` `creator-notes` `creator-note-detail` `creator-notes-summary` `creator-profile` `creator-stats` `delete-note` |
 | **bilibili** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `summary` `video` `comments` `dynamic` `ranking` `following` `user-videos` `download` |
 | **zhihu** | `hot` `search` `question` `download` `follow` `like` `favorite` `comment` `answer` |
 | **hackernews** | `top` `new` `best` `ask` `show` `jobs` `search` `user` |
 | **linkedin** | `connect` `inbox` `safe-send` `search` `people-search` `sent-invitations` `thread-snapshot` `timeline` `salesnav-search` `salesnav-inbox` `salesnav-message` `salesnav-thread` |
-| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `user` `user-posts` `user-comments` `upvote` `save` `comment` `subscribe` `saved` `upvoted` |
-| **twitter** | `trending` `search` `timeline` `tweets` `lists` `list-tweets` `list-add` `list-remove` `bookmarks` `profile` `thread` `following` `followers` `notifications` `post` `reply` `delete` `like` `likes` `article` `follow` `unfollow` `bookmark` `unbookmark` `download` `accept` `reply-dm` `block` `unblock` `hide-reply` |
+| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `user` `user-posts` `user-comments` `upvote` `save` `comment` `reply` `subscribe` `subscribed` `saved` `upvoted` |
+| **twitter** | `trending` `search` `timeline` `tweets` `lists` `list-tweets` `list-add` `list-remove` `bookmarks` `profile` `thread` `get-comments` `following` `followers` `notifications` `post` `reply` `delete` `like` `likes` `article` `follow` `unfollow` `bookmark` `unbookmark` `download` `accept` `reply-dm` `block` `unblock` `hide-reply` |
+| **youtube** | `search` `video` `transcript` `comments` `reply` `reply-comment` `channel` `playlist` `feed` `history` `watch-later` `subscriptions` `like` `unlike` `subscribe` `unsubscribe` |
+| **instagram** | `explore` `profile` `search` `search-posts` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `saved` |
+| **tiktok** | `explore` `search` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `live` `notifications` `friends` |
 | **claude** | `ask` `send` `new` `status` `read` `history` `detail` |
 | **gemini** | `new` `ask` `image` `deep-research` `deep-research-result` |
 | **notebooklm** | `status` `list` `open` `current` `get` `history` `summary` `note-list` `notes-get` `source-list` `source-get` `source-fulltext` `source-guide` |

@@ -21,7 +21,9 @@
 | `opencli tiktok unsave` | Remove from Favorites |
 | `opencli tiktok follow` | Follow a user |
 | `opencli tiktok unfollow` | Unfollow a user |
+| `opencli tiktok get-comments` | Get comments on a video with reply-able IDs |
 | `opencli tiktok comment` | Comment on a video |
+| `opencli tiktok reply` | Reply to a specific comment |
 
 ## Usage Examples
 
@@ -63,7 +65,9 @@ opencli tiktok follow nasa
 opencli tiktok unfollow nasa
 
 # Comment on a video
+opencli tiktok get-comments "https://www.tiktok.com/@user/video/123" --limit 50
 opencli tiktok comment "https://www.tiktok.com/@user/video/123" "Great!"
+opencli tiktok reply "https://www.tiktok.com/@user/video/123" "COMMENT_ID" "Thanks"
 
 # JSON output
 opencli tiktok profile --username tiktok -f json
@@ -146,9 +150,21 @@ same data their web client renders on the page.
 | `secUid` | string | Host's TikTok internal stable id |
 | `url` | string | Canonical `/@streamer/live` URL |
 
-### `comment` / `follow` / `unfollow` (write commands)
+### `get-comments`
 
-These three commands click the live UI button + verify the post-click state
+| Column | Type | Notes |
+|--------|------|-------|
+| `rank` | int | 1-based position |
+| `comment_id` | string | TikTok comment id suitable for `tiktok reply` |
+| `author` | string | Comment author's `uniqueId` |
+| `text` | string | Comment text |
+| `likes` | int | Like count |
+| `replies_count` | int | Nested reply count exposed by the web payload |
+| `time` | string | Comment timestamp when exposed |
+
+### `comment` / `reply` / `follow` / `unfollow` (write commands)
+
+These commands click the live UI button + verify the post-click state
 before returning. They never return a silent failure row — every failure
 path raises a typed error. The `result` enum makes idempotent fast paths
 (already-following / already-not-following / already-friends) explicit, so
@@ -161,6 +177,15 @@ callers can distinguish "we just did it" from "it was already done".
 | `url` | string | Canonical video URL the comment was posted on |
 | `text` | string | Comment text actually submitted (trimmed, ≤150 chars) |
 | `result` | enum | `posted` (only — TikTok permits duplicate comments, no idempotent fast path) |
+
+#### `reply`
+
+| Column | Type | Notes |
+|--------|------|-------|
+| `status` | string | `success` on verified submit |
+| `message` | string | Human-readable result |
+| `comment_id` | string | Parent comment id |
+| `text` | string | Reply text actually submitted |
 
 #### `follow`
 
@@ -201,21 +226,21 @@ empty rows — callers can treat any returned row as real data.
 
 ### Write commands — typed errors and retryability
 
-`comment` / `follow` / `unfollow` validate input upfront and verify post-click
+`comment` / `reply` / `follow` / `unfollow` validate input upfront and verify post-click
 state. Failure modes:
 
 | Failure | Typed error | `retryable` (in `hint`) |
 |---------|-------------|-------------------------|
 | Empty / overlong / malformed input | `ArgumentError` | n/a |
 | Not logged in (no session cookie + no viewer secUid) | `AuthRequiredError` | n/a |
-| Required button missing (UI changed, blocked, private account) | `CommandExecutionError` | follow / unfollow: `true` (idempotent); comment: `false` |
-| State did not flip within timeout (likes/follows count unchanged) | `CommandExecutionError` | follow / unfollow: `true`; comment: `false` |
+| Required button missing (UI changed, blocked, private account) | `CommandExecutionError` | follow / unfollow: `true` (idempotent); comment / reply: `false` |
+| State did not flip within timeout (likes/follows count unchanged) | `CommandExecutionError` | follow / unfollow: `true`; comment / reply: `false` |
 | Captcha / rate-limit popup detected | `CommandExecutionError` | same as above |
 
 The `retryable=` flag is encoded in the error `hint` string in the form
 `retryable=<true\|false> reason=<...>` so downstream agents and scripts can
-grep it without parsing structured metadata. **Comment is `retryable=false`**
-because the server may still have accepted the comment when our state-verify
+grep it without parsing structured metadata. **Comment and reply are
+`retryable=false`** because the server may still have accepted the write when our state-verify
 times out (server-fan-out semantics) — auto-retrying would double-post.
 **Follow / unfollow are `retryable=true`** because TikTok dedupes the relation
 flip server-side, so a transient blip can be safely retried.
@@ -239,7 +264,7 @@ falls back to the corresponding API endpoint when more rows are requested
 This refactor applies the page-context API baseline across TikTok read commands:
 typed errors, full numeric stats columns, and no DOM-link scraping.
 
-`comment` / `follow` / `unfollow` (Route 1) keep the UI button as the
+`comment` / `reply` / `follow` / `unfollow` keep the UI button as the
 trigger and harden every transition with state verification + typed errors.
 We **do not** call `/api/commit/follow/user/` or `/api/comment/publish/`
 directly: those endpoints require X-Bogus signing engineering, which is a

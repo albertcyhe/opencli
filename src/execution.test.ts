@@ -9,6 +9,7 @@ import { cli, Strategy } from './registry.js';
 import { withTimeoutMs } from './runtime.js';
 import * as runtime from './runtime.js';
 import * as capRouting from './capabilityRouting.js';
+import { saveBrowserbaseStore } from './browserbase.js';
 
 describe('executeCommand — non-browser timeout', () => {
   it('applies the user --timeout arg as the ceiling for non-browser commands', async () => {
@@ -556,6 +557,74 @@ describe('executeCommand — non-browser timeout', () => {
         cdpEndpoint: 'wss://connect.browserbase.example/devtools',
       });
       expect(sessionOpts[0]?.session).toMatch(/^site:test-execution:/);
+      expect(closeWindow).toHaveBeenCalledTimes(1);
+    } finally {
+      vi.unstubAllEnvs();
+      vi.restoreAllMocks();
+    }
+  });
+
+  it('lets --browserbase-account override BROWSERBASE_SESSION_ID for browser adapter commands', async () => {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'opencli-browserbase-exec-'));
+    vi.stubEnv('OPENCLI_CONFIG_DIR', tmpDir);
+    vi.stubEnv('BROWSERBASE_API_KEY', 'bb-key');
+    vi.stubEnv('BROWSERBASE_PROJECT_ID', 'proj_123');
+    vi.stubEnv('BROWSERBASE_SESSION_ID', 'sess_env');
+    saveBrowserbaseStore({
+      version: 1,
+      accounts: {
+        'x-main-1': {
+          name: 'x-main-1' as never,
+          site: 'x',
+          contextId: 'ctx_123' as never,
+          defaultProxyName: null,
+          loginState: 'ready',
+          lastLoginAtIso: null,
+          lastCheckedAtIso: null,
+        },
+      },
+      proxies: {},
+    });
+    const closeWindow = vi.fn().mockResolvedValue(undefined);
+    const mockPage = { closeWindow } as any;
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockImplementation(async (url: string | URL | Request) => {
+      const href = String(url);
+      if (href.endsWith('/sessions')) {
+        return new Response(JSON.stringify({
+          id: 'sess_account',
+          status: 'RUNNING',
+          connectUrl: 'wss://connect.browserbase.example/account',
+        }));
+      }
+      if (href.endsWith('/sessions/sess_account')) return new Response('{}');
+      return new Response('{}', { status: 404 });
+    });
+    const sessionOpts: Array<{ cdpEndpoint?: string }> = [];
+    vi.spyOn(capRouting, 'shouldUseBrowserSession').mockReturnValue(true);
+    vi.spyOn(runtime, 'browserSession').mockImplementation(async (_Factory, fn, opts) => {
+      sessionOpts.push(opts ?? {});
+      return fn(mockPage);
+    });
+
+    try {
+      const cmd = cli({
+        site: 'test-execution',
+        name: 'browserbase-account', access: 'read',
+        description: 'test Browserbase account routing',
+        browser: true,
+        strategy: Strategy.PUBLIC,
+        func: async () => [{ ok: true }],
+      });
+
+      await executeCommand(cmd, {}, false, { browserbaseAccount: 'x-main-1' });
+
+      expect(fetchSpy).not.toHaveBeenCalledWith(
+        'https://api.browserbase.com/v1/sessions/sess_env',
+        expect.anything(),
+      );
+      expect(sessionOpts[0]).toMatchObject({
+        cdpEndpoint: 'wss://connect.browserbase.example/account',
+      });
       expect(closeWindow).toHaveBeenCalledTimes(1);
     } finally {
       vi.unstubAllEnvs();

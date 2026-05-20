@@ -168,14 +168,27 @@ When the site you need is not yet covered, use the `opencli-adapter-author` skil
 | `OPENCLI_BROWSER_COMMAND_TIMEOUT` | `60` | Seconds to wait for a single browser command |
 | `OPENCLI_CDP_ENDPOINT` | — | Chrome DevTools Protocol endpoint for remote browser or Electron apps |
 | `OPENCLI_CDP_TARGET` | — | Filter CDP targets by URL substring (e.g. `detail.1688.com`) |
-| `BROWSERBASE_API_KEY` | — | API key for validating Browserbase cloud browser sessions |
-| `BROWSERBASE_SESSION_ID` | — | Browserbase session ID for adapter browser commands; equivalent to root `--session <id>` |
+| `BROWSERBASE_API_KEY` | — | API key for Browserbase cloud browser sessions, contexts, and account profiles |
+| `BROWSERBASE_PROJECT_ID` | — | Browserbase project id required for context/account operations |
+| `BROWSERBASE_SESSION_ID` | — | Existing Browserbase session ID for adapter browser commands; equivalent to root `--browserbase-session <id>` / legacy `--session <id>` |
 | `OPENCLI_VERBOSE` | `false` | Enable verbose logging (`-v` flag also works) |
 | `DEBUG_SNAPSHOT` | — | Set to `1` for DOM snapshot debug output |
 
 `opencli browser *` requires an explicit `<session>` positional, uses a foreground browser window by default, and keeps that session's tab lease until `opencli browser <session> close` or idle cleanup. Browser-backed adapters use a background adapter window and release one-shot tab leases by default. Interactive adapters can declare `siteSession: 'persistent'` to keep a stable site tab for continuity; pass `--site-session ephemeral` for a one-shot tab.
 
-For cloud browsers, create a Browserbase session with the `bb` CLI, set `BROWSERBASE_API_KEY`, then run adapter commands with `opencli --session <browserbase-session-id> <site> <command> ...`.
+For cloud browsers, OpenCLI can manage Browserbase account profiles, persistent
+Contexts, proxy bindings, Live View login sessions, and parallel session pools:
+`opencli browserbase account bootstrap ...`,
+`opencli --browserbase-account <name> <site> <command> ...`, and
+`opencli run --browserbase ...`. Existing Browserbase sessions still work with
+`--browserbase-session` or legacy `--session`. See
+[`docs/advanced/browserbase.md`](./docs/advanced/browserbase.md).
+
+Social comment workflows are documented in
+[`docs/adapters/social-comments.md`](./docs/adapters/social-comments.md),
+including Twitter/X, YouTube, Reddit, LinkedIn, Instagram, TikTok, and
+Xiaohongshu support.
+
 ## Built-in Commands
 
 | Site | Commands |
@@ -190,6 +203,9 @@ For cloud browsers, create a Browserbase session with the `bb` CLI, set `BROWSER
 | **linkedin** | `connect` `inbox` `safe-send` `search` `sent-invitations` `thread-snapshot` `timeline` `salesnav-search` `salesnav-inbox` `salesnav-message` `salesnav-thread` |
 | **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `user` `user-posts` `user-comments` `upvote` `upvoted` `save` `saved` `comment` `reply` `subscribe` `subscribed` |
 | **twitter** | `trending` `search` `timeline` `tweets` `lists` `list-tweets` `list-add` `list-create` `list-remove` `bookmarks` `post` `download` `profile` `article` `like` `likes` `notifications` `device-follow` `get-comments` `reply` `reply-dm` `thread` `follow` `unfollow` `followers` `following` `block` `unblock` `bookmark` `unbookmark` `delete` `hide-reply` `accept` |
+| **youtube** | `search` `video` `transcript` `comments` `reply` `reply-comment` `channel` `playlist` `feed` `history` `watch-later` `subscriptions` `like` `unlike` `subscribe` `unsubscribe` |
+| **instagram** | `explore` `profile` `search` `search-posts` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `saved` |
+| **tiktok** | `explore` `search` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `live` `notifications` `friends` |
 | **claude** | `ask` `send` `new` `status` `read` `history` `detail` |
 | **gemini** | `new` `ask` `image` `deep-research` `deep-research-result` |
 | **notebooklm** | `status` `list` `open` `current` `get` `history` `summary` `note-list` `notes-get` `source-list` `source-get` `source-fulltext` `source-guide` |

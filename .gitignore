@@ -8,6 +8,20 @@ dist/
 *.log
 .DS_Store
 
+# Local env / secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Browserbase local state and sensitive session artifacts.
+# The supported config path is ~/.opencli/browserbase.json; keep any copied
+# project-local credentials, proxy passwords, Live View URLs, and connect URLs
+# out of the repository.
+browserbase*.json
+*.browserbase.json
+browserbase-sessions/
+
 # VitePress
 docs/.vitepress/dist
 docs/.vitepress/cache
@@ -16,10 +30,10 @@ docs/.vitepress/cache
 *.pem
 *.crx
 *.zip
-.envrc
 .windsurf
 .claude
 .cortex
+.envrc
 
 # Database files
 *.db

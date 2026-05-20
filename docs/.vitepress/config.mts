@@ -44,6 +44,7 @@ export default defineConfig({
               text: 'Adapters Overview',
               items: [
                 { text: 'All Adapters', link: '/adapters/' },
+                { text: 'Social Comments', link: '/adapters/social-comments' },
               ],
             },
             {
@@ -190,6 +191,7 @@ export default defineConfig({
                 { text: 'Chrome DevTools Protocol', link: '/advanced/cdp' },
                 { text: 'Electron Apps', link: '/advanced/electron' },
                 { text: 'Remote Chrome', link: '/advanced/remote-chrome' },
+                { text: 'Browserbase', link: '/advanced/browserbase' },
                 { text: 'Download Support', link: '/advanced/download' },
               ],
             },

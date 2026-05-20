@@ -12,6 +12,7 @@
 | `opencli twitter search` | |
 | `opencli twitter timeline` | |
 | `opencli twitter thread` | |
+| `opencli twitter get-comments` | Get replies to a tweet with reply-able IDs |
 | `opencli twitter following` | |
 | `opencli twitter followers` | |
 | `opencli twitter notifications` | |
@@ -54,6 +55,9 @@ opencli twitter search "react 19"
 # Search latest/live tweets
 opencli twitter search "react 19" --filter live
 
+# Get replies/comments for a tweet
+opencli twitter get-comments https://x.com/jack/status/20 --limit 50
+
 # Get following/followers list (supports large limits)
 opencli twitter following @elonmusk --limit 200
 opencli twitter followers @elonmusk --limit 100
@@ -75,6 +79,7 @@ opencli twitter unlike https://x.com/jack/status/20
 opencli twitter retweet https://x.com/jack/status/20
 opencli twitter unretweet https://x.com/jack/status/20
 opencli twitter quote https://x.com/jack/status/20 "great take"
+opencli twitter reply https://x.com/jack/status/20 "reply text"
 
 # JSON output
 opencli twitter trending -f json
@@ -87,3 +92,10 @@ opencli twitter trending -v
 
 - Chrome running and **logged into** twitter.com
 - [Browser Bridge extension](/guide/browser-bridge) installed
+
+## Comments
+
+`get-comments` accepts a tweet URL or ID and returns `comment_id`, `author`,
+`text`, `likes`, `time`, and reply URL rows. The returned IDs are suitable for
+follow-up reply/hide-reply workflows where the platform still exposes the
+target reply.

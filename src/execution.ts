@@ -26,7 +26,7 @@ import * as crypto from 'node:crypto';
 import * as fs from 'node:fs';
 import * as os from 'node:os';
 import { executePipeline } from './pipeline/index.js';
-import { adapterLoadError, ArgumentError, CommandExecutionError, attachTraceReceipt, getErrorMessage } from './errors.js';
+import { adapterLoadError, ArgumentError, CommandExecutionError, ConfigError, attachTraceReceipt, getErrorMessage } from './errors.js';
 import { shouldUseBrowserSession } from './capabilityRouting.js';
 import { getBrowserFactory, browserSession, runWithTimeout, DEFAULT_BROWSER_COMMAND_TIMEOUT, type BrowserWindowMode } from './runtime.js';
 import { resolveProfileContextId } from './browser/profile.js';
@@ -36,7 +36,15 @@ import { isElectronApp } from './electron-apps.js';
 import { probeCDP, resolveElectronEndpoint } from './launcher.js';
 import { ObservationSession, exportObservationSession, type ObservationExportResult, type ObservationExportStatus } from './observation/index.js';
 import { resolveAdapterSourcePath } from './adapter-source.js';
-import { resolveBrowserbaseSessionId, validateBrowserbaseSession } from './browserbase.js';
+import {
+  BrowserbaseClient,
+  asBrowserbaseAccountName,
+  loadBrowserbaseStore,
+  resolveBrowserbaseConfig,
+  resolveBrowserbaseSessionId,
+  validateBrowserbaseSession,
+  type BrowserbaseRegion,
+} from './browserbase.js';
 
 const _loadedModules = new Map<string, Promise<void>>();
 /** Track mtime of loaded user adapter files for hot-reload in daemon mode. */
@@ -206,6 +214,12 @@ export async function executeCommand(
     windowMode?: string;
     siteSession?: string;
     browserbaseSession?: string;
+    browserbaseAccount?: string;
+    browserbasePersistContext?: boolean;
+    browserbaseKeepAlive?: boolean;
+    browserbaseRegion?: BrowserbaseRegion;
+    browserbaseTimeoutSeconds?: number;
+    cdpEndpoint?: string;
     onTraceExport?: (trace: ObservationExportResult) => void;
   } = {},
 ): Promise<unknown> {
@@ -231,11 +245,22 @@ export async function executeCommand(
   try {
     if (shouldUseBrowserSession(cmd)) {
       const electron = isElectronApp(cmd.site);
-      let cdpEndpoint: string | undefined;
-      let useCDP = false;
+      let cdpEndpoint: string | undefined = opts.cdpEndpoint;
+      let useCDP = !!cdpEndpoint;
+      let browserbaseRelease: (() => Promise<void>) | undefined;
 
-      const browserbaseSessionId = resolveBrowserbaseSessionId(opts.browserbaseSession);
-      if (browserbaseSessionId) {
+      const browserbaseSessionId = opts.browserbaseAccount ? null : resolveBrowserbaseSessionId(opts.browserbaseSession);
+      if (opts.browserbaseAccount && !cdpEndpoint) {
+        const created = await createBrowserbaseExecutionSession(opts.browserbaseAccount, {
+          persistContext: opts.browserbasePersistContext !== false,
+          keepAlive: opts.browserbaseKeepAlive === true,
+          region: opts.browserbaseRegion ?? 'us-west-2',
+          timeoutSeconds: opts.browserbaseTimeoutSeconds ?? userTimeoutSec ?? 1800,
+        });
+        cdpEndpoint = created.connectUrl;
+        useCDP = true;
+        browserbaseRelease = created.release;
+      } else if (browserbaseSessionId) {
         const browserbaseSession = await validateBrowserbaseSession(browserbaseSessionId);
         cdpEndpoint = browserbaseSession.connectUrl;
         useCDP = true;
@@ -266,121 +291,127 @@ export async function executeCommand(
       const session = resolveAdapterBrowserSession(cmd, siteSession);
       const keepTab = resolveKeepTab(siteSession, opts.keepTab);
       const windowMode = resolveBrowserWindowMode('background', opts.windowMode);
-      result = await browserSession(BrowserFactory, async (page) => {
-        const observation = traceMode === 'off'
-          ? null
-          : new ObservationSession({
-            scope: {
-              contextId,
-              session,
-              target: page.getActivePage?.(),
-              site: cmd.site,
-              command: fullName(cmd),
-              adapterSourcePath: resolveAdapterSourcePath(internal),
-            },
-          });
-        if (observation) {
-          observation.record({
-            stream: 'action',
-            name: 'command',
-            phase: 'start',
-            data: { args: kwargs },
-          });
-          await page.startNetworkCapture?.().catch(() => false);
-        }
-        const preNavUrl = resolvePreNav(cmd);
-        if (preNavUrl && await shouldRunPreNav(cmd, page, siteSession, preNavUrl)) {
-          observation?.record({
-            stream: 'action',
-            name: 'pre_navigate',
-            phase: 'start',
-            data: { url: preNavUrl },
-          });
-          // Navigate directly — the extension's handleNavigate already has a fast-path
-          // that skips navigation if the tab is already at the target URL.
-          // This avoids an extra exec round-trip (getCurrentUrl) on first command and
-          // lets the extension create the automation window with the target URL directly
-          // instead of about:blank.
-          try {
-            await page.goto(preNavUrl);
-            observation?.record({
-              stream: 'action',
-              name: 'pre_navigate',
-              phase: 'end',
-              data: { url: preNavUrl },
+      try {
+        result = await browserSession(BrowserFactory, async (page) => {
+          const observation = traceMode === 'off'
+            ? null
+            : new ObservationSession({
+              scope: {
+                contextId,
+                session,
+                target: page.getActivePage?.(),
+                site: cmd.site,
+                command: fullName(cmd),
+                adapterSourcePath: resolveAdapterSourcePath(internal),
+              },
             });
-          } catch (err) {
-            observation?.record({
-              stream: 'action',
-              name: 'pre_navigate',
-              phase: 'error',
-              data: { url: preNavUrl, error: err instanceof Error ? err.message : String(err) },
-            });
-            const wrapped = new CommandExecutionError(
-              `Pre-navigation to ${preNavUrl} failed: ${err instanceof Error ? err.message : err}`,
-              'Check that the site is reachable and the browser extension is running.',
-            );
-            if (observation && (traceMode === 'on' || traceMode === 'retain-on-failure')) {
-              observation.record({
-                stream: 'error',
-                message: wrapped.message,
-                stack: wrapped.stack,
-                code: wrapped.code,
-                hint: wrapped.hint,
-              });
-              await collectObservationEvidence(observation, page).catch(() => {});
-              exportTraceArtifact(observation, 'failure', wrapped, opts.onTraceExport);
-            }
-            throw wrapped;
-          }
-        }
-        try {
-          const browserTimeout = userTimeoutSec !== null
-            ? userTimeoutSec + RUNTIME_TIMEOUT_PADDING_SECONDS
-            : DEFAULT_BROWSER_COMMAND_TIMEOUT;
-          const result = await runWithTimeout(runCommand(cmd, page, kwargs, debug), {
-            timeout: browserTimeout,
-            label: fullName(cmd),
-          });
-          observation?.record({
-            stream: 'action',
-            name: 'command',
-            phase: 'end',
-          });
-          if (observation && traceMode === 'on') {
-            await collectObservationEvidence(observation, page).catch(() => {});
-            exportTraceArtifact(observation, 'success', undefined, opts.onTraceExport);
-          }
-          // Adapter commands are one-shot — release the current tab lease immediately
-          // instead of waiting for the 30s idle timeout. The automation container
-          // window stays open for reuse.
-          if (!keepTab) await page.closeWindow?.().catch(() => {});
-          return result;
-        } catch (err) {
           if (observation) {
-            observation.record({
+            observation?.record({
               stream: 'action',
               name: 'command',
-              phase: 'error',
-              data: { error: err instanceof Error ? err.message : String(err) },
+              phase: 'start',
+              data: { args: kwargs },
             });
-            observation.record({
-              stream: 'error',
-              message: err instanceof Error ? err.message : String(err),
-              stack: err instanceof Error ? err.stack : undefined,
+            await page.startNetworkCapture?.().catch(() => false);
+          }
+          const preNavUrl = resolvePreNav(cmd);
+          if (preNavUrl && await shouldRunPreNav(cmd, page, siteSession, preNavUrl)) {
+            observation?.record({
+              stream: 'action',
+              name: 'pre_navigate',
+              phase: 'start',
+              data: { url: preNavUrl },
             });
-            if (traceMode === 'on' || traceMode === 'retain-on-failure') {
-              await collectObservationEvidence(observation, page).catch(() => {});
-              exportTraceArtifact(observation, 'failure', err, opts.onTraceExport);
+            // Navigate directly — the extension's handleNavigate already has a fast-path
+            // that skips navigation if the tab is already at the target URL.
+            // This avoids an extra exec round-trip (getCurrentUrl) on first command and
+            // lets the extension create the automation window with the target URL directly
+            // instead of about:blank.
+            try {
+              await page.goto(preNavUrl);
+              observation?.record({
+                stream: 'action',
+                name: 'pre_navigate',
+                phase: 'end',
+                data: { url: preNavUrl },
+              });
+            } catch (err) {
+              observation?.record({
+                stream: 'action',
+                name: 'pre_navigate',
+                phase: 'error',
+                data: { url: preNavUrl, error: err instanceof Error ? err.message : String(err) },
+              });
+              const wrapped = new CommandExecutionError(
+                `Pre-navigation to ${preNavUrl} failed: ${err instanceof Error ? err.message : err}`,
+                'Check that the site is reachable and the browser extension is running.',
+              );
+              if (observation && (traceMode === 'on' || traceMode === 'retain-on-failure')) {
+                observation.record({
+                  stream: 'error',
+                  message: wrapped.message,
+                  stack: wrapped.stack,
+                  code: wrapped.code,
+                  hint: wrapped.hint,
+                });
+                await collectObservationEvidence(observation, page).catch(() => {});
+                exportTraceArtifact(observation, 'failure', wrapped, opts.onTraceExport);
+              }
+              throw wrapped;
             }
           }
-          // Release the tab lease on failure too — without this, the lease lingers
-          // until the extension's idle timer fires (unreliable on Windows where
-          // MV3 service workers may be suspended before setTimeout triggers).
-          if (!keepTab) await page.closeWindow?.().catch(() => {});
-          throw err;
-        }
-      }, { session, cdpEndpoint, contextId, windowMode, surface: 'adapter', siteSession });
+          try {
+            const browserTimeout = userTimeoutSec !== null
+              ? userTimeoutSec + RUNTIME_TIMEOUT_PADDING_SECONDS
+              : DEFAULT_BROWSER_COMMAND_TIMEOUT;
+            const result = await runWithTimeout(runCommand(cmd, page, kwargs, debug), {
+              timeout: browserTimeout,
+              label: fullName(cmd),
+            });
+            observation?.record({
+              stream: 'action',
+              name: 'command',
+              phase: 'end',
+            });
+            if (observation && traceMode === 'on') {
+              await collectObservationEvidence(observation, page).catch(() => {});
+              exportTraceArtifact(observation, 'success', undefined, opts.onTraceExport);
+            }
+            // Adapter commands are one-shot — release the current tab lease immediately
+            // instead of waiting for the 30s idle timeout. The automation container
+            // window stays open for reuse.
+            if (!keepTab) await page.closeWindow?.().catch(() => {});
+            return result;
+          } catch (err) {
+            if (observation) {
+              observation.record({
+                stream: 'action',
+                name: 'command',
+                phase: 'error',
+                data: { error: err instanceof Error ? err.message : String(err) },
+              });
+              observation.record({
+                stream: 'error',
+                message: err instanceof Error ? err.message : String(err),
+                stack: err instanceof Error ? err.stack : undefined,
+              });
+              if (traceMode === 'on' || traceMode === 'retain-on-failure') {
+                await collectObservationEvidence(observation, page).catch(() => {});
+                exportTraceArtifact(observation, 'failure', err, opts.onTraceExport);
+              }
+            }
+            // Release the tab lease on failure too — without this, the lease lingers
+            // until the extension's idle timer fires (unreliable on Windows where
+            // MV3 service workers may be suspended before setTimeout triggers).
+            if (!keepTab) await page.closeWindow?.().catch(() => {});
+            throw err;
+          }
+        }, { session, cdpEndpoint, contextId, windowMode, surface: 'adapter', siteSession });
+      } finally {
+        await browserbaseRelease?.().catch((err) => {
+          if (process.env.OPENCLI_VERBOSE) log.warn(`[browserbase] Failed to release session: ${getErrorMessage(err)}`);
+        });
+      }
     } else {
       // Non-browser commands: enforce a timeout only when the command exposes
       // a `--timeout` arg (and the resolved value is positive). Without that
@@ -407,6 +438,59 @@ export async function executeCommand(
   hookCtx.finishedAt = Date.now();
   await emitHook('onAfterExecute', hookCtx, result);
   return result;
+}
+
+async function createBrowserbaseExecutionSession(
+  accountNameRaw: string,
+  opts: {
+    persistContext: boolean;
+    keepAlive: boolean;
+    region: BrowserbaseRegion;
+    timeoutSeconds: number;
+  },
+): Promise<{ connectUrl: string; release: () => Promise<void> }> {
+  const accountName = asBrowserbaseAccountName(accountNameRaw.trim());
+  const config = resolveBrowserbaseConfig();
+  if (!config.ok) throw new ConfigError(config.error.message, config.error.hint);
+
+  const store = loadBrowserbaseStore();
+  if (!store.ok) throw new ConfigError(store.error.message, store.error.hint);
+
+  const account = store.value.accounts[accountName];
+  if (!account) {
+    throw new ConfigError(
+      `Browserbase account "${accountNameRaw}" is not configured.`,
+      'Run opencli browserbase account bootstrap or account create first.',
+    );
+  }
+  const proxy = account.defaultProxyName ? store.value.proxies[account.defaultProxyName] : null;
+  if (account.defaultProxyName && !proxy) {
+    throw new ConfigError(`Browserbase proxy "${account.defaultProxyName}" is not configured.`);
+  }
+
+  const client = new BrowserbaseClient(config.value);
+  const timeoutSeconds = Math.max(60, Math.min(21600, Math.trunc(opts.timeoutSeconds)));
+  const session = await client.createSession({
+    accountName,
+    contextId: account.contextId,
+    proxyName: account.defaultProxyName,
+    region: opts.region,
+    keepAlive: opts.keepAlive,
+    persistContext: opts.persistContext,
+    timeoutSeconds,
+  }, proxy?.rules ?? []);
+  if (!session.ok) throw new CommandExecutionError(session.error.message, session.error.hint);
+  if (!session.value.connectUrl) {
+    throw new CommandExecutionError(`Browserbase session "${session.value.id}" did not include a connectUrl.`);
+  }
+  return {
+    connectUrl: session.value.connectUrl,
+    release: async () => {
+      if (opts.keepAlive) return;
+      const released = await client.releaseSession(session.value.id);
+      if (!released.ok) throw new CommandExecutionError(released.error.message, released.error.hint);
+    },
+  };
 }
 
 async function collectObservationEvidence(session: ObservationSession, page: IPage): Promise<void> {
