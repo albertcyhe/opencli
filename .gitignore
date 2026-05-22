@@ -4,6 +4,8 @@ dist/
 *.tsbuildinfo
 .opencli/
 .worktrees/
+.agents/
+skills-lock.json
 .mcp.json
 *.log
 .DS_Store

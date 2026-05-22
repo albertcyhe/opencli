@@ -3,33 +3,36 @@ layout: home
 
 hero:
   name: OpenCLI
-  text: 让任何网站或 Electron 应用成为你的 CLI
-  tagline: 零风险 · 复用 Chrome 登录态 · AI 驱动发现 · 浏览器 + 桌面自动化
+  text: 面向 Agent 的 Browserbase-ready CLI 自动化
+  tagline: 网站 · 社交评论 · 多账号 Browserbase · 多 Proxy Session · 桌面适配器
   actions:
     - theme: brand
       text: 快速开始
       link: /zh/guide/getting-started
     - theme: alt
+      text: Agent 操作指南
+      link: /zh/guide/ai-agent-operations
+    - theme: alt
       text: 在 GitHub 查看
-      link: https://github.com/jackwener/opencli
+      link: https://github.com/albertcyhe/opencli
 
 features:
-  - icon: 🖥️
-    title: 桌面应用控制
-    details: 通过 CDP 直接在终端驱动 Electron 应用（Cursor、Codex、ChatGPT 等）。
   - icon: 🌐
-    title: 浏览器自动化
-    details: AI Agent 直接控制浏览器：点击、输入、提取、截图 — 任何交互，完全可编程。
-  - icon: 🔐
-    title: 账号安全
-    details: 复用 Chrome 登录态，凭证永远不会离开浏览器 — 无 token，无密码泄露。
-  - icon: 🤖
-    title: AI Agent 就绪
-    details: Browser 原语加上适配器编写 skill，让 AI Agent 可以稳定完成侦察、提取、验证和适配器落地。
-  - icon: 💰
-    title: 零 LLM 成本
-    details: 运行时不消耗模型 token。跑 10,000 次也不花一分钱。
-  - icon: 🔁
-    title: 确定性输出
-    details: 相同命令，相同输出结构，每次一致。可管道、可脚本、CI 友好。
+    title: Browserbase 账号
+    details: 用 Browserbase Context 持久保存登录态，创建 Live View 登录 session，之后按账号名执行任务。
+  - icon: 🧭
+    title: 多 Proxy 路由
+    details: 账号绑定 proxy，支持查询、更新和删除 proxy profile，让登录态和出口 IP 一起管理。
+  - icon: ⚙️
+    title: 并发原子任务
+    details: 通过 `opencli run --browserbase` 把 JSONL 任务分发到最多 10 个 Browserbase session。
+  - icon: 💬
+    title: 社交平台 Comments
+    details: 支持 Reddit、Twitter/X、YouTube、Instagram、TikTok、小红书，以及 LinkedIn timeline 评论数量。
+  - icon: 🧩
+    title: Agent Skills
+    details: 安装 OpenCLI skills 后，AI Agent 能判断该调用哪个命令、什么时候使用 Browserbase。
+  - icon: 🖥️
+    title: 本地 Browser Bridge
+    details: 复用本地 Chrome 登录态，执行浏览器型 adapter 和临时浏览器操作。
 ---

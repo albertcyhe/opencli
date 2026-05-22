@@ -1,22 +1,22 @@
-# Social Comment Support
+# 社交平台 Comments 支持
 
-OpenCLI exposes social comment workflows as atomic adapter commands. Use them directly, or route them through Browserbase accounts when identity, login state, or proxy matters.
+OpenCLI 把社交平台评论流程暴露成原子 adapter 命令。可以直接调用，也可以通过 Browserbase account 指定登录态、账号身份和 proxy 出口。
 
-## Support Matrix
+## 支持矩阵
 
-| Platform | Read comments | Top-level write | Reply write | Browserbase account example |
+| 平台 | 读取评论 | 一级评论/发帖 | 回复评论 | Browserbase 账号示例 |
 | --- | --- | --- | --- | --- |
 | Reddit | `reddit read`, `reddit get-comments` | `reddit comment` | `reddit reply` | `opencli --browserbase-account reddit1 reddit get-comments <url> -f json` |
-| Twitter / X | `twitter get-comments`, `twitter thread` | `twitter post` / tweet reply with `twitter reply` | `twitter reply` | `opencli --browserbase-account x-main-1 twitter get-comments <url> -f json` |
+| Twitter / X | `twitter get-comments`, `twitter thread` | `twitter post` / `twitter reply` 发 tweet 回复 | `twitter reply` | `opencli --browserbase-account x-main-1 twitter get-comments <url> -f json` |
 | YouTube | `youtube comments` | `youtube reply` | `youtube reply-comment` | `opencli --browserbase-account yt1 youtube comments <url> -f json` |
 | Instagram | `instagram get-comments` | `instagram comment` | `instagram reply` | `opencli --browserbase-account ig1 instagram get-comments <url> -f json` |
 | TikTok | `tiktok get-comments` | `tiktok comment` | `tiktok reply` | `opencli --browserbase-account tiktok1 tiktok get-comments <url> -f json` |
-| Xiaohongshu | `xiaohongshu comments` | Not exposed | `xiaohongshu reply` | `opencli --browserbase-account xhs1 xiaohongshu comments <url> -f json` |
-| LinkedIn | `linkedin timeline` comment counts | Not exposed | Not exposed | `opencli --browserbase-account linkedin1 linkedin timeline -f json` |
+| 小红书 | `xiaohongshu comments` | 暂未暴露 | `xiaohongshu reply` | `opencli --browserbase-account xhs1 xiaohongshu comments <url> -f json` |
+| LinkedIn | `linkedin timeline` 评论数量 | 暂未暴露 | 暂未暴露 | `opencli --browserbase-account linkedin1 linkedin timeline -f json` |
 
-## Read Recipes
+## 读取示例
 
-Read comments in JSON so returned IDs can be reused by reply commands:
+读取评论时用 JSON，方便复用返回的 ID：
 
 ```bash
 opencli reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" --limit 100 -f json
@@ -32,9 +32,9 @@ opencli xiaohongshu comments "https://www.xiaohongshu.com/search_result/<id>?xse
 opencli linkedin timeline --limit 20 -f json
 ```
 
-## Write Recipes
+## 写入示例
 
-Only run write commands when the user explicitly wants to post or reply.
+只有在用户明确要发评论或回复时才运行写入命令。
 
 ```bash
 opencli reddit comment 1abc123 "Comment text"
@@ -54,9 +54,9 @@ opencli tiktok reply "https://www.tiktok.com/@user/video/123" "COMMENT_ID" "Repl
 opencli xiaohongshu reply "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." "COMMENT_ID" "Reply text"
 ```
 
-## Browserbase Identity Pattern
+## Browserbase 身份模式
 
-Use a Browserbase account when login state and exit IP should travel together:
+当登录态和出口 IP 需要绑定时，使用 Browserbase account：
 
 ```bash
 opencli browserbase account set-proxy reddit1 reddit1-proxy
@@ -67,7 +67,7 @@ opencli --browserbase-account reddit1 \
   -f json
 ```
 
-For many jobs:
+多个任务并发：
 
 ```bash
 opencli run --browserbase \
@@ -76,11 +76,11 @@ opencli run --browserbase \
   jobs.jsonl
 ```
 
-See [Browserbase Accounts, Proxies, and Parallel Sessions](../advanced/browserbase.md).
+详见 [Browserbase 账号、Proxy 与并发 Session](../advanced/browserbase.md)。
 
-## Safety Notes
+## 安全说明
 
-- Read commands return what the current platform API or UI exposes; pagination, hidden replies, auth walls, and rate limits can reduce coverage.
-- Write commands require a valid logged-in identity and may have irreversible social effects. Do not run them without explicit user intent.
-- Treat comment IDs as platform-scoped. Reuse a returned ID only with the same platform adapter.
-- Do not print cookies, proxy passwords, Browserbase connect URLs, or API keys in final output.
+- 读取命令返回当前平台 API 或 UI 暴露的数据；分页、隐藏回复、登录墙和限流都会影响覆盖度。
+- 写入命令需要有效登录态，并且可能产生不可撤销的社交影响。没有用户明确意图时不要执行。
+- 评论 ID 是平台内 ID，只能回传给同一个平台 adapter。
+- 最终输出不要泄露 cookies、proxy password、Browserbase connect URL 或 API key。

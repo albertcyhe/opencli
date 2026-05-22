@@ -1,81 +1,102 @@
 # Getting Started
 
-> **Make any website or Electron App your CLI.**
-> Zero risk · Reuse Chrome login · AI-powered discovery · Browser + Desktop automation
+OpenCLI gives humans and AI agents one deterministic command surface for websites, Browserbase cloud browsers, Electron apps, and external CLIs.
 
-[![npm](https://img.shields.io/npm/v/@jackwener/opencli?style=flat-square)](https://www.npmjs.com/package/@jackwener/opencli)
-[![Node.js Version](https://img.shields.io/node/v/@jackwener/opencli?style=flat-square)](https://nodejs.org)
-[![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](https://github.com/jackwener/opencli/blob/main/LICENSE)
+## Install
 
-OpenCLI turns **any website** or **Electron app** into a command-line interface — Bilibili, Zhihu, 小红书, Twitter/X, Reddit, YouTube, Antigravity, and [many more](/adapters/) — powered by browser session reuse and AI-native discovery.
-
-## Highlights
-
-- **Desktop App Control** — Drive Electron apps (Cursor, Codex, ChatGPT, etc.) directly from the terminal via CDP.
-- **Browser Automation** — `browser` gives AI agents direct browser control: click, type/fill, extract, screenshot — fully scriptable.
-- **Website → CLI** — Turn any website into a deterministic CLI: 100+ site surfaces are already registered, or author your own with the `opencli-adapter-author` skill.
-- **Account-safe** — Reuses Chrome's logged-in state; your credentials never leave the browser.
-- **AI Agent ready** — `opencli browser *` primitives (`open` / `network` / `state` / `eval` / `init` / `verify`) drive the adapter-authoring loop.
-- **Zero LLM cost** — No tokens consumed at runtime. Run 10,000 times and pay nothing.
-- **Deterministic** — Same command, same output schema, every time. Pipeable, scriptable, CI-friendly.
-
-## Quick Start
-
-### Install via npm
+The current fork is not published as a separate npm package yet. Install it from source:
 
 ```bash
-npm install -g @jackwener/opencli
+node --version
+git clone git@github.com:albertcyhe/opencli.git
+cd opencli
+npm install
+npm run build
+npm link
+opencli doctor
+opencli list
 ```
 
-### Basic Usage
+## Discover Commands
+
+Use runtime discovery first. Adapter support changes faster than docs.
 
 ```bash
-opencli list                              # See all commands
-opencli hackernews top --limit 5          # Public API, no browser
-opencli bilibili hot --limit 5            # Browser command
-opencli zhihu hot -f json                 # JSON output
+opencli list -f json
+opencli <site> --help
+opencli <site> <command> --help
 ```
 
-### Output Formats
-
-All built-in commands support `--format` / `-f`:
+Agents should usually request JSON:
 
 ```bash
-opencli bilibili hot -f table   # Default: rich terminal table
-opencli bilibili hot -f json    # JSON (pipe to jq or LLMs)
-opencli bilibili hot -f yaml    # YAML (human-readable)
-opencli bilibili hot -f md      # Markdown
-opencli bilibili hot -f csv     # CSV
-opencli bilibili hot -v         # Verbose: show pipeline debug
+opencli hackernews top --limit 5 -f json
+opencli reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" --limit 100 -f json
 ```
 
-### Tab Completion
+## Choose A Browser Runtime
 
-OpenCLI supports intelligent tab completion to speed up command input:
+| Runtime | Use when |
+| --- | --- |
+| Public/API adapter | The command does not need login or browser state. |
+| Local Browser Bridge | The task should reuse a Chrome profile on this machine. |
+| Browserbase account | The task needs a cloud browser, durable login state, account-to-proxy binding, or parallel identities. |
+| Explicit Browserbase session | You already created a Browserbase session and only need OpenCLI to attach to it. |
+
+Local Chrome setup: [Browser Bridge](./browser-bridge.md).
+
+Browserbase setup: [Browserbase accounts, proxies, and parallel sessions](../advanced/browserbase.md).
+
+## First Browserbase Task
 
 ```bash
-# Add shell completion to your startup config
-echo 'eval "$(opencli completion zsh)"' >> ~/.zshrc              # Zsh
-echo 'eval "$(opencli completion bash)"' >> ~/.bashrc            # Bash
-echo 'opencli completion fish | source' >> ~/.config/fish/config.fish  # Fish
+export BROWSERBASE_API_KEY=...
+export BROWSERBASE_PROJECT_ID=...
+export PROXY_REDDIT1_PASS=...
 
-# Restart your shell, then press Tab to complete:
-opencli [Tab]          # Complete site names (bilibili, zhihu, twitter...)
-opencli bilibili [Tab] # Complete commands (hot, search, me, download...)
+opencli browserbase proxy add reddit1-proxy \
+  --type external \
+  --server http://host:port \
+  --username user \
+  --password-env PROXY_REDDIT1_PASS
+
+opencli browserbase account bootstrap \
+  --site reddit \
+  --count 1 \
+  --name-prefix reddit-main \
+  --proxy reddit1-proxy \
+  --open
+
+opencli --browserbase-account reddit-main-1 \
+  reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" \
+  --limit 100 \
+  -f json
 ```
 
-The completion includes:
-- All available sites and adapters
-- Built-in commands (list, validate, verify, browser, doctor, plugin...)
-- Command aliases
-- Real-time updates as you add new adapters
+## First Parallel Run
+
+Create `jobs.jsonl` with one command per line:
+
+```json
+{"id":"reddit-1","command":"reddit get-comments","args":{"post-id":"https://www.reddit.com/r/example/comments/1abc123/title/","limit":100}}
+{"id":"reddit-2","command":"reddit get-comments","args":{"post-id":"https://www.reddit.com/r/example/comments/1def456/title/","limit":100}}
+```
+
+Run the jobs through named Browserbase accounts:
+
+```bash
+opencli run --browserbase \
+  --accounts reddit-main-1,reddit-main-2,reddit-main-3 \
+  --parallel 3 \
+  jobs.jsonl
+```
+
+The pool keeps one active automation session per account/context, while different accounts can run concurrently.
 
 ## Next Steps
 
-- [Installation details](/guide/installation)
-- [Browser Bridge setup](/guide/browser-bridge)
-- [Extending OpenCLI — custom commands, plugins, and external CLIs](/guide/extending-opencli)
-- [Plugins — extend with community adapters](/guide/plugins)
-- [All available adapters](/adapters/)
-- [For developers / AI agents](/developer/contributing)
-- [Add a new Electron app CLI](/guide/electron-app-cli)
+- [AI Agent Operations](./ai-agent-operations.md)
+- [Skills for AI agents](./skills.md)
+- [Social Comment Support](../adapters/social-comments.md)
+- [All adapters](../adapters/index.md)
+- [Extending OpenCLI](./extending-opencli.md)

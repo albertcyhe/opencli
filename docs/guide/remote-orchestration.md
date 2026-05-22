@@ -16,7 +16,7 @@ The first instinct is "let the extension connect to a remote daemon" — type a 
 - Execute arbitrary JavaScript in any of your tabs
 - Take screenshots, send arbitrary HTTP requests, dump page content
 
-Treat the daemon port the way you'd treat your unlocked desktop: never put it on a network you don't fully trust. Native "extension talks to remote daemon" support was [proposed in #636](https://github.com/jackwener/OpenCLI/pull/636) and deferred until daemon authentication exists.
+Treat the daemon port the way you'd treat your unlocked desktop: never put it on a network you don't fully trust. Native "extension talks to remote daemon" support was proposed upstream in PR #636 and deferred until daemon authentication exists.
 
 ## The pattern: reverse-tunnel a localhost daemon
 

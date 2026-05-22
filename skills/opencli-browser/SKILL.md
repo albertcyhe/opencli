@@ -1,6 +1,6 @@
 ---
 name: opencli-browser
-description: Use when an agent needs to drive a real Chrome window via opencli — inspect a page, fill forms, click through logged-in flows, or extract data ad-hoc. Covers the selector-first target contract, compound form fields, stale-ref handling, network capture, and the agent-native envelopes the CLI returns. Not for writing adapters — see opencli-adapter-author for that.
+description: Use when an agent needs to drive a local Chrome window via OpenCLI Browser Bridge — inspect a page, fill forms, click through logged-in flows, or extract data ad-hoc. Not for Browserbase account/session/proxy management; use opencli-browserbase for that. Not for writing adapters; use opencli-adapter-author.
 allowed-tools: Bash(opencli:*), Read, Edit, Write
 ---
 
@@ -8,7 +8,7 @@ allowed-tools: Bash(opencli:*), Read, Edit, Write
 
 The first reader of this CLI is an agent, not a human. Every subcommand returns a structured envelope that tells you exactly what matched, how confident the match is, and what to do if it didn't. Lean on those envelopes — do not guess.
 
-This skill is for **driving a live browser** to accomplish an agent task. If you are building a reusable adapter under `~/.opencli/clis/<site>/` use `opencli-adapter-author` instead.
+This skill is for **driving a local live browser** to accomplish an agent task. If you need Browserbase cloud sessions, persistent Contexts, account-bound proxies, Live View login, or `opencli run --browserbase`, load `opencli-browserbase` instead. If you are building a reusable adapter under `~/.opencli/clis/<site>/`, use `opencli-adapter-author`.
 
 ---
 

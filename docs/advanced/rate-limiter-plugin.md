@@ -5,7 +5,7 @@ An optional plugin that adds a random sleep between browser-based commands to re
 ## Install
 
 ```bash
-opencli plugin install github:jackwener/opencli-plugin-rate-limiter
+opencli plugin install github:user/opencli-plugin-rate-limiter
 ```
 
 Or copy the example below into `~/.opencli/plugins/rate-limiter/` to use it locally without installing from GitHub.

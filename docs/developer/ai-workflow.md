@@ -24,7 +24,7 @@ opencli browser verify <site>/<name>
 
 The skill `opencli-adapter-author` walks through: coverage self-test → site recon → API discovery → field decoding → output design → adapter coding → verify → write-back to site memory.
 
-See [skills/opencli-adapter-author/SKILL.md](https://github.com/jackwener/opencli/blob/main/skills/opencli-adapter-author/SKILL.md).
+See [skills/opencli-adapter-author/SKILL.md](https://github.com/albertcyhe/opencli/blob/main/skills/opencli-adapter-author/SKILL.md).
 
 ## Primitives
 
