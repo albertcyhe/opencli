@@ -1,340 +1,181 @@
 # OpenCLI
 
-> **把任意网站变成 CLI & 在你的登录态浏览器上跑 Browser Use。**
-> 把网站、浏览器会话、Electron 应用和本地工具，统一变成适合人类与 AI Agent 使用的确定性接口。
-> 或者在任意页面上跑 Browser Use —— 导航、填表单、点击、抓取、自动化。
+> 把网站、已登录浏览器、Browserbase 云端浏览器、Electron 应用和本地 CLI 变成稳定的命令接口，给人和 AI Agent 调用。
 
 [![English](https://img.shields.io/badge/docs-English-1D4ED8?style=flat-square)](./README.md)
-[![npm](https://img.shields.io/npm/v/@jackwener/opencli?style=flat-square)](https://www.npmjs.com/package/@jackwener/opencli)
-[![Node.js Version](https://img.shields.io/node/v/@jackwener/opencli?style=flat-square)](https://nodejs.org)
-[![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933?style=flat-square)](https://nodejs.org)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](./LICENSE)
 
-OpenCLI 可以用同一套 CLI 做三类事情：
+OpenCLI 是面向 agent 的 CLI 入口。它可以：
 
-- **直接使用现成适配器**：B站、知乎、小红书、Twitter/X、Reddit、HackerNews 等 [100+ 站点](#内置命令) 开箱即用。
-- **让 AI Agent 操作任意网站**：在你的 AI Agent（Claude Code、Cursor 等）中安装 `opencli-browser` skill，Agent 就能用你的已登录浏览器导航、点击、输入/填充、提取任意网页内容。
-- **把新网站写成 CLI**：用 `opencli browser` 原语 + `opencli-adapter-author` skill，从站点侦察、API 发现、字段解码到 `opencli browser verify` 一条龙。
+- 用稳定的 JSON/table/CSV 输出调用 100+ 网站和桌面应用 adapter
+- 通过 Browser Bridge 复用本地 Chrome 登录态
+- 通过 Browserbase 管理持久 Context、账号登录态、账号绑定 proxy，以及最多 10 个并发云端 browser session
+- 对 Reddit、Twitter/X、YouTube、Instagram、TikTok、小红书等平台执行 comments 相关原子操作
+- 提供 Codex/Claude/Cursor 等 agent 可安装的 skills，让 agent 知道该调用哪些 `opencli` 命令
 
-除了网站能力，OpenCLI 还是一个 **CLI 枢纽**：你可以把 `gh`、`docker`、`longbridge`、`tg`、`discord`、`wx`、`ntn`（Notion）等本地工具统一注册到 `opencli` 下，也可以通过桌面端适配器控制 Cursor、Codex、Antigravity、ChatGPT 等 Electron 应用。
+当前 fork 的文档和仓库地址是 [`albertcyhe/opencli`](https://github.com/albertcyhe/opencli)。这个 fork 还没有单独发布 npm 包，请从源码安装；adapter/plugin import 名暂时仍是 `@jackwener/opencli`。
 
 ## 快速开始
 
-### 1. 安装 OpenCLI
-
-OpenCLI 要求 **Node.js >= 21**。
+OpenCLI 要求 Node.js 20 或更高版本。当前 fork 从源码安装：
 
 ```bash
 node --version
-npm install -g @jackwener/opencli
-```
-
-### 2. 安装 Browser Bridge 扩展
-
-OpenCLI 通过轻量 Browser Bridge 扩展和本地微型 daemon 与 Chrome/Chromium 通信。daemon 会按需自动启动。
-
-**方式 A — Chrome Web Store（推荐）：**
-在 [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk) 安装 **OpenCLI** 扩展。
-
-**方式 B — 手动安装：**
-1. 到 GitHub [Releases 页面](https://github.com/jackwener/opencli/releases) 下载最新的 `opencli-extension-v{version}.zip`。
-2. 解压后打开 `chrome://extensions`，启用 **开发者模式**。
-3. 点击 **加载已解压的扩展程序**，选择解压后的目录。
-
-### 3. 验证环境
-
-```bash
+git clone git@github.com:albertcyhe/opencli.git
+cd opencli
+npm install
+npm run build
+npm link
 opencli doctor
-```
-
-### 4. 跑第一个命令
-
-```bash
 opencli list
-opencli hackernews top --limit 5
-opencli bilibili hot --limit 5
 ```
 
-## 给人类用户
+如果要复用本地 Chrome 登录态，请从 [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk) 安装 OpenCLI Browser Bridge 扩展，或从 [albertcyhe/opencli releases](https://github.com/albertcyhe/opencli/releases) 下载扩展 zip。
 
-如果你只是想稳定地调用网站或桌面应用能力，主路径很简单：
+## Agent 能做什么
 
-- `opencli list` 查看当前所有命令
-- `opencli <site> <command>` 调用内置或生成好的适配器
-- `opencli external register mycli` 把本地 CLI 接入同一发现入口
-- `opencli doctor` 处理浏览器连通性问题
-
-## 扩展 OpenCLI
-
-如果你想新增自己的命令，先看 [扩展 OpenCLI](./docs/zh/guide/extending-opencli.md)。README 只保留入口；目录结构、源码管理方式和安装命令放在文档里。
-
-| 需求 | 推荐路径 |
-|------|----------|
-| 把个人网站命令放在自己的 Git repo | `opencli plugin create` + `opencli plugin install file://...` |
-| 快速写一个本机私人 adapter | `opencli browser init <site>/<command>`，放在 `~/.opencli/clis/` |
-| 本地修改官方 adapter | `opencli adapter eject <site>` + `opencli adapter reset <site>` |
-| 发布或安装第三方命令 | `opencli plugin install github:user/repo` |
-| 包装已有本机 binary | `opencli external register <name>` |
-
-## 给 AI Agent
-
-OpenCLI 的 browser 命令是给 AI Agent 用的——不是手动执行的。把 skill 安装到你的 AI Agent（Claude Code、Cursor 等）中，Agent 就能用你的已登录 Chrome 会话替你操作网站。
-
-### 安装 skill（同时也用于更新）
+不要猜命令，先实时发现：
 
 ```bash
-npx skills add jackwener/opencli
+opencli list -f json
+opencli reddit --help
+opencli reddit get-comments --help
 ```
 
-或只装需要的 skill：
+执行原子化 adapter 命令，给下游 agent 或程序读取时默认用 JSON：
 
 ```bash
-npx skills add jackwener/opencli --skill opencli-adapter-author
-npx skills add jackwener/opencli --skill opencli-autofix
-npx skills add jackwener/opencli --skill opencli-browser
-npx skills add jackwener/opencli --skill opencli-usage
+opencli hackernews top --limit 5 -f json
+opencli reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" --limit 100 -f json
+opencli twitter get-comments "https://x.com/user/status/123" --limit 50 -f json
+opencli youtube comments "https://www.youtube.com/watch?v=VIDEO_ID" --limit 100 -f json
+opencli xiaohongshu comments "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." --with-replies -f json
 ```
 
-### 选择哪个 skill
+## Browserbase 多账号多 Proxy
 
-| Skill | 适用场景 | 你对 AI Agent 说的话 |
-|-------|---------|-------------------|
-| **opencli-adapter-author** | 为新站点写可复用适配器，或给已有站点添加命令 | "帮我做一个抖音热门的适配器" / "帮我做一个抓取这个页面热帖的命令" |
-| **opencli-autofix** | 内置命令失败时修复已有适配器 | "`opencli zhihu hot` 返回空了，修一下" |
-| **opencli-browser** | 实时驱动 Chrome 页面——导航、填表单、点击、抓取 | "帮我看看小红书的通知" / "帮我填一下这个表单" / "用浏览器命令抓取这个页面" |
-| **opencli-usage** | 所有命令和站点的快速参考 | "OpenCLI 有哪些 Twitter 相关的命令？" |
-
-### 工作原理
-
-安装 `opencli-browser` skill 后，你的 AI Agent 可以：
-
-1. **导航**到任意 URL，使用你的已登录浏览器
-2. **读取**页面内容——通过结构化 DOM 快照（不是截图）
-3. **交互**——点击按钮、填写表单、选择选项、按键
-4. **提取**页面数据或拦截网络 API 响应
-5. **等待**元素、文本或页面跳转
-
-Agent 在内部自动处理所有 `opencli browser` 命令——你只需用自然语言描述想做的事。
-
-**Skill 参考文档：**
-- [`skills/opencli-browser/SKILL.md`](./skills/opencli-browser/SKILL.md) — 实时驱动 Chrome（导航、填表单、点击、抓取）
-- [`skills/opencli-adapter-author/SKILL.md`](./skills/opencli-adapter-author/SKILL.md) — 给新站点写适配器，全流程
-- [`skills/opencli-autofix/SKILL.md`](./skills/opencli-autofix/SKILL.md) — 修复已有适配器
-- [`skills/opencli-usage/SKILL.md`](./skills/opencli-usage/SKILL.md) — 命令和站点参考
-
-`browser` 可用命令包括：`open`、`state`、`click`、`type`、`fill`、`select`、`keys`、`wait`、`get`、`find`、`extract`、`frames`、`screenshot`、`scroll`、`back`、`eval`、`network`、`tab list`、`tab new`、`tab select`、`tab close`、`init`、`verify`、`close`。
-
-`opencli browser` 命令必须紧跟一个 `<session>` 位置参数。`opencli browser work open <url>` 和 `opencli browser work tab new [url]` 都会返回 target ID。`opencli browser work tab list` 用来查看当前已存在 tab 的 target ID，再通过 `--tab <targetId>` 把命令明确路由到某个 tab。`tab new` 只会新建 tab，不会改变默认浏览器目标；只有显式执行 `tab select <targetId>`，才会把该 tab 设为同一 session 后续未指定 target 的默认目标。
-
-## 为新站点写适配器
-
-当你需要的网站还没覆盖时，用 `opencli-adapter-author` skill，全流程：
-
-1. **侦察**站点，分类 pattern（SPA / SSR / JSONP / Token / Streaming）
-2. **发现** endpoint——network 精读、initial state、bundle 搜索、token 溯源，或 interceptor 兜底
-3. **定认证**——`PUBLIC` / `COOKIE` / `INTERCEPT` / `UI` / `LOCAL`
-4. **字段解码** + 设计输出列
-5. `opencli browser recon analyze <url>` → `opencli browser recon init <site>/<name>` → 写适配器 → `opencli browser recon verify <site>/<name>`
-6. 站点知识沉到 `~/.opencli/sites/<site>/`，下次同站点直接吃缓存
-
-## 前置要求
-
-- **Node.js**: >= 21.0.0（标准 npm 安装路径要求）
-- **Bun**: >= 1.0（可选替代运行时）
-- 浏览器型命令需要 Chrome 或 Chromium 处于运行中，并已登录目标网站
-
-> **重要**：浏览器型命令直接复用你的 Chrome/Chromium 登录态。如果拿到空数据或出现权限类失败，先确认目标站点已经在浏览器里打开并完成登录。
-
-## 配置
-
-| 变量 | 默认值 | 说明 |
-|------|--------|------|
-| `OPENCLI_DAEMON_PORT` | `19825` | daemon-extension 通信端口 |
-| `OPENCLI_WINDOW` | 命令默认值 | 设为 `foreground` 或 `background` 来覆盖 Browser Bridge 窗口位置。浏览器型命令也支持 `--window <foreground\|background>` |
-| `OPENCLI_BROWSER_CONNECT_TIMEOUT` | `30` | 浏览器连接超时（秒） |
-| `OPENCLI_BROWSER_COMMAND_TIMEOUT` | `60` | 单个浏览器命令超时（秒） |
-| `OPENCLI_CDP_ENDPOINT` | — | Chrome DevTools Protocol 端点，用于远程浏览器或 Electron 应用 |
-| `OPENCLI_CDP_TARGET` | — | 按 URL 子串过滤 CDP target（如 `detail.1688.com`） |
-| `BROWSERBASE_API_KEY` | — | Browserbase 云端浏览器、Context 和账号配置所需 API key |
-| `BROWSERBASE_PROJECT_ID` | — | Browserbase context/account 操作所需 project id |
-| `BROWSERBASE_SESSION_ID` | — | 现有 Browserbase session ID；等价于根参数 `--browserbase-session <id>` / 兼容参数 `--session <id>` |
-| `OPENCLI_VERBOSE` | `false` | 启用详细日志（`-v` 也可以） |
-| `DEBUG_SNAPSHOT` | — | 设为 `1` 输出 DOM 快照调试信息 |
-
-`opencli browser *` 必须紧跟一个 `<session>` 位置参数，默认使用前台窗口，并保留该 session 的 tab lease，直到你手动执行 `opencli browser <session> close` 或等空闲超时。浏览器型 adapter 默认使用后台 adapter 窗口并在命令结束后释放一次性 tab lease；如果需要调试最终页面，可以传 `--window foreground --keep-tab true`。
-
-Browserbase 现在可以由 OpenCLI 直接管理账号配置、持久 Context、账号绑定 proxy、Live View 登录 session 和并发任务池：`opencli browserbase account bootstrap ...`、`opencli --browserbase-account <name> <site> <command> ...`、`opencli run --browserbase ...`。已有 Browserbase session 仍可用 `--browserbase-session` 或兼容的 `--session`。详见 [`docs/advanced/browserbase.md`](./docs/advanced/browserbase.md)。
-
-社交平台评论能力见 [`docs/adapters/social-comments.md`](./docs/adapters/social-comments.md)，覆盖 Twitter/X、YouTube、Reddit、LinkedIn、Instagram、TikTok 和小红书。
-
-## 内置命令
-
-运行 `opencli list` 查看完整注册表。
-
-| 站点 | 命令 |
-|------|------|
-| **xiaohongshu** | `search` `note` `comments` `reply` `notifications` `feed` `user` `download` `publish` `creator-notes` `creator-note-detail` `creator-notes-summary` `creator-profile` `creator-stats` `delete-note` |
-| **bilibili** | `hot` `search` `me` `favorite` `history` `feed` `subtitle` `summary` `video` `comments` `dynamic` `ranking` `following` `user-videos` `download` |
-| **zhihu** | `hot` `search` `question` `download` `follow` `like` `favorite` `comment` `answer` |
-| **hackernews** | `top` `new` `best` `ask` `show` `jobs` `search` `user` |
-| **linkedin** | `connect` `inbox` `safe-send` `search` `people-search` `sent-invitations` `thread-snapshot` `timeline` `salesnav-search` `salesnav-inbox` `salesnav-message` `salesnav-thread` |
-| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `user` `user-posts` `user-comments` `upvote` `save` `comment` `reply` `subscribe` `subscribed` `saved` `upvoted` |
-| **twitter** | `trending` `search` `timeline` `tweets` `lists` `list-tweets` `list-add` `list-remove` `bookmarks` `profile` `thread` `get-comments` `following` `followers` `notifications` `post` `reply` `delete` `like` `likes` `article` `follow` `unfollow` `bookmark` `unbookmark` `download` `accept` `reply-dm` `block` `unblock` `hide-reply` |
-| **youtube** | `search` `video` `transcript` `comments` `reply` `reply-comment` `channel` `playlist` `feed` `history` `watch-later` `subscriptions` `like` `unlike` `subscribe` `unsubscribe` |
-| **instagram** | `explore` `profile` `search` `search-posts` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `saved` |
-| **tiktok** | `explore` `search` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `live` `notifications` `friends` |
-| **claude** | `ask` `send` `new` `status` `read` `history` `detail` |
-| **gemini** | `new` `ask` `image` `deep-research` `deep-research-result` |
-| **notebooklm** | `status` `list` `open` `current` `get` `history` `summary` `note-list` `notes-get` `source-list` `source-get` `source-fulltext` `source-guide` |
-| **amazon** | `bestsellers` `search` `product` `offer` `discussion` `movers-shakers` `new-releases` `rankings` |
-
-精选清单 — **[→ 查看全部 100+ 站点和命令](./docs/adapters/index.md)**（小红书 / B站 / 知乎 / Twitter / Reddit / 抖音 / 微博 / 微信读书 / 小宇宙 / 1688 / 夸克 / Spotify / 牛客 / arxiv / Bilibili / 等）。
-
-### 外部 CLI 枢纽
-
-把现有命令行工具统一接入 `opencli <tool> ...`：
-
-`gh` · `docker` · `vercel` · `wrangler` · `obsidian` · `longbridge` · `lark-cli` · `ntn(notion)` · `dws(DingTalk Workspace)` · `wecom-cli(企业微信)` · `tg(tg-cli)` · `discord(discord-cli)` · `wx(wx-cli)`
-
-注册自定义本地 CLI：`opencli external register <name>`；查看所有：`opencli external list`。
-
-**桌面应用适配器**（Electron，通过 CDP）：Cursor / Codex / Antigravity / ChatGPT App / ChatWise / Discord / Doubao — 详见 [`docs/adapters/desktop/`](./docs/adapters/desktop/)。
-
-## 下载支持
-
-OpenCLI 支持从各平台下载图片、视频和文章。
-
-### 支持的平台
-
-| 平台 | 内容类型 | 说明 |
-|------|----------|------|
-| **小红书** | 图片、视频 | 下载笔记中的所有媒体文件 |
-| **B站** | 视频 | 需要安装 `yt-dlp` |
-| **Twitter/X** | 图片、视频 | 从用户媒体页或单条推文下载 |
-| **Pixiv** | 图片 | 下载原始画质插画，支持多页作品 |
-| **1688** | 图片、视频 | 下载商品页中可见的商品素材 |
-| **小宇宙** | 音频、转录 | 使用本地凭证下载单集音频和转录 JSON / 文本 |
-| **知乎** | 文章（Markdown） | 导出文章，可选下载图片到本地 |
-| **微信公众号** | 文章（Markdown） | 导出微信公众号文章为 Markdown |
-| **豆瓣** | 图片 | 下载电影条目的海报 / 剧照图片 |
-
-### 前置依赖
-
-下载流媒体平台的视频需要安装 `yt-dlp`：
+先设置 Browserbase 凭证：
 
 ```bash
-# 安装 yt-dlp
-pip install yt-dlp
-# 或者
-brew install yt-dlp
+export BROWSERBASE_API_KEY=...
+export BROWSERBASE_PROJECT_ID=...
 ```
 
-### 使用示例
+创建 proxy profile。外部 proxy 的密码推荐放在环境变量：
 
 ```bash
-# 下载小红书笔记中的图片/视频
-opencli xiaohongshu download "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." --output ./xhs
-opencli xiaohongshu download "https://xhslink.com/..." --output ./xhs
-opencli rednote download "https://www.rednote.com/search_result/<id>?xsec_token=..." --output ./rednote
+export PROXY_REDDIT1_PASS=...
 
-# 下载B站视频（需要 yt-dlp）
-opencli bilibili download BV1xxx --output ./bilibili
-opencli bilibili download BV1xxx --quality 1080p  # 指定画质
-
-# 下载 Twitter 用户的媒体
-opencli twitter download elonmusk --limit 20 --output ./twitter
-
-# 下载单条推文的媒体
-opencli twitter download --tweet-url "https://x.com/user/status/123" --output ./twitter
-
-# 下载豆瓣电影海报 / 剧照
-opencli douban download 30382501 --output ./douban
-
-# 下载 1688 商品页中的图片 / 视频素材
-opencli 1688 download 841141931191 --output ./1688-downloads
-
-# 下载小宇宙单集音频
-opencli xiaoyuzhou download 69b3b675772ac2295bfc01d0 --output ./xiaoyuzhou
-
-# 下载小宇宙单集转录
-opencli xiaoyuzhou transcript 69dd0c98e2c8be31551f6a33 --output ./xiaoyuzhou-transcripts
-
-# 导出知乎文章为 Markdown
-opencli zhihu download "https://zhuanlan.zhihu.com/p/xxx" --output ./zhihu
-
-# 导出并下载图片
-opencli zhihu download "https://zhuanlan.zhihu.com/p/xxx" --download-images
-
-# 导出微信公众号文章为 Markdown
-opencli weixin download --url "https://mp.weixin.qq.com/s/xxx" --output ./weixin
+opencli browserbase proxy add reddit1-proxy \
+  --type external \
+  --server http://133.169.0.110:60088 \
+  --username p9SIbn0S6AoC \
+  --password-env PROXY_REDDIT1_PASS
 ```
 
-`opencli xiaoyuzhou download` 和 `transcript` 需要本地小宇宙凭证：`~/.opencli/xiaoyuzhou.json`。
-
-
-
-## 输出格式
-
-所有内置命令都支持 `--format` / `-f`，可选值为 `table`、`json`、`yaml`、`md`、`csv`。
-`list` 命令也支持同样的格式参数，同时继续兼容 `--json`。
+创建 10 个持久登录账号，并打开 Live View URL 给人工登录：
 
 ```bash
-opencli list -f yaml            # 用 YAML 列出命令注册表
-opencli bilibili hot -f table   # 默认：富文本表格
-opencli bilibili hot -f json    # JSON（适合传给 jq 或者各类 AI Agent）
-opencli bilibili hot -f yaml    # YAML（更适合人类直接阅读）
-opencli bilibili hot -f md      # Markdown
-opencli bilibili hot -f csv     # CSV
-opencli bilibili hot -v         # 详细模式：展示管线执行步骤调试信息
+opencli browserbase account bootstrap \
+  --site reddit \
+  --count 10 \
+  --name-prefix reddit-main \
+  --proxy reddit1-proxy \
+  --open
 ```
 
-## 退出码
+每个账号对应一个 Browserbase Context。cookies、localStorage、IndexedDB 保存在 Browserbase；OpenCLI 本地只保存 `~/.opencli/browserbase.json` 元数据。
 
-opencli 遵循 Unix `sysexits.h`，CI / 脚本可按失败模式分支：`0` 成功、`66` 无数据、`69` Browser Bridge 未连接、`75` 超时、`77` 需要认证、`78` 配置错误、`130` Ctrl-C。完整参考：[docs/zh/guide/exit-codes.md](./docs/zh/guide/exit-codes.md)。
-
-## 插件
-
-通过社区贡献的插件扩展 OpenCLI。插件使用与内置命令相同的 JS 格式，启动时自动发现。
+用指定账号跑一个任务：
 
 ```bash
-opencli plugin install github:user/opencli-plugin-my-tool  # 安装
-opencli plugin list                                         # 查看已安装
-opencli plugin update my-tool                               # 更新到最新
-opencli plugin update --all                                 # 更新全部已安装插件
-opencli plugin uninstall my-tool                            # 卸载
+opencli --browserbase-account reddit-main-1 \
+  reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" \
+  --limit 100 \
+  -f json
 ```
 
-当 plugin 的版本被记录到 `~/.opencli/plugins.lock.json` 后，`opencli plugin list` 也会显示对应的短 commit hash。
+用最多 10 个账号并发跑 JSONL 任务：
 
-| 插件 | 类型 | 描述 |
-|------|------|------|
-| [opencli-plugin-github-trending](https://github.com/ByteYue/opencli-plugin-github-trending) | JS | GitHub Trending 仓库 |
-| [opencli-plugin-hot-digest](https://github.com/ByteYue/opencli-plugin-hot-digest) | JS | 多平台热榜聚合 |
-| [opencli-plugin-juejin](https://github.com/Astro-Han/opencli-plugin-juejin) | JS | 稀土掘金热门文章 |
-| [opencli-plugin-vk](https://github.com/flobo3/opencli-plugin-vk) | JS | VK (VKontakte) 动态、信息流和搜索 |
+```bash
+opencli run --browserbase \
+  --accounts reddit-main-1,reddit-main-2,reddit-main-3,reddit-main-4,reddit-main-5,reddit-main-6,reddit-main-7,reddit-main-8,reddit-main-9,reddit-main-10 \
+  --parallel 10 \
+  --pool-size 10 \
+  jobs.jsonl
+```
 
-详见 [插件指南](./docs/zh/guide/plugins.md) 了解如何创建自己的插件。
+常用账号和 proxy 管理命令：
 
-## 常见问题排查
+```bash
+opencli browserbase account list
+opencli browserbase account login reddit-main-1 --open --wait
+opencli browserbase account check reddit-main-1 --command "reddit whoami"
+opencli browserbase account set-proxy reddit-main-1 reddit1-proxy
+opencli browserbase account clear-proxy reddit-main-1
+opencli browserbase account clear-login reddit-main-1 --recreate-context --delete-old-context
+opencli browserbase account delete reddit-main-1 --delete-context
 
-- **"Extension not connected" 报错**
-  - 确保你已从 [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk) 安装 OpenCLI 扩展，且在 `chrome://extensions` 中**已启用**。
-- **"attach failed: Cannot access a chrome-extension:// URL" 报错**
-  - 其他 Chrome/Chromium 扩展（如 youmind、New Tab Override 或 AI 助手类扩展）可能产生冲突。请尝试**暂时禁用其他扩展**后重试。
-- **返回空数据，或者报错 "Unauthorized"**
-  - Chrome/Chromium 里的登录态可能已经过期。请打开当前页面，在新标签页重新手工登录或刷新该页面。
-- **Node API 错误 / 缺少 `fetch` / 旧 Node 启动即崩**
-  - OpenCLI 要求 **Node.js >= 21**。先执行 `node --version`，如果版本过低先升级，再重试命令。
-- **Daemon 问题**
-  - 检查 daemon 状态：`curl localhost:19825/status`
-  - 查看扩展日志：`curl localhost:19825/logs`
+opencli browserbase proxy list
+opencli browserbase proxy get reddit1-proxy
+opencli browserbase proxy update reddit1-proxy --server http://new-host:port
+opencli browserbase proxy test reddit1-proxy
+opencli browserbase proxy delete reddit1-proxy
+```
 
+完整说明见 [Browserbase 账号、Proxy 与并发 Session](./docs/zh/advanced/browserbase.md)。
 
-## Star History
+## 社交平台 Comments
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jackwener/opencli&type=Date)](https://star-history.com/#jackwener/opencli&Date)
+| 平台 | 读取评论 | 写入支持 |
+| --- | --- | --- |
+| Reddit | `reddit read`, `reddit get-comments` | `reddit comment`, `reddit reply` |
+| Twitter/X | `twitter get-comments`, `twitter thread` | `twitter reply`, `twitter post` |
+| YouTube | `youtube comments` | `youtube reply`, `youtube reply-comment` |
+| Instagram | `instagram get-comments` | `instagram comment`, `instagram reply` |
+| TikTok | `tiktok get-comments` | `tiktok comment`, `tiktok reply` |
+| 小红书 | `xiaohongshu comments` | `xiaohongshu reply` |
+| LinkedIn | `linkedin timeline` 评论数量 | 暂未暴露评论 thread 读写 |
 
+平台参数、ID 和安全说明见 [Social Comment Support](./docs/zh/adapters/social-comments.md)。
 
+## 给 AI Agent 安装 Skills
 
-## License
+安装或刷新当前 fork 的所有 OpenCLI skills：
 
-[Apache-2.0](./LICENSE)
+```bash
+npx skills add albertcyhe/opencli
+```
+
+只安装需要的 skill：
+
+```bash
+npx skills add albertcyhe/opencli --skill opencli-usage
+npx skills add albertcyhe/opencli --skill opencli-browserbase
+npx skills add albertcyhe/opencli --skill opencli-social-comments
+npx skills add albertcyhe/opencli --skill opencli-browser
+npx skills add albertcyhe/opencli --skill opencli-adapter-author
+npx skills add albertcyhe/opencli --skill opencli-autofix
+```
+
+| Skill | 适合场景 |
+| --- | --- |
+| `opencli-usage` | 总入口：发现能力并选择下一步 skill |
+| `opencli-browserbase` | 管理 Browserbase account/context/session/proxy/并发任务 |
+| `opencli-social-comments` | 读取或写入社交平台评论 |
+| `opencli-browser` | 通过本地 Browser Bridge 临时操作 Chrome 页面 |
+| `opencli-adapter-author` | 新增或扩展可复用 adapter |
+| `opencli-autofix` | 基于 trace 修复失效 adapter |
+
+Skill 源码在 [`skills/`](./skills/)，文档入口见 [给 AI Agent 的 Skills](./docs/zh/guide/skills.md)。
+
+## 更多文档
+
+- [快速开始](./docs/zh/guide/getting-started.md)
+- [AI Agent 操作指南](./docs/zh/guide/ai-agent-operations.md)
+- [安装](./docs/zh/guide/installation.md)
+- [Browser Bridge](./docs/zh/guide/browser-bridge.md)
+- [所有适配器](./docs/zh/adapters/index.md)
+- [Browserbase](./docs/zh/advanced/browserbase.md)
+- [社交平台 comments](./docs/zh/adapters/social-comments.md)

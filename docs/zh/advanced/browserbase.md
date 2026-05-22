@@ -1,23 +1,23 @@
-# Browserbase Accounts, Proxies, and Parallel Sessions
+# Browserbase 账号、Proxy 与并发 Session
 
-OpenCLI treats Browserbase as three first-class concepts:
+OpenCLI 把 Browserbase 拆成三个一等概念：
 
-- **Account profile**: local OpenCLI metadata with a name, site tag, Browserbase `contextId`, default proxy, and login-state timestamps.
-- **Context**: Browserbase's durable browser profile. It stores cookies, localStorage, IndexedDB, and other login state.
-- **Session**: a short-lived Browserbase browser instance used for manual Live View login or automation.
+- **Account profile**：OpenCLI 本地账号元数据，包含账号名、站点标签、Browserbase `contextId`、默认 proxy 和登录状态时间戳。
+- **Context**：Browserbase 持久浏览器 profile，保存 cookies、localStorage、IndexedDB 和其它登录态。
+- **Session**：短生命周期 Browserbase 浏览器实例，用于 Live View 人工登录或自动化任务。
 
-Proxy is a session creation setting. Binding a proxy to an account means future sessions for that account use that exit path. Existing sessions are not changed.
+Proxy 是创建 session 时的参数。账号绑定 proxy 的含义是：以后这个账号新建 session 时默认使用同一个出口。已经运行的 session 不会被修改。
 
-## First 15 Minutes
+## 15 分钟上手
 
-Configure credentials:
+配置凭证：
 
 ```bash
 export BROWSERBASE_API_KEY=...
 export BROWSERBASE_PROJECT_ID=...
 ```
 
-Create a proxy. Prefer `--password-env` for external proxy passwords:
+创建 proxy。外部 proxy 密码优先用 `--password-env`：
 
 ```bash
 export PROXY_REDDIT1_PASS=...
@@ -29,7 +29,7 @@ opencli browserbase proxy add reddit1-proxy \
   --password-env PROXY_REDDIT1_PASS
 ```
 
-Create accounts and open Live View login sessions:
+创建账号并打开 Live View 登录 session：
 
 ```bash
 opencli browserbase account bootstrap \
@@ -40,14 +40,14 @@ opencli browserbase account bootstrap \
   --open
 ```
 
-Log in manually in each Live View URL, then mark accounts ready or use `login --wait` for one account:
+在每个 Live View URL 中人工登录，然后标记账号 ready，或对单个账号使用 `login --wait`：
 
 ```bash
 opencli browserbase account login reddit-main-1 --open --wait
 opencli browserbase account mark reddit-main-1 --state ready
 ```
 
-Run one atomic task:
+跑一个原子任务：
 
 ```bash
 opencli --browserbase-account reddit-main-1 \
@@ -56,7 +56,7 @@ opencli --browserbase-account reddit-main-1 \
   -f json
 ```
 
-## Daily Account Operations
+## 日常账号操作
 
 ```bash
 opencli browserbase account list
@@ -66,7 +66,7 @@ opencli browserbase account login reddit-main-1 --open --wait
 opencli browserbase account mark reddit-main-1 --state invalidated
 ```
 
-Import an existing Browserbase Context:
+导入已有 Browserbase Context：
 
 ```bash
 opencli browserbase account import reddit1 \
@@ -75,14 +75,14 @@ opencli browserbase account import reddit1 \
   --proxy reddit1-proxy
 ```
 
-Change or remove the default proxy for future sessions:
+修改或移除未来 session 的默认 proxy：
 
 ```bash
 opencli browserbase account set-proxy reddit-main-1 reddit1-proxy
 opencli browserbase account clear-proxy reddit-main-1
 ```
 
-Clear login state but keep the account name:
+清除登录态但保留账号名：
 
 ```bash
 opencli browserbase account clear-login reddit-main-1 \
@@ -90,7 +90,7 @@ opencli browserbase account clear-login reddit-main-1 \
   --delete-old-context
 ```
 
-Delete local account metadata and optionally the remote Context:
+删除本地账号元数据，并可选删除远端 Context：
 
 ```bash
 opencli browserbase account delete reddit-main-1 --delete-context
@@ -98,7 +98,7 @@ opencli browserbase account delete reddit-main-1 --delete-context
 
 ## Proxy CRUD
 
-Browserbase geo proxy:
+Browserbase 地理 proxy：
 
 ```bash
 opencli browserbase proxy add us-ny \
@@ -108,7 +108,7 @@ opencli browserbase proxy add us-ny \
   --city "New York"
 ```
 
-External proxy:
+外部 proxy：
 
 ```bash
 export PROXY_DC1_PASS=...
@@ -120,7 +120,7 @@ opencli browserbase proxy add dc1 \
   --password-env PROXY_DC1_PASS
 ```
 
-Manage proxies:
+管理 proxy：
 
 ```bash
 opencli browserbase proxy list
@@ -130,18 +130,18 @@ opencli browserbase proxy test dc1
 opencli browserbase proxy delete dc1
 ```
 
-`proxy delete` refuses to remove a proxy while accounts still reference it. Use `--force` only when you intentionally want OpenCLI to clear those account references.
+`proxy delete` 默认拒绝删除仍被账号引用的 proxy。只有在你明确想让 OpenCLI 清空这些账号引用时才使用 `--force`。
 
-## Parallel Runs
+## 并发任务
 
-Create `jobs.jsonl` with one independent job per line:
+创建 `jobs.jsonl`，每行一个独立任务：
 
 ```json
 {"id":"reddit-1","command":"reddit get-comments","args":{"post-id":"https://www.reddit.com/r/example/comments/1abc123/title/","limit":100}}
 {"id":"reddit-2","account":"reddit-main-2","command":"reddit get-comments","args":{"post-id":"https://www.reddit.com/r/example/comments/1def456/title/","limit":100}}
 ```
 
-Run across account profiles:
+跨账号执行：
 
 ```bash
 opencli run --browserbase \
@@ -151,11 +151,11 @@ opencli run --browserbase \
   jobs.jsonl
 ```
 
-The pool guarantees one active automation session per account/context while allowing different accounts to run in parallel. `--pool-size` is capped at 10; the Browserbase plan or API can still enforce a lower effective limit.
+任务池保证同一个 account/context 同时只有一个 active automation session，不同账号可以并发。`--pool-size` 最高 10；Browserbase plan 或 API 仍可能给出更低的实际上限。
 
-## Session And Context Commands
+## Session 和 Context 命令
 
-Manual session lifecycle:
+手动 session 生命周期：
 
 ```bash
 opencli browserbase session create --account reddit-main-1 --keep-alive --print-live-url
@@ -166,7 +166,7 @@ opencli browserbase session release <sessionId>
 opencli browserbase session delete <sessionId>
 ```
 
-Lower-level Context commands:
+底层 Context 命令：
 
 ```bash
 opencli browserbase context create
@@ -175,28 +175,28 @@ opencli browserbase context list-local
 opencli browserbase context delete <contextId>
 ```
 
-Existing Browserbase sessions still work:
+已有 Browserbase session 仍可直接使用：
 
 ```bash
 opencli --browserbase-session <sessionId> reddit get-comments <url> -f json
 opencli --session <sessionId> reddit get-comments <url> -f json
 ```
 
-## Security And Storage
+## 安全与存储
 
-- Local metadata is stored at `~/.opencli/browserbase.json` with `0600` permissions.
-- Cookies and login state stay in Browserbase Contexts, not in the local config.
-- Proxy plaintext passwords and Browserbase connect URLs are redacted by default.
-- Use `--show-sensitive` only when you intentionally need sensitive fields in JSON output.
-- Read-only checks default to non-persistent context writes; login and normal task sessions persist by default.
+- 本地元数据保存在 `~/.opencli/browserbase.json`，权限为 `0600`。
+- cookies 和登录态保存在 Browserbase Context，不写入本地配置。
+- proxy 明文密码和 Browserbase connect URL 默认 redacted。
+- 只有明确需要查看敏感字段时才使用 `--show-sensitive`。
+- 只读检查默认不持久化 context 写入；登录和普通任务 session 默认持久化。
 
-## Selection Priority
+## 选择优先级
 
-For browser-backed adapters, OpenCLI resolves browser settings in this order:
+浏览器型 adapter 按以下顺序解析浏览器配置：
 
 1. `--browserbase-account <name>`
 2. `--browserbase-session <sessionId>`
-3. legacy `--session <sessionId>`
+3. 兼容参数 `--session <sessionId>`
 4. `BROWSERBASE_SESSION_ID`
 5. `OPENCLI_CDP_ENDPOINT`
-6. local Browser Bridge
+6. 本地 Browser Bridge

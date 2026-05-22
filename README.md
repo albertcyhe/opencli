@@ -1,310 +1,183 @@
 # OpenCLI
 
-> **Convert any website into a CLI & run Browser Use on your logged-in Chrome.**
-> Turn websites, browser sessions, Electron apps, and local tools into deterministic interfaces for humans and AI agents.
-> Or run Browser Use against any page — navigate, fill forms, click, extract, automate.
+> Turn websites, logged-in browser profiles, Browserbase cloud browsers, Electron apps, and local CLIs into deterministic commands for humans and AI agents.
 
 [![中文文档](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-0F766E?style=flat-square)](./README.zh-CN.md)
-[![npm](https://img.shields.io/npm/v/@jackwener/opencli?style=flat-square)](https://www.npmjs.com/package/@jackwener/opencli)
-[![Node.js Version](https://img.shields.io/node/v/@jackwener/opencli?style=flat-square)](https://nodejs.org)
-[![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933?style=flat-square)](https://nodejs.org)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square)](./LICENSE)
 
-OpenCLI gives you one surface for three different kinds of automation:
+OpenCLI is an agent-facing CLI surface. It can:
 
-- **Use built-in adapters** for sites like Bilibili, Zhihu, Xiaohongshu, Reddit, HackerNews, Twitter/X, and [many more](#built-in-commands).
-- **Let AI Agents operate any website** — install the `opencli-browser` skill in your AI agent (Claude Code, Cursor, etc.), and it can navigate, click, type/fill, extract, and inspect any page through your logged-in browser via `opencli browser` primitives.
-- **Write new adapters** end-to-end with `opencli browser` + the `opencli-adapter-author` skill, which guides from first recon through field decoding, code, and `opencli browser verify`.
+- run 100+ built-in website and desktop adapters with stable JSON/table/CSV output
+- reuse a local Chrome login through Browser Bridge
+- run Browserbase sessions with persistent account Contexts, per-account proxy binding, and up to 10 concurrent cloud browsers
+- execute social comment workflows for Reddit, Twitter/X, YouTube, Instagram, TikTok, Xiaohongshu, and supported LinkedIn timeline metadata
+- expose skills that tell an AI agent which `opencli` command to call
 
-It also works as a **CLI hub** for local tools such as `gh`, `docker`, `longbridge`, `tg`, `discord`, `wx`, `ntn` (Notion), and other binaries you register yourself, plus **desktop app adapters** for Electron apps like Cursor, Codex, Antigravity, and ChatGPT.
+This fork is documented and maintained at [`albertcyhe/opencli`](https://github.com/albertcyhe/opencli). It is not published as a separate npm package yet; install it from source. Adapter/plugin import names still use `@jackwener/opencli`.
 
 ## Quick Start
 
-### 1. Install OpenCLI
-
-OpenCLI requires **Node.js >= 21**.
+OpenCLI requires Node.js 20 or newer. Install the current fork from source:
 
 ```bash
 node --version
-npm install -g @jackwener/opencli
-```
-
-### 2. Install the Browser Bridge Extension
-
-OpenCLI connects to Chrome/Chromium through a lightweight Browser Bridge extension plus a small local daemon. The daemon auto-starts when needed.
-
-**Option A — Chrome Web Store (recommended):**
-Install **OpenCLI** from the [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk).
-
-**Option B — Manual install:**
-1. Download the latest `opencli-extension-v{version}.zip` from the GitHub [Releases page](https://github.com/jackwener/opencli/releases).
-2. Unzip it, open `chrome://extensions`, and enable **Developer mode**.
-3. Click **Load unpacked** and select the unzipped folder.
-
-### 3. Verify the setup
-
-```bash
+git clone git@github.com:albertcyhe/opencli.git
+cd opencli
+npm install
+npm run build
+npm link
 opencli doctor
-```
-
-### 4. Optional: name your Chrome profile
-
-Each Chrome profile runs its own OpenCLI extension instance. If you use multiple Chrome profiles, list the connected profiles and assign local aliases:
-
-```bash
-opencli profile list
-opencli profile rename <contextId> work
-opencli profile use work
-opencli --profile work browser state
-```
-
-With only one connected profile, OpenCLI uses it automatically. With multiple connected profiles and no default, OpenCLI asks you to choose instead of guessing.
-
-### 5. Run your first commands
-
-```bash
 opencli list
-opencli hackernews top --limit 5
-opencli bilibili hot --limit 5
 ```
 
-## For Humans
+For local Chrome login reuse, install the OpenCLI Browser Bridge extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk), or download the extension zip from [albertcyhe/opencli releases](https://github.com/albertcyhe/opencli/releases).
 
-Use OpenCLI directly when you want a reliable command instead of a live browser session:
+## What An Agent Can Do
 
-- `opencli list` shows every registered command.
-- `opencli <site> <command>` runs a built-in or generated adapter.
-- `opencli external register mycli` exposes a local CLI through the same discovery surface.
-- `opencli doctor` helps diagnose browser connectivity.
-
-## Extending OpenCLI
-
-If you want to add your own commands, start with the [Extending OpenCLI guide](./docs/guide/extending-opencli.md). README keeps this short; the guide covers the directory layout, source-control model, and install commands.
-
-| Need | Recommended path |
-|------|------------------|
-| Keep personal website commands in your own Git repo | `opencli plugin create` + `opencli plugin install file://...` |
-| Quickly draft a private local adapter | `opencli browser init <site>/<command>` in `~/.opencli/clis/` |
-| Modify an official adapter locally | `opencli adapter eject <site>` + `opencli adapter reset <site>` |
-| Publish or install third-party commands | `opencli plugin install github:user/repo` |
-| Wrap an existing local binary | `opencli external register <name>` |
-
-## For AI Agents
-
-OpenCLI's browser commands are designed to be used by AI Agents — not run manually. Install skills into your AI agent (Claude Code, Cursor, etc.), and the agent operates websites on your behalf using your logged-in Chrome session.
-
-### Install skills (also refreshes existing installs)
+Discover commands at runtime instead of guessing:
 
 ```bash
-npx skills add jackwener/opencli
+opencli list -f json
+opencli reddit --help
+opencli reddit get-comments --help
 ```
 
-Or install only what you need:
+Run atomic adapter commands with machine-readable output:
 
 ```bash
-npx skills add jackwener/opencli --skill opencli-adapter-author
-npx skills add jackwener/opencli --skill opencli-autofix
-npx skills add jackwener/opencli --skill opencli-browser
-npx skills add jackwener/opencli --skill opencli-usage
+opencli hackernews top --limit 5 -f json
+opencli reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" --limit 100 -f json
+opencli twitter get-comments "https://x.com/user/status/123" --limit 50 -f json
+opencli youtube comments "https://www.youtube.com/watch?v=VIDEO_ID" --limit 100 -f json
+opencli xiaohongshu comments "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." --with-replies -f json
 ```
 
-### Which skill to use
+Use `-f json` by default when another agent or program will consume the result.
 
-| Skill | When to use | Example prompt to your AI agent |
-|-------|------------|-------------------------------|
-| **opencli-adapter-author** | Write a reusable adapter for a new site or add a command to an existing site | "Write an adapter for douyin trending" / "Make a command that grabs the top posts from this page" |
-| **opencli-autofix** | Repair a broken adapter when a built-in command fails | "`opencli zhihu hot` is returning empty — fix it" |
-| **opencli-browser** | Drive a real Chrome page ad-hoc — navigate, fill forms, click, extract | "Help me check my Xiaohongshu notifications" / "Help me fill out this form" / "Use browser commands to scrape this page" |
-| **opencli-usage** | Quick reference for all OpenCLI commands and sites | "What commands does OpenCLI have for Twitter?" |
+## Browserbase Multi-Account Setup
 
-### How it works
-
-Once `opencli-browser` is installed, your AI agent can:
-
-1. **Navigate** to any URL using your logged-in browser
-2. **Read** page content via structured DOM snapshots (not screenshots)
-3. **Interact** — click buttons, fill forms, select options, press keys
-4. **Extract** data from the page or intercept network API responses
-5. **Wait** for elements, text, or page transitions
-
-The agent handles all the `opencli browser` commands internally — you just describe what you want done in natural language.
-
-**Skill references:**
-- [`skills/opencli-browser/SKILL.md`](./skills/opencli-browser/SKILL.md) — drive Chrome ad-hoc (navigate, fill forms, click, extract)
-- [`skills/opencli-adapter-author/SKILL.md`](./skills/opencli-adapter-author/SKILL.md) — write a new adapter end-to-end
-- [`skills/opencli-autofix/SKILL.md`](./skills/opencli-autofix/SKILL.md) — repair broken adapters
-- [`skills/opencli-usage/SKILL.md`](./skills/opencli-usage/SKILL.md) — command and site reference
-
-Available browser commands include `open`, `state`, `click`, `type`, `fill`, `select`, `keys`, `wait`, `get`, `find`, `extract`, `frames`, `screenshot`, `scroll`, `back`, `eval`, `network`, `tab list`, `tab new`, `tab select`, `tab close`, `init`, `verify`, and `close`.
-
-`opencli browser` commands require a `<session>` positional immediately after `browser`. `opencli browser work open <url>` and `opencli browser work tab new [url]` both return a target ID. Use `opencli browser work tab list` to inspect target IDs, then pass `--tab <targetId>` to route a command to a specific tab. `tab new` creates a new tab without changing the default browser target; only `tab select <targetId>` promotes that tab to the default target for later untargeted commands in the same session.
-
-## Writing a new adapter
-
-When the site you need is not yet covered, use the `opencli-adapter-author` skill end-to-end:
-
-1. **Recon** the site and pick a pattern (SPA / SSR / JSONP / Token / Streaming).
-2. **Discover** the right endpoint — network inspection, initial state, bundle search, token trace, or interceptor fallback.
-3. **Pick auth** — `PUBLIC` / `COOKIE` / `INTERCEPT` / `UI` / `LOCAL`.
-4. **Decode** response fields and design output columns.
-5. `opencli browser recon analyze <url>` → `opencli browser recon init <site>/<name>` → write adapter → `opencli browser recon verify <site>/<name>`.
-6. Site knowledge persists to `~/.opencli/sites/<site>/` so the next adapter for the same site starts from context.
-
-## Prerequisites
-
-- **Node.js**: >= 21.0.0 (required for the standard npm install path)
-- **Bun**: >= 1.0 (optional alternative runtime)
-- **Chrome or Chromium** running and logged into the target site for browser-backed commands
-
-> **Important**: Browser-backed commands reuse your Chrome/Chromium login session. If you get empty data or permission-like failures, first confirm the site is already open and authenticated in Chrome/Chromium.
-
-## Configuration
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `OPENCLI_DAEMON_PORT` | `19825` | HTTP port for the daemon-extension bridge |
-| `OPENCLI_PROFILE` | — | Browser Bridge profile alias/contextId to use when multiple Chrome profiles are connected |
-| `OPENCLI_WINDOW` | command default | Set to `foreground` or `background` to override Browser Bridge window placement. Browser-backed commands also accept `--window <foreground\|background>`. |
-| `OPENCLI_BROWSER_CONNECT_TIMEOUT` | `30` | Seconds to wait for browser connection |
-| `OPENCLI_BROWSER_COMMAND_TIMEOUT` | `60` | Seconds to wait for a single browser command |
-| `OPENCLI_CDP_ENDPOINT` | — | Chrome DevTools Protocol endpoint for remote browser or Electron apps |
-| `OPENCLI_CDP_TARGET` | — | Filter CDP targets by URL substring (e.g. `detail.1688.com`) |
-| `BROWSERBASE_API_KEY` | — | API key for Browserbase cloud browser sessions, contexts, and account profiles |
-| `BROWSERBASE_PROJECT_ID` | — | Browserbase project id required for context/account operations |
-| `BROWSERBASE_SESSION_ID` | — | Existing Browserbase session ID for adapter browser commands; equivalent to root `--browserbase-session <id>` / legacy `--session <id>` |
-| `OPENCLI_VERBOSE` | `false` | Enable verbose logging (`-v` flag also works) |
-| `DEBUG_SNAPSHOT` | — | Set to `1` for DOM snapshot debug output |
-
-`opencli browser *` requires an explicit `<session>` positional, uses a foreground browser window by default, and keeps that session's tab lease until `opencli browser <session> close` or idle cleanup. Browser-backed adapters use a background adapter window and release one-shot tab leases by default. Interactive adapters can declare `siteSession: 'persistent'` to keep a stable site tab for continuity; pass `--site-session ephemeral` for a one-shot tab.
-
-For cloud browsers, OpenCLI can manage Browserbase account profiles, persistent
-Contexts, proxy bindings, Live View login sessions, and parallel session pools:
-`opencli browserbase account bootstrap ...`,
-`opencli --browserbase-account <name> <site> <command> ...`, and
-`opencli run --browserbase ...`. Existing Browserbase sessions still work with
-`--browserbase-session` or legacy `--session`. See
-[`docs/advanced/browserbase.md`](./docs/advanced/browserbase.md).
-
-Social comment workflows are documented in
-[`docs/adapters/social-comments.md`](./docs/adapters/social-comments.md),
-including Twitter/X, YouTube, Reddit, LinkedIn, Instagram, TikTok, and
-Xiaohongshu support.
-
-## Built-in Commands
-
-| Site | Commands |
-|------|----------|
-| **xiaohongshu** | `search` `note` `comments` `reply` `feed` `user` `download` `publish` `notifications` `creator-notes` `creator-notes-summary` `creator-note-detail` `creator-profile` `creator-stats` `delete-note` |
-| **rednote** | `search` `note` `comments` `user` `download` `feed` `notifications` |
-| **bilibili** | `hot` `search` `history` `feed` `ranking` `download` `comments` `reply` `dynamic` `favorite` `following` `me` `subtitle` `summary` `video` `user-videos` |
-| **tieba** | `hot` `posts` `search` `read` |
-| **hupu** | `hot` `search` `detail` `mentions` `reply` `like` `unlike` |
-| **zhihu** | `hot` `search` `question` `download` `follow` `like` `favorite` `comment` `answer` |
-| **hackernews** | `top` `new` `best` `ask` `show` `jobs` `search` `user` |
-| **linkedin** | `connect` `inbox` `safe-send` `search` `sent-invitations` `thread-snapshot` `timeline` `salesnav-search` `salesnav-inbox` `salesnav-message` `salesnav-thread` |
-| **reddit** | `hot` `frontpage` `popular` `search` `subreddit` `read` `get-comments` `user` `user-posts` `user-comments` `upvote` `upvoted` `save` `saved` `comment` `reply` `subscribe` `subscribed` |
-| **twitter** | `trending` `search` `timeline` `tweets` `lists` `list-tweets` `list-add` `list-create` `list-remove` `bookmarks` `post` `download` `profile` `article` `like` `likes` `notifications` `device-follow` `get-comments` `reply` `reply-dm` `thread` `follow` `unfollow` `followers` `following` `block` `unblock` `bookmark` `unbookmark` `delete` `hide-reply` `accept` |
-| **youtube** | `search` `video` `transcript` `comments` `reply` `reply-comment` `channel` `playlist` `feed` `history` `watch-later` `subscriptions` `like` `unlike` `subscribe` `unsubscribe` |
-| **instagram** | `explore` `profile` `search` `search-posts` `user` `followers` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `saved` |
-| **tiktok** | `explore` `search` `profile` `user` `following` `follow` `unfollow` `like` `unlike` `comment` `get-comments` `reply` `save` `unsave` `live` `notifications` `friends` |
-| **claude** | `ask` `send` `new` `status` `read` `history` `detail` |
-| **gemini** | `new` `ask` `image` `deep-research` `deep-research-result` |
-| **notebooklm** | `status` `list` `open` `current` `get` `history` `summary` `note-list` `notes-get` `source-list` `source-get` `source-fulltext` `source-guide` |
-| **amazon** | `bestsellers` `search` `product` `offer` `discussion` `movers-shakers` `new-releases` `rankings` |
-
-Curated highlights — **[→ see all 100+ supported sites & commands](./docs/adapters/index.md)** (douyin / weibo / spotify / 1688 / quark / nowcoder / google-scholar / hupu / xianyu / weread / weread-official / xiaoyuzhou / and more).
-
-## CLI Hub
-
-Unified passthrough for your existing command-line tools. Run `opencli <tool> ...` for any of:
-
-`gh` · `docker` · `vercel` · `wrangler` · `obsidian` · `longbridge` · `lark-cli` · `ntn(notion)` · `dws(DingTalk Workspace)` · `wecom-cli(企业微信)` · `tg(tg-cli)` · `discord(discord-cli)` · `wx(wx-cli)`
-
-Register your own with `opencli external register <name>`; list everything with `opencli external list`.
-
-**Desktop app adapters** (Electron, via CDP): Cursor / Codex / Antigravity / ChatGPT App / ChatWise / Discord / Doubao — see [`docs/adapters/desktop/`](./docs/adapters/desktop/).
-
-## Download Support
-
-OpenCLI supports downloading images, videos, and articles from supported platforms.
-
-| Platform | Content Types | Notes |
-|----------|---------------|-------|
-| **xiaohongshu** | Images, Videos | Downloads all media from a note |
-| **rednote** | Images, Videos | Downloads all media from a signed rednote note URL |
-| **bilibili** | Videos | Requires `yt-dlp` installed |
-| **twitter** | Images, Videos | From user media tab or single tweet |
-| **douban** | Images | Poster / still image lists |
-| **pixiv** | Images | Original-quality illustrations, multi-page |
-| **1688** | Images, Videos | Downloads page-visible product media from item pages |
-| **xiaoyuzhou** | Audio, Transcript | Downloads episode audio and transcript JSON/text with local credentials |
-| **zhihu** | Articles (Markdown) | Exports with optional image download |
-| **weixin** | Articles (Markdown) | WeChat Official Account articles |
-
-For video downloads, install `yt-dlp` first: `brew install yt-dlp`
+Set Browserbase credentials:
 
 ```bash
-opencli xiaohongshu download "https://www.xiaohongshu.com/search_result/<id>?xsec_token=..." --output ./xhs
-opencli xiaohongshu download "https://xhslink.com/..." --output ./xhs
-opencli rednote download "https://www.rednote.com/search_result/<id>?xsec_token=..." --output ./rednote
-opencli bilibili download BV1xxx --output ./bilibili
-opencli twitter download elonmusk --limit 20 --output ./twitter
-opencli 1688 download 841141931191 --output ./1688-downloads
-opencli xiaoyuzhou download 69b3b675772ac2295bfc01d0 --output ./xiaoyuzhou
-opencli xiaoyuzhou transcript 69dd0c98e2c8be31551f6a33 --output ./xiaoyuzhou-transcripts
+export BROWSERBASE_API_KEY=...
+export BROWSERBASE_PROJECT_ID=...
 ```
 
-`opencli xiaoyuzhou download` and `transcript` require local Xiaoyuzhou credentials in `~/.opencli/xiaoyuzhou.json`.
-
-## Output Formats
-
-All built-in commands support `--format` / `-f` with `table` (default), `json`, `yaml`, `md`, and `csv`.
+Create a proxy profile. External proxy passwords should live in environment variables:
 
 ```bash
-opencli bilibili hot -f json    # Pipe to jq or LLMs
-opencli bilibili hot -f csv     # Spreadsheet-friendly
-opencli bilibili hot -v         # Verbose: show pipeline debug steps
+export PROXY_REDDIT1_PASS=...
+
+opencli browserbase proxy add reddit1-proxy \
+  --type external \
+  --server http://133.169.0.110:60088 \
+  --username p9SIbn0S6AoC \
+  --password-env PROXY_REDDIT1_PASS
 ```
 
-## Exit Codes
-
-opencli follows Unix `sysexits.h` so CI / scripts can branch on failure mode: `0` success, `66` empty result, `69` Browser Bridge down, `75` timeout, `77` auth required, `78` config error, `130` Ctrl-C. Full reference: [docs/guide/exit-codes.md](./docs/guide/exit-codes.md).
-
-## Plugins
-
-Extend OpenCLI with community-contributed adapters:
+Create ten persistent login profiles and open Live View URLs for manual login:
 
 ```bash
-opencli plugin install github:user/opencli-plugin-my-tool
-opencli plugin list
-opencli plugin update --all
-opencli plugin uninstall my-tool
+opencli browserbase account bootstrap \
+  --site reddit \
+  --count 10 \
+  --name-prefix reddit-main \
+  --proxy reddit1-proxy \
+  --open
 ```
 
-| Plugin | Type | Description |
-|--------|------|-------------|
-| [opencli-plugin-github-trending](https://github.com/ByteYue/opencli-plugin-github-trending) | JS | GitHub Trending repositories |
-| [opencli-plugin-hot-digest](https://github.com/ByteYue/opencli-plugin-hot-digest) | JS | Multi-platform trending aggregator |
-| [opencli-plugin-juejin](https://github.com/Astro-Han/opencli-plugin-juejin) | JS | 稀土掘金 (Juejin) hot articles |
-| [opencli-plugin-vk](https://github.com/flobo3/opencli-plugin-vk) | JS | VK (VKontakte) wall, feed, and search |
+Each account maps to one Browserbase Context. Cookies, localStorage, and IndexedDB stay in Browserbase; OpenCLI stores only metadata in `~/.opencli/browserbase.json`.
 
-See [Plugins Guide](./docs/guide/plugins.md) for creating your own plugin.
+After login, run one task through a named account:
 
-## Testing
+```bash
+opencli --browserbase-account reddit-main-1 \
+  reddit get-comments "https://www.reddit.com/r/example/comments/1abc123/title/" \
+  --limit 100 \
+  -f json
+```
 
-See **[TESTING.md](./TESTING.md)** for how to run and write tests.
+Run a JSONL job file across up to ten accounts:
 
-## Troubleshooting
+```bash
+opencli run --browserbase \
+  --accounts reddit-main-1,reddit-main-2,reddit-main-3,reddit-main-4,reddit-main-5,reddit-main-6,reddit-main-7,reddit-main-8,reddit-main-9,reddit-main-10 \
+  --parallel 10 \
+  --pool-size 10 \
+  jobs.jsonl
+```
 
-- **"Extension not connected"** — Ensure the Browser Bridge extension is installed from the [Chrome Web Store](https://chromewebstore.google.com/detail/opencli/ildkmabpimmkaediidaifkhjpohdnifk) and **enabled** in `chrome://extensions`.
-- **"attach failed: Cannot access a chrome-extension:// URL"** — Another extension may be interfering. Try disabling other extensions temporarily.
-- **Empty data or 'Unauthorized' error** — Your Chrome/Chromium login session may have expired. Navigate to the target site and log in again.
-- **Node API errors / missing `fetch` / startup crash on old Node** — OpenCLI requires **Node.js >= 21**. Run `node --version`, upgrade Node if needed, then retry.
-- **Daemon issues** — Check status: `curl localhost:19825/status` · View logs: `curl localhost:19825/logs`
+Useful account and proxy operations:
 
-## Star History
+```bash
+opencli browserbase account list
+opencli browserbase account login reddit-main-1 --open --wait
+opencli browserbase account check reddit-main-1 --command "reddit whoami"
+opencli browserbase account set-proxy reddit-main-1 reddit1-proxy
+opencli browserbase account clear-proxy reddit-main-1
+opencli browserbase account clear-login reddit-main-1 --recreate-context --delete-old-context
+opencli browserbase account delete reddit-main-1 --delete-context
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jackwener/opencli&type=Date)](https://star-history.com/#jackwener/opencli&Date)
+opencli browserbase proxy list
+opencli browserbase proxy get reddit1-proxy
+opencli browserbase proxy update reddit1-proxy --server http://new-host:port
+opencli browserbase proxy test reddit1-proxy
+opencli browserbase proxy delete reddit1-proxy
+```
 
-## License
+Details: [Browserbase accounts, proxies, and parallel sessions](./docs/advanced/browserbase.md).
 
-[Apache-2.0](./LICENSE)
+## Social Comments
+
+| Platform | Read comments | Write support |
+| --- | --- | --- |
+| Reddit | `reddit read`, `reddit get-comments` | `reddit comment`, `reddit reply` |
+| Twitter/X | `twitter get-comments`, `twitter thread` | `twitter reply`, `twitter post` |
+| YouTube | `youtube comments` | `youtube reply`, `youtube reply-comment` |
+| Instagram | `instagram get-comments` | `instagram comment`, `instagram reply` |
+| TikTok | `tiktok get-comments` | `tiktok comment`, `tiktok reply` |
+| Xiaohongshu | `xiaohongshu comments` | `xiaohongshu reply` |
+| LinkedIn | `linkedin timeline` comment counts | comment threads are not exposed yet |
+
+See [Social Comment Support](./docs/adapters/social-comments.md) for platform-specific arguments, IDs, and safety notes.
+
+## Skills For AI Agents
+
+Install or refresh all OpenCLI skills from this fork:
+
+```bash
+npx skills add albertcyhe/opencli
+```
+
+Install only the skill you need:
+
+```bash
+npx skills add albertcyhe/opencli --skill opencli-usage
+npx skills add albertcyhe/opencli --skill opencli-browserbase
+npx skills add albertcyhe/opencli --skill opencli-social-comments
+npx skills add albertcyhe/opencli --skill opencli-browser
+npx skills add albertcyhe/opencli --skill opencli-adapter-author
+npx skills add albertcyhe/opencli --skill opencli-autofix
+```
+
+| Skill | Use it when the agent needs to |
+| --- | --- |
+| `opencli-usage` | discover OpenCLI capabilities and choose the next skill |
+| `opencli-browserbase` | manage Browserbase accounts, contexts, sessions, proxies, or pooled runs |
+| `opencli-social-comments` | read or write comments across supported social adapters |
+| `opencli-browser` | drive a local Chrome page ad hoc through Browser Bridge |
+| `opencli-adapter-author` | create or extend a reusable adapter |
+| `opencli-autofix` | repair a broken adapter after a traced failure |
+
+Skill source files live in [`skills/`](./skills/). The docs entry point is [Skills for AI agents](./docs/guide/skills.md).
+
+## More Docs
+
+- [Getting Started](./docs/guide/getting-started.md)
+- [AI Agent Operations](./docs/guide/ai-agent-operations.md)
+- [Installation](./docs/guide/installation.md)
+- [Browser Bridge](./docs/guide/browser-bridge.md)
+- [All adapters](./docs/adapters/index.md)
+- [Browserbase](./docs/advanced/browserbase.md)
+- [Social comments](./docs/adapters/social-comments.md)

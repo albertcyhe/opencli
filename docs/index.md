@@ -3,33 +3,36 @@ layout: home
 
 hero:
   name: OpenCLI
-  text: Make any website or Electron App your CLI
-  tagline: Zero risk · Reuse Chrome login · AI-powered discovery · Browser + Desktop automation
+  text: Browserbase-ready CLI automation for agents
+  tagline: Websites · Social comments · Multi-account Browserbase · Multi-proxy sessions · Desktop adapters
   actions:
     - theme: brand
       text: Get Started
       link: /guide/getting-started
     - theme: alt
+      text: Agent Operations
+      link: /guide/ai-agent-operations
+    - theme: alt
       text: View on GitHub
-      link: https://github.com/jackwener/opencli
+      link: https://github.com/albertcyhe/opencli
 
 features:
-  - icon: 🖥️
-    title: Desktop App Control
-    details: Drive Electron apps (Cursor, Codex, ChatGPT, etc.) directly from the terminal via CDP.
   - icon: 🌐
-    title: Browser Automation
-    details: "AI agents get direct browser control: click, type/fill, extract, screenshot — any interaction, fully scriptable."
-  - icon: 🔐
-    title: Account Safe
-    details: Reuses Chrome's logged-in state. Your credentials never leave the browser — no tokens, no exposed passwords.
-  - icon: 🤖
-    title: AI Agent Ready
-    details: "Browser primitives plus adapter-authoring skills give AI agents a repeatable loop for recon, extraction, verification, and adapter writing."
-  - icon: 💰
-    title: Zero LLM Cost
-    details: No tokens consumed at runtime. Run 10,000 times and pay nothing.
-  - icon: 🔁
-    title: Deterministic
-    details: Same command, same output schema, every time. Pipeable, scriptable, CI-friendly.
+    title: Browserbase Accounts
+    details: Persist login state in Browserbase Contexts, create Live View login sessions, and run future tasks by account name.
+  - icon: 🧭
+    title: Multi-Proxy Routing
+    details: Bind proxies to accounts, update proxy profiles, and keep login state and exit IP together.
+  - icon: ⚙️
+    title: Parallel Atomic Jobs
+    details: Run JSONL jobs through `opencli run --browserbase` across up to ten Browserbase sessions.
+  - icon: 💬
+    title: Social Comments
+    details: Read and write comments on Reddit, Twitter/X, YouTube, Instagram, TikTok, Xiaohongshu, and supported LinkedIn timeline metadata.
+  - icon: 🧩
+    title: Agent Skills
+    details: Install OpenCLI skills so an AI agent knows which command to call and when to use Browserbase.
+  - icon: 🖥️
+    title: Local Browser Bridge
+    details: Reuse a logged-in local Chrome profile for browser-backed adapters and ad-hoc browser control.
 ---

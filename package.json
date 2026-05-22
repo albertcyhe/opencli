@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Make any website or Electron App your CLI. AI-powered.",
+  "description": "Browserbase-ready CLI automation for websites, social comments, browser sessions, and desktop apps.",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -71,11 +71,11 @@
     "web",
     "ai"
   ],
-  "author": "jackwener",
+  "author": "OpenCLI contributors",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackwener/opencli.git"
+    "url": "git+https://github.com/albertcyhe/opencli.git"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

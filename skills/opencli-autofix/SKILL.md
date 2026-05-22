@@ -206,7 +206,7 @@ If it still fails, go back to Step 1 and collect a fresh trace. You have a budge
 
 ## Step 6: File an Upstream Issue
 
-If the retry **passes**, the local adapter has drifted from upstream. File a GitHub issue so the fix flows back to `jackwener/OpenCLI`.
+If the retry **passes**, the local adapter has drifted from the maintained fork. File a GitHub issue so the fix flows back to `albertcyhe/opencli`.
 
 **Do NOT file for:**
 - `AUTH_REQUIRED`, `BROWSER_CONNECT`, `ARGUMENT`, `CONFIG` — environment/usage issues, not adapter bugs
@@ -251,7 +251,7 @@ _Issue filed by OpenCLI autofix after a verified local repair._
 3. If the user approves and `gh auth status` succeeds:
 
 ```bash
-gh issue create --repo jackwener/OpenCLI \
+gh issue create --repo albertcyhe/opencli \
   --title "[autofix] <site>/<command>: <error_code>" \
   --body "<the body above>"
 ```
@@ -293,5 +293,5 @@ In all stop cases, clearly communicate the situation to the user rather than mak
 
 7. AI prepares upstream issue draft, shows it to the user
 
-8. User approves → AI runs: gh issue create --repo jackwener/OpenCLI --title "[autofix] zhihu/hot: SELECTOR" --body "..."
+8. User approves → AI runs: gh issue create --repo albertcyhe/opencli --title "[autofix] zhihu/hot: SELECTOR" --body "..."
 ```

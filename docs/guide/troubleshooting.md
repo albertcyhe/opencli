@@ -63,5 +63,5 @@ npx tsc --noEmit
 
 ## Getting Help
 
-- [GitHub Issues](https://github.com/jackwener/opencli/issues) — Bug reports and feature requests
+- [GitHub Issues](https://github.com/albertcyhe/opencli/issues) — Bug reports and feature requests
 - Run `opencli doctor` for comprehensive diagnostics

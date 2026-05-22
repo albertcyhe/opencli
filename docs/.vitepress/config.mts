@@ -18,9 +18,10 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Guide', link: '/guide/getting-started' },
+          { text: 'Agent Ops', link: '/guide/ai-agent-operations' },
           { text: 'Adapters', link: '/adapters/' },
           { text: 'Developer', link: '/developer/contributing' },
-          { text: 'Advanced', link: '/advanced/cdp' },
+          { text: 'Advanced', link: '/advanced/browserbase' },
         ],
         sidebar: {
           '/guide/': [
@@ -29,6 +30,8 @@ export default defineConfig({
               items: [
                 { text: 'Getting Started', link: '/guide/getting-started' },
                 { text: 'Installation', link: '/guide/installation' },
+                { text: 'AI Agent Operations', link: '/guide/ai-agent-operations' },
+                { text: 'Skills for AI Agents', link: '/guide/skills' },
                 { text: 'Comparison', link: '/comparison' },
                 { text: 'Browser Bridge', link: '/guide/browser-bridge' },
                 { text: 'Remote Orchestration', link: '/guide/remote-orchestration' },
@@ -206,9 +209,10 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '指南', link: '/zh/guide/getting-started' },
+          { text: 'Agent 操作', link: '/zh/guide/ai-agent-operations' },
           { text: '适配器', link: '/zh/adapters/' },
           { text: '开发者', link: '/zh/developer/contributing' },
-          { text: '进阶', link: '/zh/advanced/cdp' },
+          { text: '进阶', link: '/zh/advanced/browserbase' },
         ],
         sidebar: {
           '/zh/guide/': [
@@ -217,6 +221,8 @@ export default defineConfig({
               items: [
                 { text: '快速开始', link: '/zh/guide/getting-started' },
                 { text: '安装', link: '/zh/guide/installation' },
+                { text: 'AI Agent 操作指南', link: '/zh/guide/ai-agent-operations' },
+                { text: '给 AI Agent 的 Skills', link: '/zh/guide/skills' },
                 { text: 'Browser Bridge', link: '/zh/guide/browser-bridge' },
                 { text: '给新 Electron 应用生成 CLI', link: '/zh/guide/electron-app-cli' },
                 { text: '扩展 OpenCLI', link: '/zh/guide/extending-opencli' },
@@ -229,6 +235,7 @@ export default defineConfig({
               text: '适配器概览',
               items: [
                 { text: '所有适配器', link: '/zh/adapters/' },
+                { text: '社交平台 Comments', link: '/zh/adapters/social-comments' },
               ],
             },
           ],
@@ -245,6 +252,7 @@ export default defineConfig({
               text: '进阶',
               items: [
                 { text: 'Chrome DevTools Protocol', link: '/zh/advanced/cdp' },
+                { text: 'Browserbase', link: '/zh/advanced/browserbase' },
               ],
             },
           ],
@@ -259,18 +267,17 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/jackwener/opencli' },
-      { icon: 'npm', link: 'https://www.npmjs.com/package/@jackwener/opencli' },
+      { icon: 'github', link: 'https://github.com/albertcyhe/opencli' },
     ],
 
     editLink: {
-      pattern: 'https://github.com/jackwener/opencli/edit/main/docs/:path',
+      pattern: 'https://github.com/albertcyhe/opencli/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
 
     footer: {
       message: 'Released under the Apache-2.0 License.',
-      copyright: 'Copyright © 2024-present jackwener',
+      copyright: 'Copyright © 2024-present OpenCLI contributors',
     },
   },
 })
